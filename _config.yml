@@ -4,3 +4,6 @@ markdown: redcarpet
 
 exclude: ['attic', 'README.md']
 
+safe: true
+lsi: false
+

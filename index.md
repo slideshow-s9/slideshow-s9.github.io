@@ -3,11 +3,13 @@ layout: default
 title: Welcome
 ---
 
-h1. {{ page.title }}
+# {{ page.title }}
 
 <div class="toc">
 
-p(toc-title). Contents:
+<p class='toc-title'>
+
+Contents:
    
 * "What's Slide Show (S9)?":#welcome
 * "Getting Started in 1-2-3 Easy Steps":#steps
@@ -16,9 +18,10 @@ p(toc-title). Contents:
 * "What's FullerScreen?":#fullerscreen
 * "About, License - Questions? Comments?":#about
 
+</p>
 </div>
 
-h2(#welcome). What's Slide Show (S9)?
+## {#welcome} What's Slide Show (S9)?
 
 A Ruby gem that lets you create slide shows and author slides in plain text
 using a wiki-style markup language that's easy-to-write and easy-to-read.
@@ -26,7 +29,7 @@ The Slide Show (S9) project also collects and welcomes themes
 and ships "out-of-the-gem" with built-in support
 for "loss-free" gradient vector graphics themes.
 
-h2(#steps). Getting Started in 1-2-3 Easy Steps
+## {#steps} Getting Started in 1-2-3 Easy Steps
 
 * Step 1: Author your slides in plain text using a wiki-style markup language
 * Step 2: Generate your slide show using the @slideshow@ gem
@@ -34,13 +37,13 @@ h2(#steps). Getting Started in 1-2-3 Easy Steps
 * That's it. Showtime!
 
 
-h3. Step 0: Install the @slideshow@ gem
+### Step 0: Install the @slideshow@ gem
 
 ```
 $ gem install slideshow
 ```
 
-h3. Step 1: Author your slides in plain text using a wiki-style markup language
+### Step 1: Author your slides in plain text using a wiki-style markup language
 
 Slide Show lets you author your slides using a wiki-style markup language
 that's easy-to-write and easy-to-read. Let's create some slides about best practices for web services
@@ -110,7 +113,7 @@ Use @h1@ headings to start a new slide - use @h1.@ in Textile
 or use "underlining" with equal signs (@===@) in Markdown. That's it.
 For more formatting options see the Textile or Markdown reference.
 
-h3. Step 2: Generate your slide show using the @slideshow@ gem
+### Step 2: Generate your slide show using the @slideshow@ gem
 
 Run @slideshow@ to generate your slide show. The @slideshow@ gem
 expects the name of your slide show source document (e.g. [@rest@])
@@ -125,7 +128,7 @@ $ slideshow rest
 => Done.
 ```
 
-h3. Step 3: Open up your slide show in your browser
+### Step 3: Open up your slide show in your browser
 
 Open up your slide show ("@rest.html@":http://slideshow.rubyforge.org/rest.html)
 in your browser (Firefox, Chrome, Safari, Opera and others) and hit F11 to switch 
@@ -136,7 +139,7 @@ or page down key to flip through your slides.
 
 That's it. Voila.
 
-h3. Bonus: Try some different templates/theme packs
+### Bonus: Try some different templates/theme packs
 
 * "S6 PDF Theme":http://slideshow.rubyforge.org/tutorial.pdf.html -> "PDF":http://slideshow.rubyforge.org/tutorial.pdf
 * "Google HTML5 Rocks Theme":http://slideshow.rubyforge.org/tutorial.html5.html
@@ -144,7 +147,7 @@ h3. Bonus: Try some different templates/theme packs
 * "Slidy W3C Blue Theme":http://slideshow.rubyforge.org/slidy/tutorial.html
 * "More &raquo;":templates.html
 
-h2(#textile). What's Textile? What's Markdown? What's reStructuredText?
+## {#textile} What's Textile? What's Markdown? What's reStructuredText?
 
 Textile is a wiki-style markup language that's easy-to-write and easy-to-read and
 that lets you author web pages in plain text. More:
@@ -162,7 +165,7 @@ reStructuredText is yet another wiki-style markup language. More:
 * "reStructuredText Quick Reference":http://docutils.sourceforge.net/docs/user/rst/quickref.html
 * "reStructuredText Project Site":http://docutils.sourceforge.net/rst.html
 
-h2(#s6). What's S5? What's S6?
+## {#s6} What's S5? What's S6?
 
 Simple Standards-based Slide Show System (S5) is
 Eric Meyer's (of CSS fame) public domain (free, open source)
@@ -189,7 +192,7 @@ Keyboard controls:
 | Show/hide slide controls (==&#216; &laquo; &raquo;==)  | C, Move mouse to bottom right corner |
 
 
-h2(#fullerscreen). What's FullerScreen? What's Opera Show?
+## {#fullerscreen} What's FullerScreen? What's Opera Show?
 
 FullerScreen is a free Firefox browser addon that turns your web page in a full screen slide show without
 requiring any JavaScript. (Use the "@fullerscreen@":http://github.com/geraldb/slideshow-fullerscreen theme pack to create FullerScreen-compatible slide shows.)
@@ -206,7 +209,7 @@ without requiring any plugins (just press F11 to get started and page up/down to
 
 * "Opera Show Documentation":http://www.opera.com/browser/tutorials/operashow/
 
-h2(#about). About, License - Questions? Comments?
+## {#about} About, License - Questions? Comments?
 
 Gerald Bauer and contributors designed and developed the @slideshow@ gem.
 See the "change log":http://github.com/geraldb/slideshow/blob/master/History.rdoc for contributions and credits.
