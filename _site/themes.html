@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Gradient Themes - Slide Show (S9) - A Free Web Alternative to PowerPoint and KeyNote in Ruby</title>
+   <link rel="stylesheet" href="slideshow.css" type="text/css">
+   <link rel="icon"       href="favicon.png"   type="image/png">
+</head>
+<body>
+
+  <div id="header">
+    <span class='big'>Slide Show (S9)</span>
+    <span class='small'>a free web alternative to PowerPoint and KeyNote in Ruby</span>
+  </div>
+
+  <div id="nav">
+   
+    <a href="index.html">Home</a> |
+    <a href="tutorial.html">10-Minute Quick Start Guide</a> |
+    <a href="more.html">Settings, Tips, Tricks and More</a> |
+    <a href="plugins.html">Plugins, Helpers</a> |    
+    <a href="code.html">Syntax Highlighting</a> |
+    <a href="templates.html">Template Pack Gallery</a> | 
+    <a href="themes.html">Gradient Themes</a> |
+    <a href="http://groups.google.com/group/webslideshow">What's New? &middot; Forum (Questions? Comments?)</a> |
+ 
+       <a href="http://github.com/geraldb/slideshow">Code</a> | 
+       <a href="http://rubyforge.org/projects/slideshow">RubyForge</a>
+    
+    <!--
+    <a href="http://github.com/geraldb/slideshow"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" ></a>
+     -->
+     
+  </div>
+    
+    <div id="content">
+      <h1>Gradient Themes</h1>
+<div class="toc">
+<p class="toc-title">Contents:</p>
+<ul>
+	<li><a href="#use">How To Use Gradient Themes for the Built-In S6 Template Pack?</a></li>
+	<li><a href="#questions">Questions? Comments?</a></li>
+</ul>
+</div>
+<h2>Browse by Color</h2>
+<p><a href="gradient-styles-red.svg" target="gallery">Red (SVG)</a> | 
+<a href="gradient-styles-red.html" target="gallery">Red (CSS3)</a> | 
+<a href="gradient-styles-blue.svg" target="gallery">Blue</a></p>
+<h2>Browse by Style</h2>
+<p><a href="gradient-diagonal.svg" target="gallery">Diagonal</a> | 
+<a href="gradient-top-bottom.svg" target="gallery">Top Bottom</a> | 
+<a href="gradient-left-right.svg" target="gallery">Left Right</a> | 
+<a href="gradient-repeat.svg" target="gallery">Repeat</a> | 
+<a href="gradient-radial.svg" target="gallery">Radial</a> | 
+<a href="gradient-radial-off-center.svg" target="gallery">Radial Off Center</a> | 
+<a href="gradient-radial-repeat.svg" target="gallery">Radial Repeat</a></p>
+<h2>Theme Preview</h2>
+<p><iframe id="gallery" name="gallery" src="gradient-styles-red.svg" width="100%" height="60%" frameborder="0"></iframe></p>
+<h2 id="use">How To Use Gradient Themes for the Built-In S6 Template Pack?</h2>
+<p>You can define your gradient theme in plain text in the slide show source in the header using
+a simple CSS-style name value pair (if you use the built-in S6 templates).</p>
+<p>Example 1: Use <code>top-bottom</code> gradient theme with the colors red and black</p>
+<pre class='programlisting'>
+gradient: top-bottom red black
+</pre>
+<p><strong>Themes</strong>. The built-in predefined gradient themes include: <code>diagonal</code>,
+<code>top-bottom</code>, 
+<code>left-right</code>, 
+<code>repeat</code>,  
+<code>radial</code>, 
+<code>radial-off-center</code>, 
+<code>radial-repeat</code>.</p>
+<p><strong>Colors</strong>. You can use whatever colors CSS supports e.g. pre-defined colors such as <code>red</code>, 
+<code>maroon</code> or self-defined colors such as <code>#0e1f5b</code>, <code>#3b5998</code>.</p>
+<p>Example 2: Use pre-defined CSS colors (with default <code>diagonal</code> gradient theme)</p>
+<pre class='programlisting'>
+gradient-colors: green lime
+</pre>
+<p>Example 3: Use self-defined colors (with default <code>diagonal</code> gradient theme)</p>
+<pre class='programlisting'>
+gradient-colors: #0e1f5b #3b5998
+</pre>
+<p>Example 4: Use <code>radial</code> gradient theme and facebook colors</p>
+<pre class='programlisting'>
+gradient: radial #0e1f5b #3b5998
+</pre>
+<p>Example 5: Just change gradient theme and use default colors, that is, <code>red</code> and <code>orange</code></p>
+<pre class='programlisting'>
+gradient-theme: repeat
+</pre>
+<p>That&#8217;s it.</p>
+<h2 id="questions">Questions? Comments?</h2>
+<p>Questions? Comments? Send them along to the
+<a href="http://groups.google.com/group/webslideshow">Free Web Slide Show Alternatives (S5, S6, S9, Slidy And Friends) Forum/Mailing List</a>.
+Thanks!</p>
+    </div>
+
+<!-- google analytics tracker; last update June/28/2010 -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-397343-10']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>

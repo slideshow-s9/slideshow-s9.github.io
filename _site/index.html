@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Welcome - Slide Show (S9) - A Free Web Alternative to PowerPoint and KeyNote in Ruby</title>
+   <link rel="stylesheet" href="slideshow.css" type="text/css">
+   <link rel="icon"       href="favicon.png"   type="image/png">
+</head>
+<body>
+
+  <div id="header">
+    <span class='big'>Slide Show (S9)</span>
+    <span class='small'>a free web alternative to PowerPoint and KeyNote in Ruby</span>
+  </div>
+
+  <div id="nav">
+   
+    <a href="index.html">Home</a> |
+    <a href="tutorial.html">10-Minute Quick Start Guide</a> |
+    <a href="more.html">Settings, Tips, Tricks and More</a> |
+    <a href="plugins.html">Plugins, Helpers</a> |    
+    <a href="code.html">Syntax Highlighting</a> |
+    <a href="templates.html">Template Pack Gallery</a> | 
+    <a href="themes.html">Gradient Themes</a> |
+    <a href="http://groups.google.com/group/webslideshow">What's New? &middot; Forum (Questions? Comments?)</a> |
+ 
+       <a href="http://github.com/geraldb/slideshow">Code</a> | 
+       <a href="http://rubyforge.org/projects/slideshow">RubyForge</a>
+    
+    <!--
+    <a href="http://github.com/geraldb/slideshow"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" ></a>
+     -->
+     
+  </div>
+    
+    <div id="content">
+      <h1>Welcome</h1>
+<div class="toc">
+<p class="toc-title">Contents:</p>
+<ul>
+	<li><a href="#welcome">What&#8217;s Slide Show (S9)?</a></li>
+	<li><a href="#steps">Getting Started in 1-2-3 Easy Steps</a></li>
+	<li><a href="#textile">What&#8217;s Textile? What&#8217;s Markdown?</a></li>
+	<li><a href="#s6">What&#8217;s S5? What&#8217;s S6?</a></li>
+	<li><a href="#fullerscreen">What&#8217;s FullerScreen?</a></li>
+	<li><a href="#about">About, License &#8211; Questions? Comments?</a></li>
+</ul>
+</div>
+<h2 id="welcome">What&#8217;s Slide Show (S9)?</h2>
+<p>A Ruby gem that lets you create slide shows and author slides in plain text
+using a wiki-style markup language that&#8217;s easy-to-write and easy-to-read.
+The Slide Show (S9) project also collects and welcomes themes
+and ships &#8220;out-of-the-gem&#8221; with built-in support
+for &#8220;loss-free&#8221; gradient vector graphics themes.</p>
+<h2 id="steps">Getting Started in 1-2-3 Easy Steps</h2>
+<ul>
+	<li>Step 1: Author your slides in plain text using a wiki-style markup language</li>
+	<li>Step 2: Generate your slide show using the <code>slideshow</code> gem</li>
+	<li>Step 3: Open up your slide show (web page) in your browser and hit the space bar to flip through your slides</li>
+	<li>That&#8217;s it. Showtime!</li>
+</ul>
+<h3>Step 0: Install the <code>slideshow</code> gem</h3>
+<pre class='programlisting'>
+$ gem install slideshow
+</pre>
+<h3>Step 1: Author your slides in plain text using a wiki-style markup language</h3>
+<p>Slide Show lets you author your slides using a wiki-style markup language
+that&#8217;s easy-to-write and easy-to-read. Let&#8217;s create some slides about best practices for web services
+using REST (<a href="http://github.com/geraldb/slideshow/raw/master/samples/rest.textile"><code>rest.textile</code></a>):</p>
+<pre class='programlisting'>
+h1. Web Services REST-Style: Universal Identifiers, Formats &amp; Protocols
+
+Agenda
+
+* What's REST?
+* Universal Identifiers, Formats &amp; Protocols
+* The Holy REST Trinity - Noun, Verbs, Types
+* REST Design Principles 
+* Architecture Astronaut REST Speak
+
+h1. Representational State Transfer (REST) - Meaningless Acronym? Wordplay?
+
+rest - n. - peace, ease, or refreshment resulting from the insight that the web works
+
+No matter what vendors tell you - no need to "Light Up the Web" - relax - built on
+an *open architecture using universal identifiers, formats &amp; protocols and _evolving_
+open standards* - no need to reinvent the wheel and sign-up for single-vendor offerings.
+
+h3. Broad Definition
+
+* Best Practices for Designing Web Services for a Unified Human and Programable Web
+
+h3. Narrow Definition
+
+* Alternative to BigCo Web Services (SOAP, WS-*) and RPC-Style Web Services (XML-RPC)
+</pre>
+<p>Or</p>
+<pre class='programlisting'>
+Web Services REST-Style: Universal Identifiers, Formats &amp; Protocols
+===================================================================
+
+Agenda
+
+- What's REST?
+- Universal Identifiers, Formats &amp; Protocols
+- The Holy REST Trinity - Noun, Verbs, Types
+- REST Design Principles 
+- Architecture Astronaut REST Speak
+
+Representational State Transfer (REST) - Meaningless Acronym? Wordplay?
+=======================================================================
+
+rest - n. - peace, ease, or refreshment resulting from the insight that the web works
+
+No matter what vendors tell you - no need to "Light Up the Web" - relax - built on
+an *open architecture using universal identifiers, formats &amp; protocols and __evolving__
+open standards* - no need to reinvent the wheel and sign-up for single-vendor offerings.
+
+### Broad Definition
+
+- Best Practices for Designing Web Services for a Unified Human and Programable Web
+
+### Narrow Definition
+
+- Alternative to BigCo Web Services (SOAP, WS-*) and RPC-Style Web Services (XML-RPC)
+</pre>
+<p>Use <code>h1</code> headings to start a new slide &#8211; use <code>h1.</code> in Textile
+or use &#8220;underlining&#8221; with equal signs (<code>===</code>) in Markdown. That&#8217;s it.
+For more formatting options see the Textile or Markdown reference.</p>
+<h3>Step 2: Generate your slide show using the <code>slideshow</code> gem</h3>
+<p>Run <code>slideshow</code> to generate your slide show. The <code>slideshow</code> gem
+expects the name of your slide show source document (e.g. <code>rest</code>)
+without the <code>.textile</code> or <code>.markdown</code> ending and will generate a web page
+(e.g. <a href="http://slideshow.rubyforge.org/rest.html"><code>rest.html</code></a>)
+that is an all-in-one-page handout and a live slide show all at once.</p>
+<pre class='programlisting'>
+$ slideshow rest
+
+=&gt; Preparing slide show 'rest.html'...
+=&gt; Done.
+</pre>
+<h3>Step 3: Open up your slide show in your browser</h3>
+<p>Open up your slide show (<a href="http://slideshow.rubyforge.org/rest.html"><code>rest.html</code></a>)
+in your browser (Firefox, Chrome, Safari, Opera and others) and hit F11 to switch 
+into full screen projection and hit the space bar or the right arrow, down arrow
+or page down key to flip through your slides.</p>
+<p><a href="http://slideshow.rubyforge.org/rest.html"><img src="slideshow.png" alt="" ></a></p>
+<p>That&#8217;s it. Voila.</p>
+<h3>Bonus: Try some different templates/theme packs</h3>
+<ul>
+	<li><a href="http://slideshow.rubyforge.org/tutorial.pdf.html">S6 PDF Theme</a> &#8594; <a href="http://slideshow.rubyforge.org/tutorial.pdf">PDF</a></li>
+	<li><a href="http://slideshow.rubyforge.org/tutorial.html5.html">Google HTML5 Rocks Theme</a></li>
+	<li><a href="http://slideshow.rubyforge.org/s5/tutorial.html">S5 Theme</a></li>
+	<li><a href="http://slideshow.rubyforge.org/slidy/tutorial.html">Slidy W3C Blue Theme</a></li>
+	<li><a href="templates.html">More &raquo;</a></li>
+</ul>
+<h2 id="textile">What&#8217;s Textile? What&#8217;s Markdown? What&#8217;s reStructuredText?</h2>
+<p>Textile is a wiki-style markup language that&#8217;s easy-to-write and easy-to-read and
+that lets you author web pages in plain text. More:</p>
+<ul>
+	<li><a href="http://redcloth.org/textile/">Textile Reference</a></li>
+</ul>
+<p>Markdown is another wiki-style markup language that&#8217;s easy-to-write and easy-to-read and
+that lets you author web pages in plain text. More:</p>
+<ul>
+	<li><a href="http://daringfireball.net/projects/markdown/basics">Markdown Quick Start</a></li>
+	<li><a href="http://daringfireball.net/projects/markdown/syntax">Markdown Reference</a></li>
+</ul>
+<p>reStructuredText is yet another wiki-style markup language. More:</p>
+<ul>
+	<li><a href="http://docutils.sourceforge.net/docs/user/rst/quickref.html">reStructuredText Quick Reference</a></li>
+	<li><a href="http://docutils.sourceforge.net/rst.html">reStructuredText Project Site</a></li>
+</ul>
+<h2 id="s6">What&#8217;s S5? What&#8217;s S6?</h2>
+<p>Simple Standards-based Slide Show System (S5) is
+Eric Meyer&#8217;s (of CSS fame) public domain (free, open source)
+slide show package inspired by Opera Show and others that works in all modern browsers
+without any plugin required because it includes its own slide show machinery in JavaScript.
+(Use the <a href="http://github.com/geraldb/slideshow-s5-blank"><code>s5blank</code></a> or <a href="http://github.com/geraldb/slideshow-s5-themes"><code>s5themes</code></a> theme pack to create S5 slide shows.)</p>
+<ul>
+	<li><a href="http://meyerweb.com/eric/tools/s5">S5 Project Site</a></li>
+</ul>
+<p>S6 is the rewrite of Eric Meyer&#8217;s S5 using
+the jQuery JavaScript library &#8211; offering easier to understand and easier
+to extend code. Add plugins, effects and more. Contributions welcome!</p>
+<ul>
+	<li><a href="http://github.com/geraldb/s6">S6 Project Site</a></li>
+</ul>
+<p>Keyboard controls:</p>
+<table>
+	<tr>
+		<th>Action             </th>
+		<th>Key </th>
+	</tr>
+	<tr>
+		<td> Go to next slide     </td>
+		<td> Space Bar, Right Arrow Down Arrow, Page Down  </td>
+	</tr>
+	<tr>
+		<td> Go to previous slide </td>
+		<td> Left Arrow, Up Arrow, Page Up </td>
+	</tr>
+	<tr>
+		<td> Go to first slide    </td>
+		<td> Home </td>
+	</tr>
+	<tr>
+		<td> Go to last slide     </td>
+		<td> End </td>
+	</tr>
+	<tr>
+		<td> Toggle between slideshow and outline view (&#216;) </td>
+		<td> T </td>
+	</tr>
+	<tr>
+		<td> Show/hide slide controls (&#216; &laquo; &raquo;)  </td>
+		<td> C, Move mouse to bottom right corner </td>
+	</tr>
+</table>
+<h2 id="fullerscreen">What&#8217;s FullerScreen? What&#8217;s Opera Show?</h2>
+<p>FullerScreen is a free Firefox browser addon that turns your web page in a full screen slide show without
+requiring any JavaScript. (Use the <a href="http://github.com/geraldb/slideshow-fullerscreen"><code>fullerscreen</code></a> theme pack to create FullerScreen-compatible slide shows.)
+More:</p>
+<ul>
+	<li><a href="https://addons.mozilla.org/en-US/firefox/addon/4650">FullerScreen Firefox Addon Page</a></li>
+	<li><a href="http://disruptive-innovations.com/zoo/fullerscreen/samples/projection-test.html">FullerScreen Documentation</a></li>
+</ul>
+<p>Opera Show is the slide show projection machinery built-into the free Opera browser.
+Slide Show (S9)-generated web pages using the <code>fullerscreen</code> theme pack
+are compatible with the Opera Show Format (OSF)
+and, thus, your slide shows will work with the Opera browser &#8220;out-of-the-box&#8221;
+without requiring any plugins (just press F11 to get started and page up/down to flip through the slides).</p>
+<ul>
+	<li><a href="http://www.opera.com/browser/tutorials/operashow/">Opera Show Documentation</a></li>
+</ul>
+<h2 id="about">About, License &#8211; Questions? Comments?</h2>
+<p>Gerald Bauer and contributors designed and developed the <code>slideshow</code> gem.
+See the <a href="http://github.com/geraldb/slideshow/blob/master/History.rdoc">change log</a> for contributions and credits.</p>
+<p>License. The slide show scripts and templates are dedicated to the <a href='http://creativecommons.org/licenses/publicdomain'>public domain</a>.
+Use it as you please with no restrictions whatsoever.</p>
+<p>Questions? Comments? Send them along to the
+<a href="http://groups.google.com/group/webslideshow">Free Web Slide Show Alternatives (S5, S6, S9, Slidy And Friends) Forum/Mailing List</a>.
+Thanks!</p>
+    </div>
+
+<!-- google analytics tracker; last update June/28/2010 -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-397343-10']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>

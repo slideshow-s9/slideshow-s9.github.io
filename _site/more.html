@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Settings, Tips, Tricks and More - Slide Show (S9) - A Free Web Alternative to PowerPoint and KeyNote in Ruby</title>
+   <link rel="stylesheet" href="slideshow.css" type="text/css">
+   <link rel="icon"       href="favicon.png"   type="image/png">
+</head>
+<body>
+
+  <div id="header">
+    <span class='big'>Slide Show (S9)</span>
+    <span class='small'>a free web alternative to PowerPoint and KeyNote in Ruby</span>
+  </div>
+
+  <div id="nav">
+   
+    <a href="index.html">Home</a> |
+    <a href="tutorial.html">10-Minute Quick Start Guide</a> |
+    <a href="more.html">Settings, Tips, Tricks and More</a> |
+    <a href="plugins.html">Plugins, Helpers</a> |    
+    <a href="code.html">Syntax Highlighting</a> |
+    <a href="templates.html">Template Pack Gallery</a> | 
+    <a href="themes.html">Gradient Themes</a> |
+    <a href="http://groups.google.com/group/webslideshow">What's New? &middot; Forum (Questions? Comments?)</a> |
+ 
+       <a href="http://github.com/geraldb/slideshow">Code</a> | 
+       <a href="http://rubyforge.org/projects/slideshow">RubyForge</a>
+    
+    <!--
+    <a href="http://github.com/geraldb/slideshow"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" ></a>
+     -->
+     
+  </div>
+    
+    <div id="content">
+      <h1>Settings, Tips, Tricks and More</h1>
+<div class="toc">
+<p class="toc-title">Contents:</p>
+<ul>
+	<li><a href="#notitle">How To Create Slides Without Titles?</a></li>
+	<li><a href="#themes">How To Use Gradient Themes?</a></li>
+	<li><a href="#templates">How To Use Your Own Slide Show Template Packages?</a></li>
+	<li><a href="#fetch">How To Fetch New Template Packages?</a></li>
+	<li><a href="#git">How To Fetch New Template Packs Using <code>git</code>?</a></li>
+	<li><a href="#list">How To List All Installed Template Packages?</a></li>
+	<li><a href="#pdf">How To Generate PDF Documents from Your Slide Shows?</a></li>
+	<li><a href="#slideshowopt">How To Set Default Command Line Options?</a></li>
+	<li><a href="#comments">How To Comment Out Content?</a></li>
+	<li><a href="#questions">Questions? Comments?</a></li>
+</ul>
+</div>
+<h2 id="notitle">How To Create Slides Without Titles?</h2>
+<p>You can use the <code>!SLIDE</code> directive to create slides without headings.
+Example:</p>
+<pre class='programlisting'>
+!SLIDE
+
+A slide with no title
+
+!SLIDE
+
+Another slide with no heading
+
+!SLIDE
+
+And another
+
+!SLIDE commandline
+
+    $ ruby print.rb
+
+!SLIDE image 
+
+!i/friendsbadge.png!
+</pre>
+<p>Note, you can pass along CSS style classes to your generated <code>div</code>
+or <code>section</code> that wraps your slide. Example:</p>
+<pre class='programlisting'>
+!SLIDE smaller commandline
+</pre>
+<p>Will become:</p>
+<pre class='programlisting'>
+&lt;div class='slide smaller commandline'&gt;
+  ...
+&lt;/div&gt;
+</pre>
+<h2 id="themes">How To Use Gradient Themes for the Built-In S6 Template Pack?</h2>
+<p>You can define your gradient theme in plain text in the slide show source in the header
+using a simple CSS-style name value pair. <a href="themes.html#use">More &raquo;</a></p>
+<h2 id="templates">How To Use Your Own Slide Show Template Packages?</h2>
+<p>Use the <code>-g/--generate</code> switch to generate a sample template
+package with manifest using the built-in S6 machinery.</p>
+<p>Example: Generate a template pack w/ manifest in your working folder</p>
+<pre class='programlisting'>
+$ slideshow -g
+</pre>
+<p>Or fetch a sample template pack from the internet or fork it using <code>git</code> or create it from scratch.
+See the <a href="templates.html">Template Gallery</a> for more info and examples to get started.</p>
+<p>To use your own template pack use the <code>-t/--template MANIFEST</code> option 
+passing along the manifest. Example:</p>
+<pre class='programlisting'>
+$ slideshow -t s6.txt  microformats
+$ slideshow -t s5blank.txt   microformats
+</pre>
+<p>Got templates? Send a link and announcement to the
+<a href="http://groups.google.com/group/webslideshow">Forum/Mailing List</a>
+and get your link added to the <a href="templates.html">Template Gallery</a>.</p>
+<h2 id="fetch">How To Fetch New Template Packages?</h2>
+<p>Using the <code>-f/--fetch URI</code> option lets you fetch (install) new templates. Example:</p>
+<pre class='programlisting'>
+$ slideshow -f http://github.com/geraldb/slideshow-s5-blank/raw/master/s5blank.txt 
+</pre>
+<p>Resulting in:</p>
+<pre class='programlisting'>
+Fetching template package 's5blank' 
+  : from 'http://github.com/geraldb/slideshow-s5-blank/raw/master 
+  : saving to '/home/gerald/.slideshow/templates/s5blank' 
+  Downloading manifest 's5blank.txt'... 
+  Downloading template 'header.html.erb'... 
+  ... 
+  Downloading template 'ui/default/slides.js'... 
+Done. 
+</pre>
+<p>Note, if you want to store the template pack somewhere else
+use the <code>-c/--config</code> option (defaults to <code>~/.slideshow</code>).</p>
+<p>To find more templates browse the <a href="templates.html">Template Gallery</a>.</p>
+<h3>Troubleshooting</h3>
+<p>Trouble downloading? Do you have a direct internet connection?
+If not, configure your proxy using the HTTP_PROXY environment variable. Sample:</p>
+<pre class='programlisting'>
+HTTP_PROXY=http://234.445.454:4341
+</pre>
+<p>Or with user credentials (that is, login and password):</p>
+<pre class='programlisting'>
+HTTP_PROXY=http://gerald:topsecret@234.445.454:4341
+</pre>
+<p>If all fails, you can always download the template pack on your own
+(using lets say <code>git</code> itself) and than move the souces into your
+templates folder (that is, <code>~/.slideshow/templates</code>).</p>
+<h2 id="git">How To Fetch New Template Packs Using <code>git</code>?</h2>
+<p>If you prefer you can fetch template packs using <code>git</code> itself in two steps</p>
+<p>Step 1: Change to your templates folder</p>
+<p>Issue the command:</p>
+<pre class='programlisting'>
+cd ~/.slideshow/templates
+</pre>
+<p>Step 2: Clone (Fetch) the template pack using <code>git</code></p>
+<p>Let&#8217;s clone the <code>slideshow-google-html5-slides</code> template pack.
+Issue the command:</p>
+<pre class='programlisting'>
+git clone http://github.com/geraldb/slideshow-google-html5-slides.git
+</pre>
+<p>That&#8217;s it. Use the <code>-l/--list</code> option to list all you installed template packs.</p>
+<h2 id="list">How To List All Installed Template Packages?</h2>
+<p>Using the <code>-l/--list</code> option lets you list all installed templates. Example:</p>
+<pre class='programlisting'>
+$ slideshow -l
+</pre>
+<p>Resulting in:</p>
+<pre class='programlisting'>
+Installed templates include: 
+  s5blank.txt       (/home/gerald/.slideshow/templates/s5blank/s5blank.txt) 
+  s5.txt            (/usr/lib/ruby/gems/1.8/gems/slideshow-0.8/templates/s5.txt) 
+  s6.txt            (/usr/lib/ruby/gems/1.8/gems/slideshow-0.8/templates/s6.txt) 
+  fullerscreen.txt  (/usr/lib/ruby/gems/1.8/gems/slideshow-0.8/templates/fullerscreen.txt) 
+</pre>
+<h2 id="pdf">How To Generate PDF Documents from Your Slide Shows?</h2>
+<p>When you generate your slide show as usual with the built-in S6 template pack
+you will get an extra <code>&lt;your_name_here&gt;.pdf.html</code> document generated that
+you can use to generate a PDF-version of your slide show
+using lets say the free, open source <a href="http://code.google.com/p/wkhtmltopdf/"><code>wkhtmltopdf</code></a> tool.</p>
+<p>Example:</p>
+<pre class='programlisting'>
+$ slideshow tutorial
+
+$ wkhtmltopdf --outline --orientation Landscape tutorial.pdf.html tutorial.pdf 
+</pre>
+<h2 id="slideshowopt">How To Set Default Command Line Options?</h2>
+<p>The <code>SLIDESHOWOPT</code> environment variable lets 
+you set default command line options.</p>
+<p>Example: Make <code>slides</code> your default output folder</p>
+<pre class='programlisting'>
+$ SLIDESHOWOPT=-o slides
+</pre>
+<p>Example: Make S5-compatible slide show</p>
+<pre class='programlisting'>
+$ SLIDESHOWOPT=-o slides -t s5blank.txt
+</pre>
+<p>Example: Make your own template package the default</p>
+<pre class='programlisting'>
+$ SLIDESHOWOPT=-t &lt;your_template_manifest_here&gt;   
+</pre>
+<p>And than use the gem executable as usual (will use/add your command line 
+options stored in <code>SLIDESHOWOPT</code>):</p>
+<pre class='programlisting'>
+$ slideshow microformats
+</pre>
+<h2 id="comments">How To Comment Out Content?</h2>
+<p>Use <code>%</code> for comments anywhere (including headers) and <code>%begin</code>/<code>%end</code>
+for multi-line comments and <code>%end</code> to skip everything until the end.</p>
+<pre class='programlisting'>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Start off with some headers
+
+title: 10 Things Every Java Programmer Should Know About Ruby
+author: Jim Weirich
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Let's go. The presentation starts here
+
+# 10 Things Every Java Programmer Should Know About Ruby
+
+Jim Weirich
+</pre>
+<p>See <a href="http://github.com/geraldb/slideshow/blob/master/samples/3rd/10things.text">10 Things Every Java Programmer Should Know About Ruby</a>
+sample.</p>
+<p>Note, as an alternative syntax to skip (comment out)
+content in your source enclose it with  <code>__SKIP__</code>/<code>__END__</code>. Example:</p>
+<pre class='programlisting'>
+__SKIP__ 
+  not yet ready or private notes/comments 
+__END__ 
+</pre>
+<p>As a shortcut if you just use <code>__END__</code> (without <code>__SKIP__</code>) (Ruby-like) 
+it will skip everything from <code>__END__</code> until the end of the file.</p>
+<h2 id="questions">Questions? Comments?</h2>
+<p>Questions? Comments? Send them along to the
+<a href="http://groups.google.com/group/webslideshow">Free Web Slide Show Alternatives (S5, S6, S9, Slidy And Friends) Forum/Mailing List</a>.
+Thanks!</p>
+    </div>
+
+<!-- google analytics tracker; last update June/28/2010 -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-397343-10']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
