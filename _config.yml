@@ -1,6 +1,9 @@
 
 
-markdown: redcarpet
+## markdown: redcarpet
+
+markdown: kramdown
+
 
 exclude: ['attic', 'README.md']
 

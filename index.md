@@ -39,9 +39,9 @@ for "loss-free" gradient vector graphics themes.
 
 ### Step 0: Install the @slideshow@ gem
 
-```
+~~~
 $ gem install slideshow
-```
+~~~
 
 ### Step 1: Author your slides in plain text using a wiki-style markup language
 
@@ -49,7 +49,7 @@ Slide Show lets you author your slides using a wiki-style markup language
 that's easy-to-write and easy-to-read. Let's create some slides about best practices for web services
 using REST ("@rest.textile@":http://github.com/geraldb/slideshow/raw/master/samples/rest.textile):
 
-```
+~~~
 h1. Web Services REST-Style: Universal Identifiers, Formats & Protocols
 
 Agenda
@@ -75,11 +75,11 @@ h3. Broad Definition
 h3. Narrow Definition
 
 * Alternative to BigCo Web Services (SOAP, WS-*) and RPC-Style Web Services (XML-RPC)
-```
+~~~
 
 Or
 
-```
+~~~
 Web Services REST-Style: Universal Identifiers, Formats & Protocols
 ===================================================================
 
@@ -107,7 +107,7 @@ open standards* - no need to reinvent the wheel and sign-up for single-vendor of
 ### Narrow Definition
 
 - Alternative to BigCo Web Services (SOAP, WS-*) and RPC-Style Web Services (XML-RPC)
-```
+~~~
 
 Use @h1@ headings to start a new slide - use @h1.@ in Textile
 or use "underlining" with equal signs (@===@) in Markdown. That's it.
@@ -121,12 +121,12 @@ without the @.textile@ or @.markdown@ ending and will generate a web page
 (e.g. "@rest.html@":http://slideshow.rubyforge.org/rest.html)
 that is an all-in-one-page handout and a live slide show all at once.
 
-```
+~~~
 $ slideshow rest
 
 => Preparing slide show 'rest.html'...
 => Done.
-```
+~~~
 
 ### Step 3: Open up your slide show in your browser
 
