@@ -1,0 +1,6 @@
+
+
+markdown: redcarpet
+
+exclude: ['attic', 'README.md']
+
