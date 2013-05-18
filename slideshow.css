@@ -69,6 +69,12 @@ a:hover {
 }
 
 
+/* fix: use javascript?? jquery to add .programlisting class
+  to pre tags followed by code e.g. <pre><code> => <pre class='programlisting'><code>
+
+   for now assume all pres are programlistings
+*/ 
+pre,
 .programlisting
 {
   padding: 4px 4px 4px 4px;
@@ -96,7 +102,10 @@ a:hover {
    font-size: 80%;
 }
 
-.toc-title
+.toc p  /* first paragraph in toc is toc-title;
+           use prediciate too to make sure we only get the first one??
+           e.g. p:first-child ?? 
+          */
 {
    text-align: center;
    font-weight: bold;
