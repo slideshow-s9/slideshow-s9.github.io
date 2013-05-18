@@ -23,11 +23,11 @@ h2(#lib). Using Embedded Ruby (ERB) Helpers in Your Slides
 Slide Show (S9) includes support for plugins and helpers
 and lets you use Embedded Ruby (ERB) in your slide source. Example:
 
-{% code %}
+```
 h1. Today's Date
 
 <%= Date.today %> 
-{% endcode %}
+```
 
 If you want to use your own helpers put your code in the @./lib@ 
 folder (or any subfolders) and your code gets loaded on startup. 
@@ -35,11 +35,13 @@ folder (or any subfolders) and your code gets loaded on startup.
 Note, as an alternative syntax for Embedded Ruby (ERB) helpers you can also
 use a Django-style syntax using @{% raw %}{{ }}{% endraw %}@. Example:
 
-{% code %}{% raw %}
+```
+{% raw %}
 h1. Today's Date
 
 {{ Date.today }}
-{% endraw %}{% endcode %}
+{% endraw %}
+```
 
 h2(#builtin). Built-In Helpers
 
@@ -50,16 +52,18 @@ h2(#builtin). Built-In Helpers
   <td width="50%" style="vertical-align: top;">
 Django-style helper syntax:
 
-{% code %}{% raw %}
+```
+{% raw %}
 {{ include help.txt }}
-{% endraw %}{% endcode %}
+{% endraw %}
+```
 </td>
 <td style="vertical-align: top;">
 Classic helper syntax:
 
-{% code %}
+```
 <%= include 'help.txt' %>
-{% endcode %}
+```
 </td></tr></table>
 
 
@@ -70,16 +74,18 @@ Classic helper syntax:
   <td width="50%" style="vertical-align: top;">
 Django-style:
 
-{% code %}{% raw %}
+```
+{% raw %}
 {{ google_analytics code=UA-YOUR-CODE-HERE }}
-{% endraw %}{% endcode %}
+{% endraw %}
+```
 </td>
 <td style="vertical-align: top;">
 Classic:
 
-{% code %}
+```
 <%= google_analytics :code => 'UA-YOUR-CODE-HERE' %>
-{% endcode %}
+```
 </td></tr></table>
 
 
@@ -90,16 +96,18 @@ Classic:
   <td width="50%" style="vertical-align: top;">
 Django-style:
 
-{% code %}{% raw %}
+```
+{% raw %}
 {{ help }}
-{% endraw %}{% endcode %}
+{% endraw %}
+```
 </td>
 <td style="vertical-align: top;">
 Classic:
 
-{% code %}
+```
 <%= help %>
-{% endcode %}
+```
 </td></tr></table>
 
 * @left@/@right@ - Lets you use two-column layouts in your slides. Example:
@@ -109,7 +117,8 @@ Classic:
   <td width="50%" style="vertical-align: top;">
 Django-style:
 
-{% code %}{% raw %}
+```
+{% raw %}
 {% left %}
 
 ### Java is
@@ -131,12 +140,13 @@ typed.
 
 typed.
 {% end %}
-{% endraw %}{% endcode %}
+{% endraw %}
+```
 </td>
 <td style="vertical-align: top;">
 Classic:
 
-{% code %}
+```
 <% left do %>
 
 ### Java is
@@ -158,7 +168,7 @@ typed.
 
 typed.
 <% end %>
-{% endcode %}
+```
 </td></tr></table>
 
 * @step@  - Lets you wrap a block into a div for incremental display using steps. Example:
@@ -168,24 +178,26 @@ typed.
   <td width="50%" style="vertical-align: top;">
 Django-style:
 
-{% code %}{% raw %}
+```
+{% raw %}
 {% step %}
 * Catching all inappropriate operations on a type, either at
   * compile time, or
   * run time
 {% end %}
-{% endraw %}{% endcode %}
+{% endraw %}
+```
 </td>
 <td style="vertical-align: top;">
 Classic:
 
-{% code %}
+```
 <% step do %>
 * Catching all inappropriate operations on a type, either at
   * compile time, or
   * run time
 <% end %>
-{% endcode %}
+```
 </td></tr></table>
 
 
@@ -193,17 +205,17 @@ Classic:
 
 In your slide source use: 
   
-{% code %}
+```
 <% content_for :head do %> 
   your content here e.g. more meta tags; javascript includes etc. 
 <% end %> 
-{% endcode %}
+```
 
 In your template use: 
 
-{% code %}
+```
 <%= content_for :head %>
-{% endcode %}
+```
 
 and it will include the marked content from your source.
 Note, you can use @:foo@, @:bar@ or whatever key you 
@@ -224,7 +236,7 @@ Let's create a new Ruby script (file) e.g. @markdown_helper.rb@
 and let's pack our new helper into a module named @MarkdownHelper@
 Example:
 
-{% code %}
+```
 module MarkdownHelper
   
   # helper/shortcut for adding embedded image to slide in markdown syntax:
@@ -240,17 +252,17 @@ module MarkdownHelper
   end
   
 end
-{% endcode %}
+```
 
 Almost done. Two more steps. Include your code into
 the class @Slideshow::Gen@. Add this snippet to the end of your
 Ruby script:
 
-{% code %}
+```
 class Slideshow::Gen
   include MarkdownHelper
 end
-{% endcode %}
+```
 
 Lastly, make sure your Ruby script (that is, @markdown_helper.rb@)
 resides in the @./lib@ 
@@ -258,15 +270,17 @@ folder (or any subfolders) of your working folder
 and your code will get loaded on startup and is ready for use in your
 slides. Example:
  
-{% code %}
+```
 <%= image 'friendsbadge.png' %>
-{% endcode %}
+```
 
 Or Django-style:
 
-{% code %}{% raw %}
+```
+{% raw %}
 {{ image friendsbadge.png }}
-{% endraw %}{% endcode %}
+{% endraw %}
+```
 
 That's it. For more samples, check the
 "source of the built-in helpers":http://github.com/geraldb/slideshow/tree/master/lib/slideshow/helpers.
