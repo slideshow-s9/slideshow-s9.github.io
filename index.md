@@ -12,7 +12,6 @@ Contents:
 * [Getting Started in 1-2-3 Easy Steps](#steps)
 * [What's Textile? What's Markdown?](#textile)
 * [What's S5? What's S6?](#s6)
-* [What's FullerScreen?](#fullerscreen)
 * [About, License - Questions? Comments?](#about)
 </div>
 
@@ -181,6 +180,7 @@ to extend code. Add plugins, effects and more. Contributions welcome!
 Keyboard controls:
 
 | Action               | Key |
+| -------------------- | --- |
 | Go to next slide     | Space Bar, Right Arrow Down Arrow, Page Down  |
 | Go to previous slide | Left Arrow, Up Arrow, Page Up |
 | Go to first slide    | Home |
@@ -188,24 +188,6 @@ Keyboard controls:
 | Toggle between slideshow and outline view (`Ø`) | T |
 | Show/hide slide controls (`Ø` `«` `»`)  | C, Move mouse to bottom right corner |
 
-
-## What's FullerScreen? What's Opera Show?   {#fullerscreen}
-
-FullerScreen is a free Firefox browser addon that turns your web page in a full screen slide show without
-requiring any JavaScript. (Use the [`fullerscreen`](http://github.com/geraldb/slideshow-fullerscreen) theme pack
-to create FullerScreen-compatible slide shows.)
-More:
-
-* [FullerScreen Firefox Addon Page](https://addons.mozilla.org/en-US/firefox/addon/4650)
-* [FullerScreen Documentation](http://disruptive-innovations.com/zoo/fullerscreen/samples/projection-test.html)
-
-Opera Show is the slide show projection machinery built-into the free Opera browser.
-Slide Show (S9)-generated web pages using the `fullerscreen` theme pack
-are compatible with the Opera Show Format (OSF)
-and, thus, your slide shows will work with the Opera browser "out-of-the-box"
-without requiring any plugins (just press F11 to get started and page up/down to flip through the slides).
-
-* [Opera Show Documentation](http://www.opera.com/browser/tutorials/operashow/)
 
 ## About, License   {#about}
 

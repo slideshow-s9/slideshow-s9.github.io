@@ -111,6 +111,15 @@ pre,
    font-weight: bold;
 }
 
+.editme
+{
+   display: inline-block;
+   padding-left: 10px;
+   padding-right: 10px;
+   border: #bbb solid 1pt;
+   background-color: #eeeeee;
+   font-size: 80%;
+}
 
 /* styles for ultraviolet code syntax highlighting theme 'eiffel' */
 

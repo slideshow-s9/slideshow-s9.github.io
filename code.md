@@ -3,25 +3,23 @@ layout: default
 title: Code/Syntax Highlighting Helpers
 ---
 
-h1. {{ page.title }}
+# {{ page.title }}
 
-<div class="toc">
+<div markdown="1" class="toc">
+Contents:
 
-p(toc-title). Contents:
-   
-* "Hello, Syntax Highlighting Helper!":#intro
-* "Client-Side vs. Server-Side Syntax Highlighting":#engines
-* "Using the @code@ Helpers for Syntax Highlighting":#use
-* "Questions? Comments?":#questions
-
+* [Hello, Syntax Highlighting Helper!](#intro)
+* [Client-Side vs. Server-Side Syntax Highlighting](#engines)
+* [Using the `code` Helpers for Syntax Highlighting](#use)
+* [Questions? Comments?](#questions)
 </div>
 
-h2(#intro). Hello, Syntax Highlighting Helper!
+## Hello, Syntax Highlighting Helper!   {#intro}
 
 Slide Show (S9) lets you include and syntax highlight code
-with the @code@ helper. Example:
+with the `code` helper. Example:
 
-```
+~~~
 <% code do %>
 # The Greeter class
 class Greeter
@@ -40,11 +38,11 @@ g = Greeter.new("world")
 # Output "Hello World!"
 g.salute
 <% end %>
-```
+~~~
 
 becomes
 
-<notextile>
+<div>
 <pre class="programlisting eiffel"><span class="line-numbers">   1 </span> <span class="Comment"><span class="Comment">#</span> The Greeter class</span>
 <span class="line-numbers">   2 </span> <span class="Keyword">class</span> <span class="TypeName">Greeter</span>
 <span class="line-numbers">   3 </span>   <span class="Keyword">def</span> <span class="FunctionName">initialize</span>(<span class="FunctionParameter">name</span>)
@@ -62,216 +60,213 @@ becomes
 <span class="line-numbers">  15 </span> <span class="Comment"><span class="Comment">#</span> Output &quot;Hello World!&quot;</span>
 <span class="line-numbers">  16 </span> g.<span class="FunctionName">salute</span>
 </pre>
-</notextile>
+</div>
 
-h2(#engines).  Client-Side vs. Server-Side Syntax Highlighting - Your Choice
+## Client-Side vs. Server-Side Syntax Highlighting - Your Choice   {#engines}
 
 Slide Show (S9) ships with three built-in syntax highlighting helper engines
 letting you choose between client-side syntax highlighting in JavaScript
 (the out-of-the-gem factory setting) or server-side ahead-of-time
 syntax highlighting in classic Ruby.
 
-h3. What's SyntaxHighlighter? 
+### What's SyntaxHighlighter? 
 
 SyntaxHighligher is a free, open-source syntax highlighter in JavaScript:
 
-* "SyntaxHighlighter Project Site":http://alexgorbatchev.com/SyntaxHighlighter/
-* "SyntaxHighlighter Languages":http://alexgorbatchev.com/SyntaxHighlighter/manual/brushes/
-* "SyntaxHighlighter Themes":http://alexgorbatchev.com/SyntaxHighlighter/manual/themes/
+* [SyntaxHighlighter Project Site](http://alexgorbatchev.com/SyntaxHighlighter/)
+* [SyntaxHighlighter Languages](http://alexgorbatchev.com/SyntaxHighlighter/manual/brushes/)
+* [SyntaxHighlighter Themes](http://alexgorbatchev.com/SyntaxHighlighter/manual/themes/)
 
 Note, if you use the SyntaxHighligher engine you will need to
-use the "@s6syntax@":http://github.com/geraldb/slideshow-s6-syntax-highlighter
+use the [`s6syntax`](http://github.com/geraldb/slideshow-s6-syntax-highlighter)
 template pack that includes the SyntaxHighlighter machinery or as an alternative
 bundle up your own template pack.
 
-h3. What's Ultraviolet? 
+### What's Ultraviolet? 
 
 Ultraviolet is a free, open-source syntax highlighting engine
 in Ruby that uses Textmate syntax files offering out-of-the-gem
 syntax highlighting for more than fifty languages in twenty themes:
 
-* "Ultraviolet Project Site":http://ultraviolet.rubyforge.org
-* "Ultraviolet Languages":http://ultraviolet.rubyforge.org/syntax_gallery.xhtml
-* "Ultraviolet Themes":http://ultraviolet.rubyforge.org/themes.xhtml
+* [Ultraviolet Project Site](http://ultraviolet.rubyforge.org)
+* [Ultraviolet Languages](http://ultraviolet.rubyforge.org/syntax_gallery.xhtml)
+* [Ultraviolet Themes](http://ultraviolet.rubyforge.org/themes.xhtml)
 
 To use Ultraviolet for syntax highlighting install the Ruby gem e.g.
 
-```
+~~~
 $ gem install ultraviolet
-```
+~~~
 
-and switch the @code-engine@ setting to @uv@ or @ultraviolet@.
+and switch the `code-engine` setting to `uv` or `ultraviolet`.
 
-h3. What's CodeRay?
+### What's CodeRay?
 
 CodeRay is another free, open source syntax highlighting engine
 in Ruby:
 
-* "CodeRay Project Site":http://coderay.rubychan.de
+* [CodeRay Project Site](http://coderay.rubychan.de)
 
 To use CodeRay for syntax highlighting install the Ruby gem e.g.
 
-```
+~~~
 $ gem install coderay
-```
+~~~
 
-and switch the @code-engine@ setting to @coderay@.
+and switch the `code-engine` setting to `coderay`.
 
 
-h2(#use). Using the @code@ Helpers for Syntax Highlighting
+## Using the `code` Helpers for Syntax Highlighting   {#use}
 
-The @code@ helper lets you include and syntax highlight code inline e.g.
+The `code` helper lets you include and syntax highlight code inline e.g.
 
 <table width="100%">
 <tr>
-  <td width="50%" style="vertical-align: top;">
+  <td markdown="1" width="50%" style="vertical-align: top;">
 Classic-style:
 
-```
+~~~
 <% code do %> 
   puts 'Hello World!   
 <% end %> 
-```
+~~~
 
 </td>
-<td style="vertical-align: top;">
+<td markdown="1" style="vertical-align: top;">
 Django-Style:
 
-```
+~~~
 {% raw %}
 {% code %} 
   puts 'Hello World!   
 {% end %}
 {% endraw %}
-```
+~~~
 </td></tr></table>
 
-or include code from a file - lets say @hello.rb@: 
+or include code from a file - lets say `hello.rb`:
 
 <table width="100%">
 <tr>
-  <td width="50%" style="vertical-align: top;">
-```
+  <td markdown="1" width="50%" style="vertical-align: top;">
+~~~
 <%= code 'hello.rb' %> 
-```
+~~~
 </td>
-<td style="vertical-align: top;">
-```
+<td markdown="1" style="vertical-align: top;">
+~~~
 {% raw %}
 {{ code hello.rb }} 
 {% endraw %}
-```
+~~~
 </td></tr></table>
 
-To select the language (default is @ruby@) use the @:lang@ option e.g.
+To select the language (default is `ruby`) use the `:lang` option e.g.
 
 <table width="100%">
 <tr>
-  <td width="50%" style="vertical-align: top;">
-```
+  <td markdown="1" width="50%" style="vertical-align: top;">
+~~~
 <%= code 'effects.css', lang: => 'css' %> 
-```
+~~~
 </td>
-<td style="vertical-align: top;">
-```
+<td markdown="1" style="vertical-align: top;">
+~~~
 {% raw %}
 {{ code effects.css lang=css }} 
 {% endraw %}
-```
+~~~
 </td></tr></table>
 
 Note, you can also include parts of files
-using "Codex-style markers":http://pragdave.blogs.pragprog.com/pragdave/2008/05/our-take-on-pre.html  
-in your source (e.g. @#START:your_marker_here@ and 
-@#END:your_marker_here@) and you can also pass along an extra CSS class 
-(@large@, @small@, @tiny@, etc.) e.g. this directive in Codex
+using [Codex-style markers](http://pragdave.blogs.pragprog.com/pragdave/2008/05/our-take-on-pre.html)
+in your source (e.g. `#START:your_marker_here` and 
+`#END:your_marker_here`) and you can also pass along an extra CSS class 
+(`large`, `small`, `tiny`, etc.) e.g. this directive in Codex
 
-```
+~~~
 :code code/meta/my_ostruct.rb[impl class=code-small] 
-```
+~~~
 
 becomes in S9: 
 
 <table width="100%">
 <tr>
-  <td width="50%" style="vertical-align: top;">
-```
+  <td markdown="1" width="50%" style="vertical-align: top;">
+~~~
 <%= code 'code/meta/my_ostruct.rb#impl', class:=>'small' %> 
-```
+~~~
 </td>
-<td style="vertical-align: top;">
-```
+<td markdown="1" style="vertical-align: top;">
+~~~
 {% raw %}
-{{ code code/meta/my_ostruct.rb#impl class=small }}  
+{{ code code/meta/my_ostruct.rb#impl class=small }}
 {% endraw %}
-```
+~~~
 </td></tr></table>
 
 
-To select the underlying engine for syntax highlighting use the @:engine@ option e.g.
+To select the underlying engine for syntax highlighting use the `:engine` option e.g.
 
 <table width="100%">
 <tr>
-  <td width="50%" style="vertical-align: top;">
-```
+  <td markdown="1" width="50%" style="vertical-align: top;">
+~~~
 <%= code 'highlight.rb', :engine => 'sh' %> 
-```
+~~~
 </td>
-<td style="vertical-align: top;">
-```
+<td markdown="1" style="vertical-align: top;">
+~~~
 {% raw %}
 {{ code highlight.rb  engine=sh }}
 {% endraw %}
-```
+~~~
 </td></tr></table>
 
 or use a header to set it once e.g:
 
-```
+~~~
 code-engine: sh   # or use your very own code engine here 
-```
+~~~
 
 You can also use the built-in code highlighting engines 
 "stand-alone" without the code "wrapper" helper. 
 
 To use SyntaxHighlighter use:
 
-```
-<% sh do %> 
-  puts 'Hello World!   
-<% end %> 
-```
+~~~
+<% sh do %>
+  puts 'Hello World!
+<% end %>
+~~~
 
 To use Ultraviolet use: 
 
-```
-<% uv do %> 
-  puts '¡Hola Mundo!   
-<% end %> 
-```
+~~~
+<% uv do %>
+  puts '¡Hola Mundo!
+<% end %>
+~~~
 
-To use CodeRay use: 
+To use CodeRay use:
 
-```
-<% coderay do %> 
-  puts 'Hallo Welt!   
-<% end %> 
-```
+~~~
+<% coderay do %>
+  puts 'Hallo Welt!
+<% end %>
+~~~
 
-Note, that the @sh@, @uv@ and @coderay@ helpers
+Note, that the `sh`, `uv` and `coderay` helpers
 only support inline code (if you want to include code use a nested include e.g.: 
 
-```
-<% sh :lang => 'css', :line_numbers => 'off' do %> 
+~~~
+<% sh :lang => 'css', :line_numbers => 'off' do %>
   <%= include 'gradients.css' %> 
 <% end %> 
-```
+~~~
 
 For more options or on how to write your own syntax highlighting 
-helpers check the "source of the syntax higlighting helpers":http://github.com/geraldb/slideshow/tree/master/lib/slideshow/helpers/syntax.
+helpers check the [source of the syntax higlighting helpers](http://github.com/geraldb/slideshow/tree/master/lib/slideshow/helpers/syntax).
 
-h2(#questions). Questions? Comments?
 
-Questions? Comments? Send them along to the
-"Free Web Slide Show Alternatives (S5, S6, S9, Slidy And Friends) Forum/Mailing List":http://groups.google.com/group/webslideshow.
-Thanks!
+{% include questions.md %}

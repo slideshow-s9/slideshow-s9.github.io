@@ -23,10 +23,8 @@
     <a href="templates.html">Template Pack Gallery</a> | 
     <a href="themes.html">Gradient Themes</a> |
     <a href="http://groups.google.com/group/webslideshow">What's New? &middot; Forum (Questions? Comments?)</a> |
- 
-       <a href="http://github.com/geraldb/slideshow">Code</a> | 
-       <a href="http://rubyforge.org/projects/slideshow">RubyForge</a>
-    
+
+       <a href="https://github.com/slideshow-s9">Code, Repo</a>
     <!--
     <a href="http://github.com/geraldb/slideshow"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" ></a>
      -->
@@ -35,22 +33,11 @@
     
     <div id="content">
       {{ content }}
+      
+      {% include editme.html %}
     </div>
 
-<!-- google analytics tracker; last update June/28/2010 -->
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-397343-10']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
+    {% include google_analytics.html %}
 
 </body>
 </html>
