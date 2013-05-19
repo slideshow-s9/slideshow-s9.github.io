@@ -130,7 +130,7 @@ in your browser (Firefox, Chrome, Safari, Opera and others) and hit F11 to switc
 into full screen projection and hit the space bar or the right arrow, down arrow
 or page down key to flip through your slides.
 
-!slideshow.png!:http://slideshow.rubyforge.org/rest.html
+<a href="rest.html"><img src="i/slideshow.png"></a>
 
 That's it. Voila.
 
@@ -180,13 +180,13 @@ to extend code. Add plugins, effects and more. Contributions welcome!
 
 Keyboard controls:
 
-|_. Action             |_. Key |
+| Action               | Key |
 | Go to next slide     | Space Bar, Right Arrow Down Arrow, Page Down  |
 | Go to previous slide | Left Arrow, Up Arrow, Page Up |
 | Go to first slide    | Home |
 | Go to last slide     | End |
-| Toggle between slideshow and outline view (==&#216;==) | T |
-| Show/hide slide controls (==&#216; &laquo; &raquo;==)  | C, Move mouse to bottom right corner |
+| Toggle between slideshow and outline view (`Ø`) | T |
+| Show/hide slide controls (`Ø` `«` `»`)  | C, Move mouse to bottom right corner |
 
 
 ## What's FullerScreen? What's Opera Show?   {#fullerscreen}
@@ -207,15 +207,13 @@ without requiring any plugins (just press F11 to get started and page up/down to
 
 * [Opera Show Documentation](http://www.opera.com/browser/tutorials/operashow/)
 
-## About, License - Questions? Comments?   {#about}
+## About, License   {#about}
 
 Gerald Bauer and contributors designed and developed the `slideshow` gem.
-See the [change log](http://github.com/geraldb/slideshow/blob/master/History.rdoc)
+See the [change log](http://github.com/geraldb/slideshow/blob/master/History.markdown)
 for contributions and credits.
 
 License. The slide show scripts and templates are dedicated to the public domain.
 Use it as you please with no restrictions whatsoever.
 
-Questions? Comments? Send them along to the
-[Free Web Slide Show Alternatives (S5, S6, S9, Slidy And Friends) Forum/Mailing List](http://groups.google.com/group/webslideshow).
-Thanks!
+{% include questions.md %}

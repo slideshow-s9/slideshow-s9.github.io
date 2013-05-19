@@ -268,8 +268,5 @@ __END__
 As a shortcut if you just use `__END__` (without `__SKIP__`) (Ruby-like)
 it will skip everything from `__END__` until the end of the file.
 
-## Questions? Comments?   {#questions}
 
-Questions? Comments? Send them along to the
-[Free Web Slide Show Alternatives (S5, S6, S9, Slidy And Friends) Forum/Mailing List](http://groups.google.com/group/webslideshow).
-Thanks!
+{% include questions.md %}
