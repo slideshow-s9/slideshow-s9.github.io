@@ -6,7 +6,7 @@ Title: Web Services REST-Style: Universal Identifiers, Formats & Protocols
 %%%%%%%%%%%%%%%%%%%%%
 %% Some Extra CSS 
 
-%css 
+%css
   
 table { width: 100%; }
 th    { text-align: left; }
@@ -25,9 +25,10 @@ table#restspeak2 th:nth-child(2) { width: 80%; }
 %%%%%%%%%%%%%%
 %% Let's go.
 
-{{ gradient blue aqua blue aqua  }}
 
 h1. Web Services REST-Style<br>Universal Identifiers, Formats & Protocols
+
+{{ gradient blue aqua blue aqua  }}
 
 Agenda
 

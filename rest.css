@@ -1,0 +1,169 @@
+@import url(s6/projection.css); /* required to make the slide show run at all */
+     
+body { font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; }
+
+a:link, a:visited { color: black; }
+
+.slide h1 { font-size: 30pt;  }
+
+.slide h1 {  text-align: center; }
+
+.slide h1.fullscreen { position: absolute;
+                       top: 40%;
+                       width: 100%; }
+
+/* lets you create slides with no heading (because heading is hidden but gets included in toc) */
+.slide h1.hidden     { display: none; }
+
+
+.slide h2 { font-size: 28pt;  }
+
+h3 { font-size: 25pt;  }
+
+/* todo: add special formating for .cover slide
+   lets you use h1(cover). for title/cover slide (a la S5 slide0) but more generic (not bound to 1st slide)
+*/
+
+.cover h1 { /* tbd */ }
+.cover h2 { /* tbd */ }
+
+/* todo: add special formating for h1, h2 in footer */
+
+#footer h1 { /* tbd */ }
+#footer h2 { /* tbd */ }
+
+
+p, li, dt, dd, td, th { font-size: 18pt; }
+
+ul { list-style-type: square; }    
+
+/**********************************/
+/* general text-alignment classes */
+
+.left   { text-align: left; }
+.center { text-align: center; }
+.right  { text-align: right;  }
+
+/**********************************/
+/* general font-size classes      */
+
+.small { font-size: 97%; }
+
+.x-small,
+.smaller { font-size: 88%; }
+
+.xx-small,
+.smallest,
+.tiny      { font-size: 82%; }
+
+
+
+pre { font-size: 16pt;  }
+
+.code { 
+        background-color: azure;
+        padding: 5px;
+      }
+     
+.footnote a:first-of-type  { text-decoration: none; }
+
+
+p.small  { font-size: 97%; }
+
+p.x-small,
+p.smaller,  
+p.footnote { font-size: 88%; }
+
+p.xx-small,
+p.smallest,
+p.tiny     { font-size: 82%; }
+
+
+.help p,
+.help td  { font-size: 88%; }
+
+ 
+.step { color: silver; }
+/* or hide next steps e.g.  .step { visibility: hidden; } */
+.stepcurrent { color: black; }
+
+
+  
+table { width: 100%; }
+th    { text-align: left; }
+
+table#restspeak th:nth-child(1) { width: 20%; }
+table#restspeak th:nth-child(2) { width: 5%; }
+table#restspeak th:nth-child(3) { width: 20%; }
+table#restspeak th:nth-child(4) { width: 5%; }
+table#restspeak th:nth-child(5) { width: 50%; }
+
+table#restspeak2 th:nth-child(1) { width: 20%; }
+table#restspeak2 th:nth-child(2) { width: 80%; }
+
+    .s9_gradient_linear_blue_aqua_blue_aqua { background-image: -webkit-linear-gradient(top, blue, aqua, blue, aqua );
+                background-image: -moz-linear-gradient(top, blue, aqua, blue, aqua );
+                background-image: -ms-linear-gradient(top, blue, aqua, blue, aqua );
+                background-image: -o-linear-gradient(top, blue, aqua, blue, aqua );
+                background-image: linear-gradient(top, blue, aqua, blue, aqua );
+              }
+    .s9_gradient_linear_silver_white_silver_white { background-image: -webkit-linear-gradient(top, silver, white, silver, white );
+                background-image: -moz-linear-gradient(top, silver, white, silver, white );
+                background-image: -ms-linear-gradient(top, silver, white, silver, white );
+                background-image: -o-linear-gradient(top, silver, white, silver, white );
+                background-image: linear-gradient(top, silver, white, silver, white );
+              }
+    .s9_gradient_linear_yellow_orange_yellow_orange { background-image: -webkit-linear-gradient(top, yellow, orange, yellow, orange );
+                background-image: -moz-linear-gradient(top, yellow, orange, yellow, orange );
+                background-image: -ms-linear-gradient(top, yellow, orange, yellow, orange );
+                background-image: -o-linear-gradient(top, yellow, orange, yellow, orange );
+                background-image: linear-gradient(top, yellow, orange, yellow, orange );
+              }
+    .s9_gradient_linear_yellow_orange_yellow_orange { background-image: -webkit-linear-gradient(top, yellow, orange, yellow, orange );
+                background-image: -moz-linear-gradient(top, yellow, orange, yellow, orange );
+                background-image: -ms-linear-gradient(top, yellow, orange, yellow, orange );
+                background-image: -o-linear-gradient(top, yellow, orange, yellow, orange );
+                background-image: linear-gradient(top, yellow, orange, yellow, orange );
+              }
+    .s9_gradient_linear_silver_white_silver_white { background-image: -webkit-linear-gradient(top, silver, white, silver, white );
+                background-image: -moz-linear-gradient(top, silver, white, silver, white );
+                background-image: -ms-linear-gradient(top, silver, white, silver, white );
+                background-image: -o-linear-gradient(top, silver, white, silver, white );
+                background-image: linear-gradient(top, silver, white, silver, white );
+              }
+    .s9_gradient_linear_green_lime_green_lime { background-image: -webkit-linear-gradient(top, green, lime, green, lime );
+                background-image: -moz-linear-gradient(top, green, lime, green, lime );
+                background-image: -ms-linear-gradient(top, green, lime, green, lime );
+                background-image: -o-linear-gradient(top, green, lime, green, lime );
+                background-image: linear-gradient(top, green, lime, green, lime );
+              }
+    .s9_gradient_linear_green_lime_green_lime { background-image: -webkit-linear-gradient(top, green, lime, green, lime );
+                background-image: -moz-linear-gradient(top, green, lime, green, lime );
+                background-image: -ms-linear-gradient(top, green, lime, green, lime );
+                background-image: -o-linear-gradient(top, green, lime, green, lime );
+                background-image: linear-gradient(top, green, lime, green, lime );
+              }
+    .s9_gradient_linear_silver_white_silver_white { background-image: -webkit-linear-gradient(top, silver, white, silver, white );
+                background-image: -moz-linear-gradient(top, silver, white, silver, white );
+                background-image: -ms-linear-gradient(top, silver, white, silver, white );
+                background-image: -o-linear-gradient(top, silver, white, silver, white );
+                background-image: linear-gradient(top, silver, white, silver, white );
+              }
+    .s9_gradient_linear_red_orange_red_orange { background-image: -webkit-linear-gradient(top, red, orange, red, orange );
+                background-image: -moz-linear-gradient(top, red, orange, red, orange );
+                background-image: -ms-linear-gradient(top, red, orange, red, orange );
+                background-image: -o-linear-gradient(top, red, orange, red, orange );
+                background-image: linear-gradient(top, red, orange, red, orange );
+              }
+    .s9_gradient_linear_red_orange_red_orange { background-image: -webkit-linear-gradient(top, red, orange, red, orange );
+                background-image: -moz-linear-gradient(top, red, orange, red, orange );
+                background-image: -ms-linear-gradient(top, red, orange, red, orange );
+                background-image: -o-linear-gradient(top, red, orange, red, orange );
+                background-image: linear-gradient(top, red, orange, red, orange );
+              }
+    .s9_gradient_linear_silver_white_silver_white { background-image: -webkit-linear-gradient(top, silver, white, silver, white );
+                background-image: -moz-linear-gradient(top, silver, white, silver, white );
+                background-image: -ms-linear-gradient(top, silver, white, silver, white );
+                background-image: -o-linear-gradient(top, silver, white, silver, white );
+                background-image: linear-gradient(top, silver, white, silver, white );
+              }

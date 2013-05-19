@@ -1,0 +1,40 @@
+
+* What's Opera Show? What's FullerScreen?
+
+h1. Slide Show (S9) Template Pack Options 
+
+{{ gradient yellow white yellow white }}
+
+{% left %} 
+
+h2. What's Opera Show?
+
+Opera has been shipping with built-in full screen projection and slide show support for years (since Opera 4)! 
+Pioneered the concept using Cascading Style Sheets (CSS2) that offer/include 
+the @projection@ media type in addition to @screen@, @print@ or @handheld@, for example.
+
+{% end %} 
+
+{% right %} 
+
+h2. What's FullerScreen?
+
+FullerScreen is a free, open source Firefox addon that lets you turn your web page into a 
+slide show and your browser into full screen projection with a single push button (F11).
+
+{% step %} 
+
+FullerScreen - More than just full screen projection:
+
+* Built-in slide manager with thumbnails!
+* Use spacebar, arrows, page up/down keys to move between slides/steps
+* Use top and end keys to move to first/last slide
+* Move mouse to the bottom-right screen corner to show joystick
+
+{% end %}
+
+(Use the @fullerscreen@ template pack to create FullerScreen slide shows.)
+
+{% end %} 
+
+

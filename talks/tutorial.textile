@@ -16,7 +16,6 @@ Agenda
 * What's Slide Show (S9)? 
 * Wiki-Style Markup Language - Markdown, Textile
 * How it works - Just press F11! 
-* What's Opera Show? What's FullerScreen?
 * What's S5? What's S6?
 * Gradient Themes Using "Loss-Free" Vector Graphics in S9 
 * Turn Your Online Wiki Pages into Slide Shows - Sputnik Case Study
@@ -106,43 +105,8 @@ with a single push button (F11).  Hit the space bar or the right arrow, down arr
  
 That's all. It's that simple.
 
-h1. Slide Show (S9) Template Pack Options 
 
-{{ gradient yellow white yellow white }}
-
-{% left %} 
-
-h2. What's Opera Show?
-
-Opera has been shipping with built-in full screen projection and slide show support for years (since Opera 4)! 
-Pioneered the concept using Cascading Style Sheets (CSS2) that offer/include 
-the @projection@ media type in addition to @screen@, @print@ or @handheld@, for example.
-
-{% end %} 
-
-{% right %} 
-
-h2. What's FullerScreen?
-
-FullerScreen is a free, open source Firefox addon that lets you turn your web page into a 
-slide show and your browser into full screen projection with a single push button (F11).
-
-{% step %} 
-
-FullerScreen - More than just full screen projection:
-
-* Built-in slide manager with thumbnails!
-* Use spacebar, arrows, page up/down keys to move between slides/steps
-* Use top and end keys to move to first/last slide
-* Move mouse to the bottom-right screen corner to show joystick
-
-{% end %}
-
-(Use the @fullerscreen@ template pack to create FullerScreen slide shows.)
-
-{% end %} 
-
-h1. Slide Show (S9) Template Pack Options (Cont'd)
+h1. Slide Show (S9) Template Pack Options
 
 {{ gradient navy silver navy silver }}
 
@@ -259,7 +223,7 @@ h1. Thanks - Learn More - Questions? Comments?
 {{ gradient blue silver blue silver }}
 
 Gerald Bauer designed and developed the Slide Show (S9) Ruby gem. 
-Find out more @ "slideshow.rubyforge.org":http://slideshow.rubyforge.org 
+Find out more @ "slideshow-s9.github.io":http://slideshow-s9.github.io 
 
 Questions? Comments? Send them along to the "Free Web Slide Show Alternatives - S5, S6, S9 And Friends - Forum/Mailing List":http://groups.google.com/group/webslideshow. Thanks!
 
