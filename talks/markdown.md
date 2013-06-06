@@ -21,8 +21,14 @@ Agenda
 * Syntax - Header Formatting
 * Syntax - Hyperlink
 * What is Markdown good for?
-* Website Example - `vienna.rb`
-
+* Example - Website
+* Example - Presentation
+* Example - Book
+* Markdown Parsers in Ruby
+* What's the `markdown` Gem?
+* Tooling - Websites
+* Tooling - Presentations
+* Tooling - Books
 
 
 
@@ -209,11 +215,16 @@ and elsewhere
 
 - GitHub
 - Stack Overflow
-- ????
+- Reddit
+- You?
+- And many more 
 
 
 
 # Website Example - `vienna.rb`
+
+
+`2013-04-13-the-slides-of-our-second-meetup-are-online.markdown`:
 
 ~~~
 ---
@@ -247,7 +258,7 @@ Source: [`vienna-rb.at/blog/2013/04/13/the-slides-of-our-second-meetup-are-onlin
 
 
 
-# Website Example - Vienna.rb (Cont.)
+# Website Example - `vienna.rb` (Cont.)
 
 List of posts in Markdown. Yeah!
 
@@ -430,61 +441,102 @@ Tip: The `markdown` gem includes a little command line tool. Try `markdown -h` f
 Note - The markdown command line tool includes a server and little online markdown editor!
 Try `markdown serve` to start your own web service / HTTP (JSON) API.
 
+Source: [`github.com/geraldb/markdown`](https://github.com/geraldb/markdown)
 
 
 
 # Tooling - Websites 
 
-Many static site compilers/builders options! Let's use Jekyll
+Many static site compilers/builders options! Let's use Jekyll. Example:
 
-Example:
+`mypage.markdown`:
 
 ~~~
-$ cd vienna-rb.github.io
-$ jekyll build 
+---
+title: My Page
+---
+
+## Page Header
+
+Some text here.
+
+## Another Page Header
+
+More text here.
+
+Some code:
+
+    10 PRINT "BASIC ROCKS!"
+    20 GOTO 10
 ~~~
 
+To build your site (pages) issue:
 
-That's it.
+~~~
+$ jekyll build
+~~~
 
-More options:
+That's it. More options:
 
+- Ace
+- Bonsai
+- Frank
 - nanoc
+- Middleman
+- StaticMatic
+- Statis
+- ZenWeb
+- and many more!
+
 
 
 
 # Tooling - Presentations
 
-Many presentation builders options! Let's use Slide Show (S9)
+Many presentation builders options! Let's use Slide Show (S9). Example:
 
-Example:
+`mytalk.markdown`:
 
 ~~~
-$ cd talks
-$ slideshow tutorial.markdown
+# My Slide Title
+
+* Bullet Point One
+* Bullet Point Two
+
+# Another Slide Title
+
+Some text here. 
 ~~~
 
-That's it.
+To build your presentation issue:
 
-More options:
+~~~
+$ slideshow mytalk.markdown
+~~~
 
-- Parade
+That's it. More options:
+
 - deck.rb
-- 
+- KeyDown
+- Parade
+- ShowOff
+- Slidedown
+- Slide'em up
+- and many more!
 
 
 
 # Tooling - Books
 
-Let's use pandoc     Note: It's Haskell (not Ruby)
+Let's use Pandoc.  Note: It's Haskell (not Ruby). Example:
 
-Example:
+`mybook.txt`:
 
 ~~~
 Title: My Book
-Author: Sam Smith
+Author: Ruby Rubacuori
 
-This is my book!
+This is my book.
 
 # Chapter One
 
@@ -495,38 +547,141 @@ Chapter one is over.
 Chapter two has just begun.
 ~~~
 
-
-To make this into an ebook takes only one command:
+To build your book issue:
 
 ~~~
-pandoc mybook.txt -o mybook.epub
+$ pandoc mybook.txt -o mybook.epub
 ~~~
 
+That's it.
 
 
 
-# Questions, Comments - Thank You
+# That's it. Thank you.
+
+Questions? Comments?
 
 
 
 
+# Appendix: What's EPUB?
 
-# Appendix: What's ePub?
+![](i/epub-logo.gif)
 
-Basically web pages zipped into a package.
+EPUB (short for Electronic PUBlication) is a free and open e-book standard.
+Files are zipped up archives with the extension `.epub.` Example:
 
+~~~
+title_page.html
+ch01.html
+ch02.html
+ch03.html
+styles.css
+~~~
 
+Plus some extras (defined in the Open Container Format - OCF):
+
+~~~
+mimetype                # identification as epub - application/epub+zip
+META-INF/container.xml  # contents of the book (in XML)
+content.opf             # .opf - Open Packaging Format (in XML)
+toc.ncx                 # .ncs - Navigation Control file for XML (in XML)
+nav.html
+~~~
 
 
 # Appendix: Zen Writing - Zen Text Editor
 
+What's Zen Writing?
+
+Extremely stripped down text editor - leaving you alone with your thoughts
+and your words - lets you focus on your text.
+
+
+### Linux
+
+- ReText (Free, Open Source)
+- UberWriter (Free, Open Source)
+
+### Windows
+
+- WriteMonkey (Free, Open Source)
+- MarkPad (Free, Open Source)
+
+### Apple / Mac / iPad
+
+- Byword ($9.99)
+- Marked ($2.99)
+- IA Writer ($9.99)
+- Elements ($4.99)
+
+Many more
 
 
 
 # Appendix: What's Markdown Extra?
 
+Adds more "extras" to Markdown. Example:
+
+- Inline HTML
+- Markdown Inside HTML Blocks
+- Header Id Attribute
+- Fenced Code Blocks
+- Tables
+- Definition Lists
+- Footnotes
+- Abbreviations
+- Emphasis
+- Backslash Escapes
+
+Table Example:
+
+~~~
+| Item      | Value |
+| --------- | -----:|
+| Computer  | $1600 |
+| Phone     |   $12 |
+| Pipe      |    $1 |
+~~~
+
+becomes
+
+~~~
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th style="text-align: right">Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Computer</td>
+      <td style="text-align: right">$1600</td>
+    </tr>
+    <tr>
+      <td>Phone</td>
+      <td style="text-align: right">$12</td>
+    </tr>
+    <tr>
+      <td>Pipe</td>
+      <td style="text-align: right">$1</td>
+    </tr>
+  </tbody>
+</table>
+~~~
 
 
 
 # Appendix: What's Babelmark2? What's Markdown Dingus?
+
+Markdown Dingus - very first online Markdown converter; uses original
+Markdown Perl script)
+
+- [`daringfireball.net/projects/markdown/dingus`](http://daringfireball.net/projects/markdown/dingus)
+
+Babelmark2 - modern version of Markdown Dingus; lets you compare
+many Markdown services via HTTP (JSON) API
+
+- [`johnmacfarlane.net/babelmark2`](http://johnmacfarlane.net/babelmark2/)
 
