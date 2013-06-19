@@ -41,7 +41,7 @@ $ gem install slideshow
 
 Slide Show lets you author your slides using a wiki-style markup language
 that's easy-to-write and easy-to-read. Let's create some slides about best practices for web services
-using REST [`rest.textile`](http://github.com/geraldb/slideshow/raw/master/samples/rest.textile):
+using REST [`rest.textile`](https://github.com/slideshow-s9/slideshow-s9.github.io/blob/master/talks/rest.textile):
 
 ~~~
 h1. Web Services REST-Style: Universal Identifiers, Formats & Protocols
@@ -116,9 +116,9 @@ without the `.textile` or `.markdown` ending and will generate a web page
 that is an all-in-one-page handout and a live slide show all at once.
 
 ~~~
-$ slideshow rest
+$ slideshow build rest
 
-=> Preparing slide show 'rest.html'...
+=> Preparing 'rest.html'...
 => Done.
 ~~~
 
@@ -165,8 +165,8 @@ Simple Standards-based Slide Show System (S5) is
 Eric Meyer's (of CSS fame) public domain (free, open source)
 slide show package inspired by Opera Show and others that works in all modern browsers
 without any plugin required because it includes its own slide show machinery in JavaScript.
-(Use the [`s5blank`](http://github.com/geraldb/slideshow-s5-blank)
-or [`s5themes`](http://github.com/geraldb/slideshow-s5-themes) theme pack
+(Use the [`s5blank`](http://github.com/slideshow-s9/slideshow-s5-blank)
+or [`s5themes`](http://github.com/slideshow-s9/slideshow-s5-themes) theme pack
 to create S5 slide shows.)
 
 * [S5 Project Site](http://meyerweb.com/eric/tools/s5)
