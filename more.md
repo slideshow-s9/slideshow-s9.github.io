@@ -71,16 +71,7 @@ using a simple CSS-style name value pair. [More »](themes.html#use)
 
 ## How To Use Your Own Slide Show Template Packages?   {#templates}
 
-Use the `-g/--generate` switch to generate a sample template
-package with manifest using the built-in S6 machinery.
-
-Example: Generate a template pack w/ manifest in your working folder 
-
-~~~
-$ slideshow -g
-~~~
-
-Or fetch a sample template pack from the internet or fork it using `git` or create
+Fetch a sample template pack from the internet or fork it using `git` or create
 it from scratch.
 See the [Template Gallery](templates.html) for more info and examples to get started.
 
@@ -88,8 +79,8 @@ To use your own template pack use the `-t/--template MANIFEST` option
 passing along the manifest. Example:
 
 ~~~
-$ slideshow -t s6.txt  microformats
-$ slideshow -t s5blank.txt   microformats
+$ slideshow build microformats -t s6
+$ slideshow build microformats -t s5blank
 ~~~
 
 Got templates? Send a link and announcement to the
@@ -97,20 +88,26 @@ Got templates? Send a link and announcement to the
 and get your link added to the [Template Gallery](templates.html).
 
 
-## How To Fetch New Template Packages?  {#fetch} 
+## How To Fetch New Template Packages?  {#fetch}
 
-Using the `-f/--fetch URI` option lets you fetch (install) new templates. Example:
+Using the `install` command lets you fetch (install) new templates. Example:
 
 ~~~
-$ slideshow -f http://github.com/geraldb/slideshow-s5-blank/raw/master/s5blank.txt 
+$ slideshow install s5blank
+~~~
+
+or
+
+~~~
+$ slideshow install https://raw.github.com/slideshow-s9/slideshow-s5-blank/master/s5blank.txt
 ~~~
 
 Resulting in:
 
 ~~~
 Fetching template package 's5blank' 
-  : from 'http://github.com/geraldb/slideshow-s5-blank/raw/master 
-  : saving to '/home/gerald/.slideshow/templates/s5blank' 
+  : from 'https://raw.github.com/slideshow-s9/slideshow-s5-blank/master
+  : saving to '~/.slideshow/templates/s5blank'
   Downloading manifest 's5blank.txt'... 
   Downloading template 'header.html.erb'... 
   ... 
@@ -162,27 +159,31 @@ Let's clone the `slideshow-google-html5-slides` template pack.
 Issue the command:
 
 ~~~
-git clone http://github.com/geraldb/slideshow-google-html5-slides.git
+git clone http://github.com/slideshow-s9/slideshow-google-html5-slides.git
 ~~~
 
-That's it. Use the `-l/--list` option to list all you installed template packs.
+That's it. Use the `list` command to list all installed template packs.
 
 ## How To List All Installed Template Packages?   {#list}
 
-Using the `-l/--list` option lets you list all installed templates. Example:
+Using the `list` command lets you list all installed templates. Example:
 
 ~~~
-$ slideshow -l
+$ slideshow list
+~~~
+
+or
+
+~~~
+$ slideshow ls
 ~~~
 
 Resulting in:
 
 ~~~
 Installed templates include: 
-  s5blank.txt       (/home/gerald/.slideshow/templates/s5blank/s5blank.txt) 
-  s5.txt            (/usr/lib/ruby/gems/1.8/gems/slideshow-0.8/templates/s5.txt) 
-  s6.txt            (/usr/lib/ruby/gems/1.8/gems/slideshow-0.8/templates/s6.txt) 
-  fullerscreen.txt  (/usr/lib/ruby/gems/1.8/gems/slideshow-0.8/templates/fullerscreen.txt) 
+  s5blank.txt       (~/.slideshow/templates/s5blank/s5blank.txt)
+  s6.txt            (/usr/lib/ruby/gems/1.8/gems/slideshow-0.8/templates/s6.txt)
 ~~~
 
 
@@ -196,7 +197,7 @@ using lets say the free, open source [`wkhtmltopdf`](http://code.google.com/p/wk
 Example:
 
 ~~~
-$ slideshow tutorial
+$ slideshow build tutorial
 
 $ wkhtmltopdf --outline --orientation Landscape tutorial.pdf.html tutorial.pdf 
 ~~~
@@ -204,7 +205,7 @@ $ wkhtmltopdf --outline --orientation Landscape tutorial.pdf.html tutorial.pdf
 
 ## How To Set Default Command Line Options?   {#slideshowopt}
 
-The `SLIDESHOWOPT` environment variable lets 
+The `SLIDESHOWOPT` environment variable lets
 you set default command line options.
 
 Example: Make `slides` your default output folder
@@ -216,7 +217,7 @@ $ SLIDESHOWOPT=-o slides
 Example: Make S5-compatible slide show
 
 ~~~
-$ SLIDESHOWOPT=-o slides -t s5blank.txt
+$ SLIDESHOWOPT=-o slides -t s5blank
 ~~~
 
 Example: Make your own template package the default
@@ -229,7 +230,7 @@ And than use the gem executable as usual (will use/add your command line
 options stored in `SLIDESHOWOPT`):
 
 ~~~
-$ slideshow microformats
+$ slideshow build microformats
 ~~~
 
 
@@ -253,7 +254,7 @@ author: Jim Weirich
 Jim Weirich
 ~~~
 
-See [10 Things Every Java Programmer Should Know About Ruby](http://github.com/geraldb/slideshow/blob/master/samples/3rd/10things.text)
+See [10 Things Every Java Programmer Should Know About Ruby](http://raw.github.com/slideshow-s9/slideshow-s9.github.io/master/talks/3rd/10things.text)
 sample.
 
 Note, as an alternative syntax to skip (comment out)

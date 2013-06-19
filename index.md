@@ -41,7 +41,7 @@ $ gem install slideshow
 
 Slide Show lets you author your slides using a wiki-style markup language
 that's easy-to-write and easy-to-read. Let's create some slides about best practices for web services
-using REST [`rest.textile`](https://github.com/slideshow-s9/slideshow-s9.github.io/blob/master/talks/rest.textile):
+using REST [`rest.textile`](https://raw.github.com/slideshow-s9/slideshow-s9.github.io/master/talks/rest.textile):
 
 ~~~
 h1. Web Services REST-Style: Universal Identifiers, Formats & Protocols

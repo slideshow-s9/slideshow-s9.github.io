@@ -94,7 +94,7 @@ COMMAND OPTIONS
 
 EXAMPLES
     slideshow install impress.js
-    slideshow install https://raw.github.com/.../impress.js.txt
+    slideshow install https://raw.github.com/slideshow-s9/slideshow-impress.js/master/impress.js.txt
 ~~~
 
 
