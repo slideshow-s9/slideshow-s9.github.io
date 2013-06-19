@@ -73,7 +73,7 @@ using a simple CSS-style name value pair. [More »](themes.html#use)
 
 Fetch a sample template pack from the internet or fork it using `git` or create
 it from scratch.
-See the [Template Gallery](templates.html) for more info and examples to get started.
+See the [Template Gallery](gallery.html) for more info and examples to get started.
 
 To use your own template pack use the `-t/--template MANIFEST` option 
 passing along the manifest. Example:
@@ -85,7 +85,7 @@ $ slideshow build microformats -t s5blank
 
 Got templates? Send a link and announcement to the
 [Forum/Mailing List](http://groups.google.com/group/webslideshow)
-and get your link added to the [Template Gallery](templates.html).
+and get your link added to the [Template Gallery](gallery.html).
 
 
 ## How To Fetch New Template Packages?  {#fetch}
@@ -118,7 +118,7 @@ Done.
 Note, if you want to store the template pack somewhere else
 use the `-c/--config` option (defaults to `~/.slideshow`).
 
-To find more templates browse the [Template Gallery](templates.html).
+To find more templates browse the [Template Gallery](gallery.html).
 
 
 ### Troubleshooting

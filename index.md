@@ -10,7 +10,7 @@ Contents:
 
 * [What's Slide Show (S9)?](#whatis)
 * [Getting Started in 1-2-3 Easy Steps](#steps)
-* [What's Textile? What's Markdown?](#textile)
+* [What's Markdown? What's Textile?](#markup)
 * [What's S5? What's S6?](#s6)
 * [About, License - Questions? Comments?](#about)
 </div>
@@ -44,36 +44,6 @@ that's easy-to-write and easy-to-read. Let's create some slides about best pract
 using REST [`rest.textile`](https://raw.github.com/slideshow-s9/slideshow-s9.github.io/master/talks/rest.textile):
 
 ~~~
-h1. Web Services REST-Style: Universal Identifiers, Formats & Protocols
-
-Agenda
-
-* What's REST?
-* Universal Identifiers, Formats & Protocols
-* The Holy REST Trinity - Noun, Verbs, Types
-* REST Design Principles 
-* Architecture Astronaut REST Speak
-
-h1. Representational State Transfer (REST) - Meaningless Acronym? Wordplay?
-
-rest - n. - peace, ease, or refreshment resulting from the insight that the web works
-
-No matter what vendors tell you - no need to "Light Up the Web" - relax - built on
-an *open architecture using universal identifiers, formats & protocols and _evolving_
-open standards* - no need to reinvent the wheel and sign-up for single-vendor offerings.
-
-h3. Broad Definition
-
-* Best Practices for Designing Web Services for a Unified Human and Programable Web
-
-h3. Narrow Definition
-
-* Alternative to BigCo Web Services (SOAP, WS-*) and RPC-Style Web Services (XML-RPC)
-~~~
-
-Or
-
-~~~
 Web Services REST-Style: Universal Identifiers, Formats & Protocols
 ===================================================================
 
@@ -103,28 +73,60 @@ open standards* - no need to reinvent the wheel and sign-up for single-vendor of
 - Alternative to BigCo Web Services (SOAP, WS-*) and RPC-Style Web Services (XML-RPC)
 ~~~
 
-Use `h1` headings to start a new slide - use `h1.` in Textile
-or use "underlining" with equal signs (`===`) in Markdown. That's it.
-For more formatting options see the Textile or Markdown reference.
+or
+
+~~~
+h1. Web Services REST-Style: Universal Identifiers, Formats & Protocols
+
+Agenda
+
+* What's REST?
+* Universal Identifiers, Formats & Protocols
+* The Holy REST Trinity - Noun, Verbs, Types
+* REST Design Principles 
+* Architecture Astronaut REST Speak
+
+h1. Representational State Transfer (REST) - Meaningless Acronym? Wordplay?
+
+rest - n. - peace, ease, or refreshment resulting from the insight that the web works
+
+No matter what vendors tell you - no need to "Light Up the Web" - relax - built on
+an *open architecture using universal identifiers, formats & protocols and _evolving_
+open standards* - no need to reinvent the wheel and sign-up for single-vendor offerings.
+
+h3. Broad Definition
+
+* Best Practices for Designing Web Services for a Unified Human and Programable Web
+
+h3. Narrow Definition
+
+* Alternative to BigCo Web Services (SOAP, WS-*) and RPC-Style Web Services (XML-RPC)
+~~~
+
+
+Use "underlining" with equal signs (`===`) in Markdown
+or use `h1` headings to start a new slide - use `h1.` in Textile. That's it.
+For more formatting options see the Markdown or Textile reference.
+
 
 ### Step 2: Generate your slide show using the `slideshow` gem
 
 Run `slideshow` to generate your slide show. The `slideshow` gem
 expects the name of your slide show source document (e.g. `rest`)
-without the `.textile` or `.markdown` ending and will generate a web page
-(e.g. [`rest.html`](http://slideshow.rubyforge.org/rest.html)
+without the `.markdown` or `.textile` ending and will generate a web page
+(e.g. [`rest.html`](rest.html)
 that is an all-in-one-page handout and a live slide show all at once.
 
 ~~~
 $ slideshow build rest
 
-=> Preparing 'rest.html'...
+=> Preparing slideshow 'rest.html'...
 => Done.
 ~~~
 
 ### Step 3: Open up your slide show in your browser
 
-Open up your slide show [`rest.html`](http://slideshow.rubyforge.org/rest.html)
+Open up your slide show [`rest.html`](rest.html)
 in your browser (Firefox, Chrome, Safari, Opera and others) and hit F11 to switch 
 into full screen projection and hit the space bar or the right arrow, down arrow
 or page down key to flip through your slides.
@@ -135,24 +137,24 @@ That's it. Voila.
 
 ### Bonus: Try some different templates/theme packs
 
-* [S6 PDF Theme](http://slideshow.rubyforge.org/tutorial.pdf.html) -> [PDF](http://slideshow.rubyforge.org/tutorial.pdf)
+* [S6 PDF Theme](tutorial.pdf.html) -> [PDF](tutorial.pdf)
 * [Google HTML5 Rocks Theme](http://slideshow.rubyforge.org/tutorial.html5.html)
 * [S5 Theme](http://slideshow.rubyforge.org/s5/tutorial.html)
 * [Slidy W3C Blue Theme](http://slideshow.rubyforge.org/slidy/tutorial.html)
-* [More »](templates.html)
+* [More »](gallery.html)
 
-## What's Textile? What's Markdown? What's reStructuredText?   {#textile}
+## What's Markdown? What's Textile? What's reStructuredText?   {#markup}
 
-Textile is a wiki-style markup language that's easy-to-write and easy-to-read and
-that lets you author web pages in plain text. More:
-
-* [Textile Reference](http://redcloth.org/textile/)
-
-Markdown is another wiki-style markup language that's easy-to-write and easy-to-read and
+Markdown is a wiki-style markup language that's easy-to-write and easy-to-read and
 that lets you author web pages in plain text. More:
 
 * [Markdown Quick Start](http://daringfireball.net/projects/markdown/basics)
 * [Markdown Reference](http://daringfireball.net/projects/markdown/syntax)
+
+Textile is another wiki-style markup language that's easy-to-write and easy-to-read and
+that lets you author web pages in plain text. More:
+
+* [Textile Reference](http://redcloth.org/textile/)
 
 reStructuredText is yet another wiki-style markup language. More:
 
@@ -192,7 +194,7 @@ Keyboard controls:
 ## About, License   {#about}
 
 Gerald Bauer and contributors designed and developed the `slideshow` gem.
-See the [change log](http://github.com/geraldb/slideshow/blob/master/History.markdown)
+See the [change log](https://github.com/geraldb/slideshow/blob/master/History.markdown)
 for contributions and credits.
 
 License. The slide show scripts and templates are dedicated to the public domain.
