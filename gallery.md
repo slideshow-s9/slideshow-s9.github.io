@@ -10,8 +10,8 @@ title: Template Gallery
 [S6 Blank w/ Syntax Highlighter](#s6syntax)  ||
 [CSSS](#csss)  |
 [deck.js](#deckjs)  |
-[FullerScreen](#fullerscreen)  |
 [Google HTML5 Rocks](#g5) |
+[impress.js](#impressjs)  |
 [S5 Blank](#s5blank)  |
 [S5 Themes](#s5themes) |
 [Shower](#shower)  |
@@ -32,7 +32,7 @@ Contents:
 
 Sample template package using the S6 blank package.
 
-[Sample](http://slideshow.rubyforge.org/tutorial.html)  &middot;
+[Sample](tutorial.html)  &middot;
 [More »](https://github.com/slideshow-s9/slideshow-s6-blank)
 
 
@@ -70,20 +70,20 @@ Sample template package using the deck.js package by Caleb Troughton (aka imakew
 
 
 
-## FullerScreen   {#fullerscreen}
-
-Sample template package for FullerScreen.
-
-[Sample](http://slideshow.rubyforge.org/fullerscreen/tutorial.html)   &middot;
-[More »](https://github.com/slideshow-s9/slideshow-fullerscreen)
-
-
 ## Google HTML5 Rocks   {#g5}
 
 Sample template package using Google's `html5-slides` code.
 
 [Sample](http://slideshow.rubyforge.org/tutorial.html5.html)    &middot;
 [More »](https://github.com/slideshow-s9/slideshow-google-html5-slides)
+
+
+## impress.js   {#impressjs}
+
+Sample template package using the impress.js package by Bartek Szopka (aka bartaz).
+
+[More »](https://github.com/slideshow-s9/slideshow-impress.js)
+
 
 
 ## S5 Blank   {#s5blank}
