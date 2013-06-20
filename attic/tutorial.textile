@@ -1,9 +1,29 @@
 
+gradient-colors: silver white silver white
+
+{{ gradient yellow orange yellow orange }}
+{{ gradient blue aqua blue aqua  }}
+{{ gradient red orange red orange }}
+{{ gradient navy silver navy silver }}
+{{ gradient red magenta red magenta }}
+{{ gradient blue silver blue silver }}
+{{ gradient yellow white yellow white }}
+{{ gradient green lime green lime }}
+
+---
+fn1. {{ source text='Textile Source' }}
+
+Agenda
+
+* Turn Your Online Wiki Pages into Slide Shows - Sputnik Case Study
+
+
+
+
 * What's Opera Show? What's FullerScreen?
 
 h1. Slide Show (S9) Template Pack Options 
 
-{{ gradient yellow white yellow white }}
 
 {% left %} 
 
@@ -38,3 +58,47 @@ FullerScreen - More than just full screen projection:
 {% end %} 
 
 
+
+
+h1. Gradient Themes Using "Loss-Free" Vector Graphics in S9 
+
+Firefox and Opera (and Chrome and Safari too) ship with built-in machinery for
+ theming slide shows using "loss-free" vector  graphics. Offers "Flash/Silverlight-like" functionality out-of-the-box (no plugin download/installation required) using free web standards - a World Wide Web Consortium (W3C) Recommendation known as - surprise, surprise 
+ - Scalable Vector Graphics (SVG).
+
+
+Creating a gradient theme is as easy as:
+
+{{{
+<linearGradient id="top_bottom" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0%"   style="stop-color: red" />
+  <stop offset="100%" style="stop-color: black" />
+</linearGradient>
+}}}
+
+
+
+Note, S9 ships with nine predefined 
+  gradient styles such as "Diagonal", "Radial Off Center", "Radial Repeat", "Top Bottom"
+ and S9 lets you define your gradient themes in plain text. Example:
+
+{{{
+gradient: top-bottom red black
+}}}
+
+or:
+
+{{{
+gradient-colors: #0e1f5b #3b5998
+}}}
+
+
+h1. Turn Your Online Wiki Pages into Slide Shows - Sputnik Case Study
+
+Inspired by the Slide Show (S9) Ruby gem - Yuri Takhteyev has added S9-style slide shows
+  to "Sputnik":http://sputnik.freewisdom.org/en/Slideshow_Demo - a wiki in Lua.
+
+Lets you author slide shows online in your browser.
+It's - surprise, surpise - a wiki and, thus, lets you
+ work togther with others on a slide show, 
+track changes and versions, link and get linked, and much much more.

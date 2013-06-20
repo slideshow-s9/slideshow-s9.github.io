@@ -1,3 +1,6 @@
+
+using REST [`rest.textile`](https://raw.github.com/slideshow-s9/slideshow-s9.github.io/master/talks/rest.textile):
+
 Contents:
 
 * [What's FullerScreen?](#fullerscreen)

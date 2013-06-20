@@ -26,7 +26,7 @@ for "loss-free" gradient vector graphics themes.
 ## Getting Started in 1-2-3 Easy Steps   {#steps}
 
 * Step 1: Author your slides in plain text using a wiki-style markup language
-* Step 2: Generate your slide show using the `slideshow` gem
+* Step 2: Build your slide show using the `slideshow` gem
 * Step 3: Open up your slide show (web page) in your browser and hit the space bar to flip through your slides
 * That's it. Showtime!
 
@@ -41,11 +41,10 @@ $ gem install slideshow
 
 Slide Show lets you author your slides using a wiki-style markup language
 that's easy-to-write and easy-to-read. Let's create some slides about best practices for web services
-using REST [`rest.textile`](https://raw.github.com/slideshow-s9/slideshow-s9.github.io/master/talks/rest.textile):
+using REST:
 
 ~~~
-Web Services REST-Style: Universal Identifiers, Formats & Protocols
-===================================================================
+# Web Services REST-Style: Universal Identifiers, Formats & Protocols
 
 Agenda
 
@@ -55,8 +54,8 @@ Agenda
 - REST Design Principles 
 - Architecture Astronaut REST Speak
 
-Representational State Transfer (REST) - Meaningless Acronym? Wordplay?
-=======================================================================
+
+# Representational State Transfer (REST) - Meaningless Acronym? Wordplay?
 
 rest - n. - peace, ease, or refreshment resulting from the insight that the web works
 
@@ -104,16 +103,15 @@ h3. Narrow Definition
 ~~~
 
 
-Use "underlining" with equal signs (`===`) in Markdown
-or use `h1` headings to start a new slide - use `h1.` in Textile. That's it.
+Use `#` headings to start a new slide  in Markdown or `h1.` in Textile. That's it.
 For more formatting options see the Markdown or Textile reference.
 
 
-### Step 2: Generate your slide show using the `slideshow` gem
+### Step 2: Build your slide show using the `slideshow` gem
 
-Run `slideshow` to generate your slide show. The `slideshow` gem
+Run `slideshow` to build your slide show. The `slideshow` gem
 expects the name of your slide show source document (e.g. `rest`)
-without the `.markdown` or `.textile` ending and will generate a web page
+without the `.markdown` or `.textile` ending and will build a web page
 (e.g. [`rest.html`](rest.html)
 that is an all-in-one-page handout and a live slide show all at once.
 
@@ -127,7 +125,7 @@ $ slideshow build rest
 ### Step 3: Open up your slide show in your browser
 
 Open up your slide show [`rest.html`](rest.html)
-in your browser (Firefox, Chrome, Safari, Opera and others) and hit F11 to switch 
+in your browser (Firefox, Chrome, Opera, Safari, and others) and hit F11 to switch 
 into full screen projection and hit the space bar or the right arrow, down arrow
 or page down key to flip through your slides.
 
@@ -167,8 +165,8 @@ Simple Standards-based Slide Show System (S5) is
 Eric Meyer's (of CSS fame) public domain (free, open source)
 slide show package inspired by Opera Show and others that works in all modern browsers
 without any plugin required because it includes its own slide show machinery in JavaScript.
-(Use the [`s5blank`](http://github.com/slideshow-s9/slideshow-s5-blank)
-or [`s5themes`](http://github.com/slideshow-s9/slideshow-s5-themes) theme pack
+(Use the [`s5blank`](https://github.com/slideshow-s9/slideshow-s5-blank)
+or [`s5themes`](https://github.com/slideshow-s9/slideshow-s5-themes) theme pack
 to create S5 slide shows.)
 
 * [S5 Project Site](http://meyerweb.com/eric/tools/s5)
@@ -177,7 +175,7 @@ S6 is the rewrite of Eric Meyer's S5 using
 the jQuery JavaScript library - offering easier to understand and easier
 to extend code. Add plugins, effects and more. Contributions welcome!
 
-* [S6 Project Site](http://github.com/geraldb/s6)
+* [S6 Project Site](https://github.com/geraldb/s6)
 
 Keyboard controls:
 
@@ -194,8 +192,7 @@ Keyboard controls:
 ## About, License   {#about}
 
 Gerald Bauer and contributors designed and developed the `slideshow` gem.
-See the [change log](https://github.com/geraldb/slideshow/blob/master/History.markdown)
-for contributions and credits.
+See the change log for contributions and credits.
 
 License. The slide show scripts and templates are dedicated to the public domain.
 Use it as you please with no restrictions whatsoever.
