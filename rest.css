@@ -101,11 +101,11 @@ table#restspeak th:nth-child(5) { width: 50%; }
 table#restspeak2 th:nth-child(1) { width: 20%; }
 table#restspeak2 th:nth-child(2) { width: 80%; }
 
-    .s9_gradient_linear_blue_aqua_blue_aqua { background-image: -webkit-linear-gradient(top, blue, aqua, blue, aqua );
-                background-image: -moz-linear-gradient(top, blue, aqua, blue, aqua );
-                background-image: -ms-linear-gradient(top, blue, aqua, blue, aqua );
-                background-image: -o-linear-gradient(top, blue, aqua, blue, aqua );
-                background-image: linear-gradient(top, blue, aqua, blue, aqua );
+    .s9_gradient_linear_silver_white_silver_white { background-image: -webkit-linear-gradient(top, silver, white, silver, white );
+                background-image: -moz-linear-gradient(top, silver, white, silver, white );
+                background-image: -ms-linear-gradient(top, silver, white, silver, white );
+                background-image: -o-linear-gradient(top, silver, white, silver, white );
+                background-image: linear-gradient(top, silver, white, silver, white );
               }
     .s9_gradient_linear_silver_white_silver_white { background-image: -webkit-linear-gradient(top, silver, white, silver, white );
                 background-image: -moz-linear-gradient(top, silver, white, silver, white );
@@ -113,53 +113,11 @@ table#restspeak2 th:nth-child(2) { width: 80%; }
                 background-image: -o-linear-gradient(top, silver, white, silver, white );
                 background-image: linear-gradient(top, silver, white, silver, white );
               }
-    .s9_gradient_linear_yellow_orange_yellow_orange { background-image: -webkit-linear-gradient(top, yellow, orange, yellow, orange );
-                background-image: -moz-linear-gradient(top, yellow, orange, yellow, orange );
-                background-image: -ms-linear-gradient(top, yellow, orange, yellow, orange );
-                background-image: -o-linear-gradient(top, yellow, orange, yellow, orange );
-                background-image: linear-gradient(top, yellow, orange, yellow, orange );
-              }
-    .s9_gradient_linear_yellow_orange_yellow_orange { background-image: -webkit-linear-gradient(top, yellow, orange, yellow, orange );
-                background-image: -moz-linear-gradient(top, yellow, orange, yellow, orange );
-                background-image: -ms-linear-gradient(top, yellow, orange, yellow, orange );
-                background-image: -o-linear-gradient(top, yellow, orange, yellow, orange );
-                background-image: linear-gradient(top, yellow, orange, yellow, orange );
-              }
     .s9_gradient_linear_silver_white_silver_white { background-image: -webkit-linear-gradient(top, silver, white, silver, white );
                 background-image: -moz-linear-gradient(top, silver, white, silver, white );
                 background-image: -ms-linear-gradient(top, silver, white, silver, white );
                 background-image: -o-linear-gradient(top, silver, white, silver, white );
                 background-image: linear-gradient(top, silver, white, silver, white );
-              }
-    .s9_gradient_linear_green_lime_green_lime { background-image: -webkit-linear-gradient(top, green, lime, green, lime );
-                background-image: -moz-linear-gradient(top, green, lime, green, lime );
-                background-image: -ms-linear-gradient(top, green, lime, green, lime );
-                background-image: -o-linear-gradient(top, green, lime, green, lime );
-                background-image: linear-gradient(top, green, lime, green, lime );
-              }
-    .s9_gradient_linear_green_lime_green_lime { background-image: -webkit-linear-gradient(top, green, lime, green, lime );
-                background-image: -moz-linear-gradient(top, green, lime, green, lime );
-                background-image: -ms-linear-gradient(top, green, lime, green, lime );
-                background-image: -o-linear-gradient(top, green, lime, green, lime );
-                background-image: linear-gradient(top, green, lime, green, lime );
-              }
-    .s9_gradient_linear_silver_white_silver_white { background-image: -webkit-linear-gradient(top, silver, white, silver, white );
-                background-image: -moz-linear-gradient(top, silver, white, silver, white );
-                background-image: -ms-linear-gradient(top, silver, white, silver, white );
-                background-image: -o-linear-gradient(top, silver, white, silver, white );
-                background-image: linear-gradient(top, silver, white, silver, white );
-              }
-    .s9_gradient_linear_red_orange_red_orange { background-image: -webkit-linear-gradient(top, red, orange, red, orange );
-                background-image: -moz-linear-gradient(top, red, orange, red, orange );
-                background-image: -ms-linear-gradient(top, red, orange, red, orange );
-                background-image: -o-linear-gradient(top, red, orange, red, orange );
-                background-image: linear-gradient(top, red, orange, red, orange );
-              }
-    .s9_gradient_linear_red_orange_red_orange { background-image: -webkit-linear-gradient(top, red, orange, red, orange );
-                background-image: -moz-linear-gradient(top, red, orange, red, orange );
-                background-image: -ms-linear-gradient(top, red, orange, red, orange );
-                background-image: -o-linear-gradient(top, red, orange, red, orange );
-                background-image: linear-gradient(top, red, orange, red, orange );
               }
     .s9_gradient_linear_silver_white_silver_white { background-image: -webkit-linear-gradient(top, silver, white, silver, white );
                 background-image: -moz-linear-gradient(top, silver, white, silver, white );

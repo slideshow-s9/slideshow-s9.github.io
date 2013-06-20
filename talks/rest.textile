@@ -3,6 +3,7 @@
 
 Title: Web Services REST-Style: Universal Identifiers, Formats & Protocols
 
+
 %%%%%%%%%%%%%%%%%%%%%
 %% Some Extra CSS 
 
@@ -22,13 +23,11 @@ table#restspeak2 th:nth-child(2) { width: 80%; }
 
 %end
 
+
 %%%%%%%%%%%%%%
 %% Let's go.
 
-
 h1. Web Services REST-Style<br>Universal Identifiers, Formats & Protocols
-
-{{ gradient blue aqua blue aqua  }}
 
 Agenda
 
@@ -39,8 +38,6 @@ Agenda
 * Architecture Astronaut REST Speak
 
 ---
-fn1. {{ source text='Textile Source' }}
-
 {{ help }}
 
 
@@ -51,8 +48,6 @@ h1(fullscreen). Part 1 - What's REST?
 
 h1. What's REST?
 
-{{ gradient yellow orange yellow orange }}
-
 Representational State Transfer (REST) - Meaningless Acronym? Wordplay?
 
 bq. rest - n. - peace, ease, or refreshment resulting from the insight that the web works
@@ -62,8 +57,6 @@ No matter what vendors tell you - no need to "Light Up the Web" - relax - built 
 
 
 h1. What's REST? (Cont'd)
-
-{{ gradient yellow orange yellow orange }}
 
 {% left %}
 
@@ -103,8 +96,6 @@ h1(fullscreen). Part 2 - Universal Identifiers, Formats & Protocols
 
 h1. Universal Identifiers, Formats & Protocols<br>The Holy Trinity
 
-{{ gradient green lime green lime }}
-
 {% left %}
 
 {% step %}
@@ -143,8 +134,6 @@ h3. Protocols
 
 h1. The Holy REST Trinity - Noun, Verbs, Types
 
-{{ gradient green lime green lime }}
-
 table(#restspeak).
 |_. REST-Speak |_.      |_. Internet-Speak   |_.      |_. Plain Old English |
 | Verbs        | &hArr; | Protocols          | &hArr; | Communication & Data Exchange Rules  |
@@ -167,8 +156,6 @@ h1(fullscreen). Part 3 - Design Principles & Architecture
 
 h1. REST Design Principles 
 
-{{ gradient red orange red orange }}
-
 * Idenifiers Matter &rArr; Choose Great Names
 * Open Formats Matter &rArr; Avoid Vendor Lock-In
 * Protocols Matter &rArr; Learn more about HTTP and Use Best Practices
@@ -181,8 +168,6 @@ h1. REST Design Principles
 
 
 h1. Architecture Astronaut REST Speak
-
-{{ gradient red orange red orange }}
 
 * REST-y
 * REST-ful
@@ -201,5 +186,3 @@ fn1. RPC = Remote Procedure Call
 h1(fullscreen). The End - Thank You
 
 {{ gradient silver white silver white }}
-
-{{ google_analytics code=UA-397343-10 }}

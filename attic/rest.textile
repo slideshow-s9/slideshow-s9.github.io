@@ -1,0 +1,15 @@
+
+{{ gradient blue aqua blue aqua  }}
+{{ gradient yellow orange yellow orange }}
+{{ gradient yellow orange yellow orange }}
+{{ gradient green lime green lime }}
+{{ gradient green lime green lime }}
+{{ gradient red orange red orange }}
+{{ gradient red orange red orange }}
+
+
+{{ google_analytics code=UA-397343-10 }}
+
+---
+fn1. {{ source text='Textile Source' }}
+
