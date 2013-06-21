@@ -136,9 +136,9 @@ That's it. Voila.
 ### Bonus: Try some different templates/theme packs
 
 * [S6 PDF Theme](tutorial.pdf.html) -> [PDF](tutorial.pdf)
-* [Google HTML5 Rocks Theme](http://slideshow.rubyforge.org/tutorial.html5.html)
-* [S5 Theme](http://slideshow.rubyforge.org/s5/tutorial.html)
-* [Slidy W3C Blue Theme](http://slideshow.rubyforge.org/slidy/tutorial.html)
+* [Google HTML5 Slides Theme](g5/tutorial1.html5.html)
+* [S5 Blank](s5/tutorial1.html)
+* [Slidy W3C Blue Theme](slidy/tutorial1.w3c.html)
 * [More »](gallery.html)
 
 ## What's Markdown? What's Textile? What's reStructuredText?   {#markup}

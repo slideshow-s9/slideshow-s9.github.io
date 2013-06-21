@@ -3,22 +3,14 @@
 
 Title: Slide Show (S9) 10-Minute Tutorial
 
+%%%%%%
+%% NB: same as tutorial.textile
+%%  - no agenda slide (w/ help) included
+%%  - no gradient bonus slide
+%%  - wiki style sample only in markdown
 
 %%%%%%%%%%%%%%
 %% Let's go.
-
-h1. Slide Show (S9) 10-Minute Tutorial
-
-Agenda
-
-* What's Slide Show (S9)? 
-* Wiki-Style Markup Language - Markdown, Textile
-* How it works - Just press F11! 
-* What's S5? What's S6?
-* Bonus: Gradient Themes Using "Loss-Free" Vector Graphics in S9 
-
----
-{{ help }}
 
 
 h1. What's Slide Show (S9)?
@@ -36,10 +28,10 @@ h3. Getting Started in 1-2-3 Easy Steps
 *(step) That's it. Showtime!
 
 
-h1. Wiki-Style Markup Language - Markdown, Textile
+h1. Wiki-Style Markup Language
 
-Lets you create slide shows and author slides in plain text using a wiki-style markup language that's easy-to-write and easy-to-read.
-Sample:
+Lets you create slide shows and author slides in plain text using a wiki-style markup language
+that's easy-to-write and easy-to-read. Sample:
 
 {{{
 # What's Slide Show (S9)?
@@ -54,23 +46,6 @@ A Free Web Alternative to PowerPoint and Keynote in Ruby
 - Step 2: Build your slide show using the `slideshow` gem
 - Step 3: Open up your slide show in your browser 
 - That's it. Showtime!
-}}}
-
-or
-
-{{{
-h1. What's Slide Show (S9)?
-
-h3. What? 
-
-A Free Web Alternative to PowerPoint and Keynote in Ruby
-
-h3. Getting Started in 1-2-3 Easy Steps
-
-* Step 1: Write your slides in plain text using a wiki-style markup language
-* Step 2: Build your slide show using the @slideshow@ gem
-* Step 3: Open up your slide show in your browser
-* That's it. Showtime!
 }}}
 
 
@@ -91,7 +66,7 @@ $ slideshow build tutorial
 Turn your web page into a slide show and your browser into full screen projection
 with a single push button (F11).  Hit the space bar or the right arrow, down arrow
 or page down key to flip through your slides.
-
+ 
 That's all. It's that simple.
 
 
@@ -126,37 +101,9 @@ for more template packs and samples.
 
 
 
-h1. Thank You - Learn More - Questions? Comments?
+h1. Thank You - Questions? Comments?
 
 Gerald Bauer designed and developed the Slide Show (S9) Ruby gem. 
 Find out more @ "slideshow-s9.github.io":http://slideshow-s9.github.io 
 
 Questions? Comments? Send them along to the "Free Web Slide Show Alternatives - S5, S6, S9 And Friends - Forum/Mailing List":http://groups.google.com/group/webslideshow. Thanks!
-
-
-
-h1. Bonus: Gradient Themes Using "Loss-Free" Vector Graphics in S9
-
-{{ gradient green lime green lime }}
-
-h3. CSS3 Background Gradients 
-
-Using modern browser such as Firefox, Chrome, Opera, Safari or Internet Explorer (10+)
-you can now theme your slide shows using using "loss-free" vector
-graphics in plain old CSS. Thanks to gradient support in backgrounds in CSS3.
-
-For example, the linear gradient from top to bottom with four color is defined
-in CSS3 as:
-
-{{{
-.gradient_green_lime {
-  background-image: linear-gradient(top, green, lime, green, lime);
-}
-}}}
-
-Using Slide Show (S9) you can use the @gradient@ helper that generates the CSS3
-for you:
-
-{{{
-{{{{ gradient green lime green lime }}
-}}}

@@ -10,12 +10,11 @@ Contents:
 
 * [How To Create Slides Without Titles?](#notitle)
 * [How To Use Gradient Themes?](#themes)
-* [How To Use Your Own Slide Show Template Packages?](#templates)
 * [How To Fetch New Template Packages?](#fetch)
 * [How To Fetch New Template Packs Using `git`?](#git)
 * [How To List All Installed Template Packages?](#list)
+* [How To Use Your Own Slide Show Template Packages?](#templates)
 * [How To Generate PDF Documents from Your Slide Shows?](#pdf)
-* [How To Set Default Command Line Options?](#slideshowopt)
 * [How To Comment Out Content?](#comments)
 * [Questions? Comments?](#questions)
 </div>
@@ -67,25 +66,6 @@ Will become:
 
 You can define your gradient theme in plain text in the slide show source in the header
 using a simple CSS-style name value pair. [More »](themes.html#use)
-
-
-## How To Use Your Own Slide Show Template Packages?   {#templates}
-
-Fetch a sample template pack from the internet or fork it using `git` or create
-it from scratch.
-See the [Template Gallery](gallery.html) for more info and examples to get started.
-
-To use your own template pack use the `-t/--template MANIFEST` option 
-passing along the manifest. Example:
-
-~~~
-$ slideshow build microformats -t s6
-$ slideshow build microformats -t s5blank
-~~~
-
-Got templates? Send a link and announcement to the
-[Forum/Mailing List](http://groups.google.com/group/webslideshow)
-and get your link added to the [Template Gallery](gallery.html).
 
 
 ## How To Fetch New Template Packages?  {#fetch}
@@ -155,8 +135,7 @@ cd ~/.slideshow/templates
 
 Step 2: Clone (Fetch) the template pack using `git`
 
-Let's clone the `slideshow-google-html5-slides` template pack.
-Issue the command:
+Let's clone the `slideshow-google-html5-slides` template pack. Issue the command:
 
 ~~~
 git clone http://github.com/slideshow-s9/slideshow-google-html5-slides.git
@@ -187,6 +166,25 @@ Installed templates include:
 ~~~
 
 
+## How To Use Your Own Slide Show Template Packages?   {#templates}
+
+Fetch a sample template pack from the internet or clone it using `git` or create
+it from scratch.
+See the [Template Gallery](gallery.html) for more info and samples to get started.
+
+To use your own template pack use the `-t/--template MANIFEST` option 
+passing along the manifest. Example:
+
+~~~
+$ slideshow build microformats -t s6
+$ slideshow build microformats -t s5blank
+~~~
+
+Got templates? Send a link and announcement to the
+[Forum/Mailing List](http://groups.google.com/group/webslideshow)
+and get your link added to the [Template Gallery](gallery.html).
+
+
 ## How To Generate PDF Documents from Your Slide Shows?   {#pdf}
 
 When you generate your slide show as usual with the built-in S6 template pack
@@ -200,37 +198,6 @@ Example:
 $ slideshow build tutorial
 
 $ wkhtmltopdf --outline --orientation Landscape tutorial.pdf.html tutorial.pdf 
-~~~
-
-
-## How To Set Default Command Line Options?   {#slideshowopt}
-
-The `SLIDESHOWOPT` environment variable lets
-you set default command line options.
-
-Example: Make `slides` your default output folder
-
-~~~
-$ SLIDESHOWOPT=-o slides
-~~~
-
-Example: Make S5-compatible slide show
-
-~~~
-$ SLIDESHOWOPT=-o slides -t s5blank
-~~~
-
-Example: Make your own template package the default
-
-~~~
-$ SLIDESHOWOPT=-t <your_template_manifest_here>
-~~~
-
-And than use the gem executable as usual (will use/add your command line 
-options stored in `SLIDESHOWOPT`):
-
-~~~
-$ slideshow build microformats
 ~~~
 
 
