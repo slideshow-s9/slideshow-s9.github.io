@@ -21,8 +21,11 @@ h1. Prototype &hArr; jQuery
 
 p(center). To and from JavaScript libraries by ["Remy Sharp":http://remysharp.com][1]
 
----
-fn1. Adapted S6 Version from "Original PDF Slide Deck":http://www.slideshare.net/remy.sharp/prototype-jquery-going-from-one-to-the-other, {{ source path=3rd text='S9 Textile Source' }}
+%% ---
+
+fn1. Adapted S6 Version from "Original PDF Slide Deck":http://www.slideshare.net/remy.sharp/prototype-jquery-going-from-one-to-the-other
+
+%% , {{ source path=3rd text='S9 Textile Source' }}
 
 {{ help }}
 
