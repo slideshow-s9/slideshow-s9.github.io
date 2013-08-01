@@ -33,8 +33,7 @@ Agenda
 
 Tag == Element == Web Component
 
-Let's you build your own tags and lets you use your own tags
-as easily as any standard `<div>` or `<span>` today.
+Lets you build your own tags that you can use as easily as plain old `<div>` or `<span>` tags.
 
 Example:
 
@@ -50,9 +49,9 @@ More Examples:
 ~~~
 <super-button></super-button>
 
-<you-tube-search-video imfeelinglucky='rock me amadeus'></yout-tube-search-video>
+<you-tube-video imfeelinglucky='rock me amadeus'></yout-tube-video>
 
-<pdf-js src='wien.pdf"></pdf-js>
+<pdf-js src='wien.pdf'></pdf-js>
 
 <marked-js>
 ## Markdown Renderer
@@ -60,14 +59,14 @@ More Examples:
 * code in `JavaScript`
 * realtime formatting
 
-_many more goodies.
+_many_ more goodies.
 </marked-js>
 
-<x-toolbar theme='light-theme'>
-  <x-button icon='menu'></x-icon-button>
-  <x-button icon='refresh'></x-icon-button>
-  <div flex>Toolbar: light-theme</div>
-  <x-button icon='add'></x-icon-button>
+<x-toolbar theme='light'>
+  <x-button icon='menu'></x-button>
+  <x-button icon='refresh'></x-button>
+  <div flex>Toolbar: light theme</div>
+  <x-button icon='add'></x-button>
 </x-toolbar>
 ~~~
 
@@ -84,7 +83,7 @@ More info @ [`www.x-tags.org`](http://www.x-tags.org)
 ### Polymer
 
 Library by Google - lets you use and build custom tags;
-uses web components machinery built into modern browser;
+uses web components machinery built into modern browsers;
 pollyfills only for older browsers.
 
 More info @ [`www.polymer-project.org`](http://www.polymer-project.org)
@@ -95,23 +94,27 @@ More info @ [`www.polymer-project.org`](http://www.polymer-project.org)
 
 ### Custom Elements 
 
-(`<element>`) - W3C Spec
+(`<element>`) - [W3C Spec](http://www.w3.org/TR/custom-elements/)
 
 ### Shadow DOM
 
-(hide DOM subtrees under shadow roots - `createShadowRoot()`) - W3C Spec
+(hide DOM subtrees under shadow roots - `createShadowRoot()`) - [W3C Spec](http://www.w3.org/TR/shadow-dom/)
 
 ### HTML Imports
 
-(include and reuse HTML documents) - W3C Spec
+(include and reuse HTML documents) - [W3C Spec](http://www.w3.org/TR/html-imports/)
+
+### HTML Templates
+
+(`<template>`) - [W3C Spec](http://www.w3.org/TR/html-templates/)
 
 ### MDV (Model Driven Views)
 
-(`<template repeat='{{{{ greetings }}}}'>`) - JavaScript Library
+(`repeat='{{{{ greetings }}}}'`) - JavaScript Library
 
 
 
-# Custom Tag Definition  - Step 1
+# Example 1 - `<beer-of-the-day>` Tag Definition
 
 
 `beer-of-the-day.html`
@@ -119,7 +122,7 @@ More info @ [`www.polymer-project.org`](http://www.polymer-project.org)
 ~~~
 <polymer-element name='beer-of-the-day'>
   <template>
-    <span>I'm a fan of <b>Ottakringer Zwickl Rot</b>
+    <span>I'm a fan of <b>Ottakringer Helles</b>
       and this is my Shadow DOM.
     </span>
   </template>
@@ -127,7 +130,7 @@ More info @ [`www.polymer-project.org`](http://www.polymer-project.org)
 ~~~
 
 
-# Custom Tag Usage - Step 2
+# Example 1 - `<beer-of-the-day>` Tag Usage
 
 ~~~
 <html>
@@ -136,13 +139,13 @@ More info @ [`www.polymer-project.org`](http://www.polymer-project.org)
     <!-- 1. Shim/polyfill missing web components machinery -->
     <script src='js/libs/polymer-min.js'></script>
 
-    <!-- 2. Load custom tag (e.g HTML Imports in Action) -->
+    <!-- 2. Load custom tag (e.g HTML Imports in action) -->
     <link rel='import' href='beer-of-the-day.html'>
 
   </head>
   <body>
 
-    <!-- 3. Use custom tag. -->
+    <!-- 3. Use custom tag -->
     <beer-of-the-day></beer-of-the-day>
 
   </body>
@@ -150,7 +153,7 @@ More info @ [`www.polymer-project.org`](http://www.polymer-project.org)
 ~~~
 
 
-# Let's Build `<football-js>` Widget
+# Example 2 - `<football-js>` Bundesliga Matchday Widget
 
 What's `football.js`?
 
@@ -171,13 +174,13 @@ The old way in JavaScript. Usage Example:
 The new way:
 
 ~~~
-<link rel='import' href='football-js.html'>   <!-- HTML import -->
+<link rel='import' href='football-js.html'>   <!-- HTML Imports -->
 
 <football-js event='at.2013/14'></football-js>  <!-- custom tag use -->
 ~~~
 
 
-# Let's Build `<football-js>` Widget - MDV (Model Driven Views)
+# Example 2 - `<football-js>` - MDV (Model Driven Views)
 
 ### Matchday Data as JavaScript Objects
 
@@ -204,7 +207,7 @@ The new way:
 ~~~
 
 
-# Let's Build `<football-js>` Widget - MDV / Nested Templates
+# Example 2 - `<football-js>` Widget - Nested Templates
 
 ~~~
 <template>
@@ -235,10 +238,9 @@ The new way:
 </template>
 ~~~
 
-That's it.
 
 
-# Let's Build `<football-js>` Widget - Widget
+# Example 2 - `<football-js>` - All Together Now
 
 ~~~
 <polymer-element name='football-js' attributes='event'>
@@ -298,7 +300,7 @@ That's it.
 ~~~
 
 
-# Let's Build `<football-js>` - Usage
+# Example 2 - `<football-js>` - Usage
 
 ~~~
 <!DOCTYPE html>
