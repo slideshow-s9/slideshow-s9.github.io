@@ -26,7 +26,7 @@ pre {
 - Serializers - From Ruby Objects to JavaScript Objects
 - Appendix: Sinatra Styles - Classic or Modern (Modular)
 - Appendix: Database Connection Management
-- Appendix: Books
+- Appendix: Sinatra Books
 - Appendix: What's Rack?
 
 
@@ -56,7 +56,7 @@ $ gem install sinatra
 
 # What's Sinatra? (Continued)
 
-Example `hallo.rb`:
+Example - `hallo.rb`:
 
 ~~~
 require 'sinatra'
@@ -240,7 +240,7 @@ Example - `GET /beer/ottakringerhelles`:
 
 # What's JSONP?
 
-JSONP = JSON with padding.  Why?
+JSONP = JSON with Padding.  Why?
 
 Call Home Restriction. Cross-Domain Browser Requests Get Blocked. 
 
@@ -294,13 +294,73 @@ end
 
 # Serializers - From Ruby Objects (in Memory) to JavaScript Object (in Text) 
 
-Built into Ruby 2.0 `#to_json`. Example:
+JSON built into Ruby 2.0 as a standard library. Example:
 
-{ xxx}.to_json
+~~~
+require 'json'
 
-TBD
+hash =
+{
+  key:   "ottakringerhelles",
+  title: "Ottakringer Helles"
+}
+~~~~
+
+### 1) `JSON.generate`
+
+~~~
+puts JSON.generate( hash )
+
+>> {"key":"ottakringerhelles","title":"Ottakringer Helles"}
+~~~
+
+### 2) `#to_json`
+
+~~~
+puts hash.to_json
+
+>>  {"key":"ottakringerhelles","title":"Ottakringer Helles"}
+~~~
 
 
+
+# Serializers - From Ruby Objects (in Memory) to JavaScript Object (in Text) Continued
+
+Serializers for your Models. Example:
+
+~~~
+class BeerSerializer
+
+  def initialize( beer )
+    @beer = beer
+  end
+
+  attr_reader :beer
+
+  def as_json
+    data = { key:      beer.key,
+             title:    beer.title,
+             synonyms: beer.synonyms,
+             abv:      beer.abv,
+             ...
+           }
+    data.to_json
+  end
+
+end # class BeerSerializer
+~~~
+
+And add `as_json` to your Model. Example:
+
+~~~
+class Beer < ActiveRecord::Base
+
+  def as_json_v2( opts={} )
+    BeerSerializer.new( self ).as_json
+  end
+
+end # class Beer
+~~~
 
 
 # That's it. Thanks.
