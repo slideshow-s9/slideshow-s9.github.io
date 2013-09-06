@@ -117,7 +117,7 @@ Sample template package using the Slidy2 machinery
 [More »](https://github.com/slideshow-s9/slideshow-slidy)
 
 
-## reveal by Adolfo Villafiorita   {#revealjs}
+## reveal.js by Adolfo Villafiorita   {#revealjs}
 
 Template pack using reveal.js.
 
@@ -131,7 +131,7 @@ or
 $ slideshow install reveal
 ~~~
 
-[Docu](https://github.com/avillafiorita/slideshow-reveal.js/blob/master/doc/s9-reveal.textile)
+[Docu](https://github.com/avillafiorita/slideshow-reveal.js/blob/master/doc/s9-reveal.textile) &middot; 
 [More »](https://github.com/avillafiorita/slideshow-reveal.js)
 
 
