@@ -16,6 +16,7 @@ title: Template Gallery
 [S5 Themes](#s5themes) |
 [Shower](#shower)  |
 [Slidy](#slidy)  |
+[reveal.js](#revealjs)  | 
 [Upstage](#upstage)
 
 
@@ -114,6 +115,24 @@ Sample template package using the Slidy2 machinery
 
 [Sample](slidy/tutorial1.w3c.html)  &middot;
 [More »](https://github.com/slideshow-s9/slideshow-slidy)
+
+
+## reveal by Adolfo Villafiorita   {#revealjs}
+
+Template pack using reveal.js.
+
+~~~
+$ slideshow install https://raw.github.com/avillafiorita/slideshow-reveal.js/master/reveal.txt
+~~~
+
+or
+
+~~~
+$ slideshow install reveal
+~~~
+
+[Docu](https://github.com/avillafiorita/slideshow-reveal.js/blob/master/doc/s9-reveal.textile)
+[More »](https://github.com/avillafiorita/slideshow-reveal.js)
 
 
 
