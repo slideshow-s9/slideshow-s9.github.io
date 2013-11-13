@@ -24,8 +24,9 @@ Agenda
 * Reading Web Feeds in Ruby  - `RSS::Rss`
 * Reading Web Feeds in Ruby  - `RSS::Atom::Feed`
 * Who Cares? Let's Normalize - A Web Feed is a Web Feed is a Web Feed
-
-
+* Planet Feed Reader in 20 Lines of Ruby
+* Production-Ready? Real-World World Feed Reader?
+* `planet.rb` - Using the Pluto Gem w/ Sinatra
 
 
 
@@ -314,6 +315,7 @@ feed.class.name: RSS::Atom::Feed
 # What's the difference?  RSS vs ATOM
 
 | RSS                   |  ATOM                   |
+| --------------------- | ----------------------- |
 | `feed.channel.title`  |  `feed.title.content`   |
 | `item.title`          |  `entry.title.content`  |
 | `item.link`           |  `entry.link.href`      |
@@ -409,7 +411,129 @@ More Ruby gems feed options:
 
 
 
+# Planet Feed Reader in 20 Lines of Ruby
+
+`planet.rb`:
+
+~~~
+require 'open-uri'
+require 'feedutils'
+require 'erb'
+  
+# step 1) read a list of web feeds
+
+FEEDS = [
+  'http://vienna-rb.at/atom.xml',
+  'http://www.meetup.com/vienna-rb/events/rss/vienna.rb/',
+  'http://www.1stfloorgraphics.nl/blog/feed/',
+  'http://lab.an-ti.eu/atom.xml',
+  'http://abangratz.github.io/atom.xml'
+]
+
+items = []
+  
+FEEDS.each do |url|
+  feed = FeedUtils::Parser.parse( open( url ).read )
+  items += feed.items
+end
+
+# step 2) mix up all postings in a new page
+
+FEED_ITEM_TEMPLATE = <<EOS
+<%% items.each do |item| %>
+  <div class="item">
+    <h2><a href="<%%= item.url %>"><%%= item.title %></a></h2>
+    <div><%%= item.content %></div>
+  </div>
+<%% end %>
+EOS
+
+puts ERB.new( FEED_ITEM_TEMPLATE ).result
+~~~
+
+Run the script:
+
+~~~
+$ ruby planet.rb      
+~~~
+
+Prints:
+
+~~~
+<div class="item">
+  <h2><a href="http://vienna-rb.at/blog/2013/11/06/picks/">Picks / what the vienna.rb team thinks is worth sharing this week</a></h2>
+  <div>
+   <h3>6/11 Picks!!</h3>
+   <p>In a series on this website we'll entertain YOU with our picks...
+ ...
+~~~
+
+
+# Production-Ready? Real-World Planet Feed Reader? Almost
+
+1) Cache (Store) Feed Items in Database
+
+e.g. lets you use `items.latest.limit(24)` and so on (SQL queries)
+
+2) Use Conditional GETs When Fetching Feeds
+
+e.g. use HTTP Header `If-Modified-Since` for last modified dates and `If-None-Match` for etags
+
+3) Schedule Feed Auto Update Every Hour
+
+e.g. use `rake update`  w/ cron job, for example
+
+
+That's it.  Goodies ready for (re)use in pluto gem.
 
 
 
+# `planet.rb` - Using the Pluto Gem w/ Sinatra
+
+planet.rb:
+
+~~~
+class Planet < Sinatra::Base
+
+  include Pluto::Models   # Models e.g. Feed, Item, Site, etc.
+
+  get '/' do
+    erb :index, locals: { items: Items.latest.limit(24) }
+  end
+
+end
+~~~
+
+index.erb:
+
+~~~
+<%% items.each do |item| %>
+
+  <div class='item'>
+
+    <h2 class='item-title'>
+     <%%= link_to item.title, item.url %>
+    </h2>
+
+    <div class='item-content'>
+     <%%= item.content %>
+    </div>
+  </div>
+
+<%% end %>
+~~~
+
+See the [pluto.live.starter](https://github.com/feedreader/pluto.live.starter) repo for more.
+
+
+
+# Thanks - Questions? Comments?
+
+## Links
+
+Planet Vienna.rb  -> [`viennarb.herokuapp.com`](http://viennarb.herokuapp.com)
+
+Planet Ruby  ->  [`plutolive.herokuapp.com`](http://plutolive.herokuapp.com)
+
+Pluto Planet Feed Reader Tools  ->  [`github.com/feedreader`](https://github.com/feedreader)
 
