@@ -34,11 +34,13 @@ Agenda
 
 <img src='i/web-feed-icon.png' style='float: right;'>
 
-A web feed (or news feed) is a simple data format
+A web feed (or news feed) is a simple document/data format
 that 1) lets you publish a list of
-status updates, blog postings, articles, pictures, recordings, etc
+status updates, blog postings, articles, pictures, cartoons, recordings, etc
 and that 2) lets others subscribe to your updates.
 
+
+# What's a Web Feed? (Cont.)
 
 Example:
 
@@ -69,7 +71,7 @@ Example:
 
 # What's a Planet?
 
-It's a kind of Do-It-Yourself Facebook Newsfeed:
+It's a kind of Do-It-Yourself Facebook News Feed:
 
 Step 1) Read a list of web feeds.
 
@@ -78,9 +80,17 @@ Step 2) Mix up all postings in a new page.
 Step 3) Serve and enjoy.
 
 
+
+# What's a Planet? (Cont.)
+
+
 Example: Planet Vienna.rb
 
 ![](i/planet-viennarb.png)
+
+
+
+# What's a Planet? (Cont.)
 
 Example: Planet Vienna.rb - Alternative Design / Style
 
@@ -148,6 +158,8 @@ This will
 Open up `viennarb.html` to see your planet web page. Voila!
 
 
+# What's Pluto? (Cont.)
+
 Appendix: `viennarb.ini`
 
 ~~~
@@ -167,23 +179,19 @@ title  = Planet Vienna.rb
   title  = Floor Drees's Blog
   link   = http://www.1stfloorgraphics.nl/blog/
   feed   = http://www.1stfloorgraphics.nl/blog/feed/
-  github = FloorD
 
 [pxlpnk]
   title  = Andreas Tiefenthaler's Blog
   link   = http://lab.an-ti.eu
   feed   = http://lab.an-ti.eu/atom.xml
-  github = pxlpnk
 
 [abangratz]
   title  = Anton Bangratz's Blog
   link   = http://abangratz.github.io
   feed   = http://abangratz.github.io/atom.xml
-  github = abangratz
   
 ...
 ~~~
-
 
 
 
@@ -210,6 +218,9 @@ feed.items.each do |item|
   puts
 end
 ~~~
+
+
+# Reading Web Feeds in Ruby  - `RSS::Rss` (Cont.)
 
 Prints:
 
@@ -273,6 +284,10 @@ feed.entries.each do |entry|
   puts
 end
 ~~~
+
+
+
+# Reading Web Feeds in Ruby  - `RSS::Atom::Feed` (Cont.)
 
 Prints:
 
@@ -388,6 +403,10 @@ end
 
 ~~~
 
+
+
+# Who Cares? Let's Normalize - A Web Feed is a Web Feed is a Web Feed (Cont.)
+
 Prints:
 
 ~~~
@@ -422,7 +441,7 @@ require 'erb'
   
 # step 1) read a list of web feeds
 
-FEEDS = [
+FEED_URLS = [
   'http://vienna-rb.at/atom.xml',
   'http://www.meetup.com/vienna-rb/events/rss/vienna.rb/',
   'http://www.1stfloorgraphics.nl/blog/feed/',
@@ -431,8 +450,8 @@ FEEDS = [
 ]
 
 items = []
-  
-FEEDS.each do |url|
+
+FEED_URLS.each do |url|
   feed = FeedUtils::Parser.parse( open( url ).read )
   items += feed.items
 end
@@ -450,6 +469,9 @@ EOS
 
 puts ERB.new( FEED_ITEM_TEMPLATE ).result
 ~~~
+
+
+# Planet Feed Reader in 20 Lines of Ruby (Cont.)
 
 Run the script:
 
@@ -490,7 +512,7 @@ That's it.  Goodies ready for (re)use in pluto gem.
 
 # `planet.rb` - Using the Pluto Gem w/ Sinatra
 
-planet.rb:
+`planet.rb`:
 
 ~~~
 class Planet < Sinatra::Base
@@ -504,7 +526,7 @@ class Planet < Sinatra::Base
 end
 ~~~
 
-index.erb:
+`index.erb`:
 
 ~~~
 <%% items.each do |item| %>
