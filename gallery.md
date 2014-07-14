@@ -16,8 +16,8 @@ title: Template Gallery
 [S5 Themes](#s5themes) |
 [Shower](#shower)  |
 [Slidy](#slidy)  |
-[reveal.js](#revealjs)  | 
-[Upstage](#upstage)
+[reveal.js](#revealjs)
+
 
 
 <div markdown="1" class="toc">
@@ -102,11 +102,14 @@ and Pixel.
 [More »](https://github.com/slideshow-s9/slideshow-s5-themes)
 
 
+<!--
 ## Shower (Ribbon Theme)   {#shower}
 
 Sample template package using the Shower package by Vadim Makeev.
 
 [More »](https://github.com/slideshow-s9/slideshow-shower)
+-->
+
 
 
 ## Slidy (W3C Blue)   {#slidy}
@@ -135,7 +138,18 @@ $ slideshow install reveal
 [More »](https://github.com/avillafiorita/slideshow-reveal.js)
 
 
+## Shower by Adolfo Villafiorita   {#shower}
 
+Template pack using Shower.
+
+~~~
+$ slideshow install https://raw.github.com/avillafiorita/slideshow-shower/master/shower.txt
+~~~
+
+[More »](https://github.com/avillafiorita/slideshow-shower)
+
+
+<!--
 ## Upstage by Reid Burke {#upstage}
 
 Template pack using Upstage - a simple slideshow system built with YUI 3 by Reid Burke. 
@@ -145,6 +159,7 @@ $ slideshow install https://raw.github.com/reid/upstage/master/upstage.txt
 ~~~
 
 [More »](https://github.com/reid/upstage)
+-->
 
 
 ## How To Fetch New Template Packages?   {#fetch}
