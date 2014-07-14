@@ -146,6 +146,7 @@ Template pack using Shower.
 $ slideshow install https://raw.github.com/avillafiorita/slideshow-shower/master/shower.txt
 ~~~
 
+[Docu](https://github.com/avillafiorita/slideshow-shower/blob/master/doc/tutorial.textile)  &middot; 
 [More »](https://github.com/avillafiorita/slideshow-shower)
 
 
