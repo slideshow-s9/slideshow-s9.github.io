@@ -112,7 +112,7 @@ For more formatting options see the Markdown or Textile reference.
 Run `slideshow` to build your slide show. The `slideshow` gem
 expects the name of your slide show source document (e.g. `rest`)
 without the `.markdown` or `.textile` ending and will build a web page
-(e.g. [`rest.html`](rest.html)
+(e.g. [`rest.html`](demos/rest.html)
 that is an all-in-one-page handout and a live slide show all at once.
 
 ~~~
@@ -124,24 +124,24 @@ $ slideshow build rest
 
 ### Step 3: Open up your slide show in your browser
 
-Open up your slide show [`rest.html`](rest.html)
+Open up your slide show [`rest.html`](demos/rest.html)
 in your browser (Firefox, Chrome, Opera, Safari, and others) and hit F11 to switch 
 into full screen projection and hit the space bar or the right arrow, down arrow
 or page down key to flip through your slides.
 
-<a href="rest.html"><img src="i/slideshow.png"></a>
+<a href="demos/rest.html"><img src="i/slideshow.png"></a>
 
 That's it. Voila.
 
 ### Bonus: Try some different templates/theme packs
 
-* [S6 PDF Theme](tutorial.pdf.html) -> [PDF](tutorial.pdf)
-* [Google HTML5 Slides Theme](g5/tutorial1.html5.html)
-* [S5 Blank](s5/tutorial1.html)
-* [Slidy W3C Blue Theme](slidy/tutorial1.w3c.html)
+* [S6 PDF Theme](demos/tutorial.pdf.html) -> [PDF](demos/tutorial.pdf)
+* [Google HTML5 Slides Theme](demos/packs/g5/tutorial1.html5.html)
+* [S5 Blank](demos/packs/s5/tutorial1.html)
+* [Slidy W3C Blue Theme](demos/packs/slidy/tutorial1.w3c.html)
 * [More »](gallery.html)
 
-## What's Markdown? What's Textile? What's reStructuredText?   {#markup}
+## What's Markdown? What's Textile?   {#markup}
 
 Markdown is a wiki-style markup language that's easy-to-write and easy-to-read and
 that lets you author web pages in plain text. More:
@@ -154,10 +154,6 @@ that lets you author web pages in plain text. More:
 
 * [Textile Reference](http://redcloth.org/textile/)
 
-reStructuredText is yet another wiki-style markup language. More:
-
-* [reStructuredText Quick Reference](http://docutils.sourceforge.net/docs/user/rst/quickref.html)
-* [reStructuredText Project Site](http://docutils.sourceforge.net/rst.html)
 
 ## What's S5? What's S6?   {#s6}
 
@@ -171,7 +167,7 @@ to create S5 slide shows.)
 
 * [S5 Project Site](http://meyerweb.com/eric/tools/s5)
 
-S6 is the rewrite of Eric Meyer's S5 using
+S6 is the rewrite of S5 using
 the jQuery JavaScript library - offering easier to understand and easier
 to extend code. Add plugins, effects and more. Contributions welcome!
 

@@ -221,7 +221,7 @@ author: Jim Weirich
 Jim Weirich
 ~~~
 
-See [10 Things Every Java Programmer Should Know About Ruby](http://raw.github.com/slideshow-s9/slideshow-s9.github.io/master/talks/3rd/10things.text)
+See [10 Things Every Java Programmer Should Know About Ruby](http://raw.github.com/slideshow-s9/samples/master/10things.text)
 sample.
 
 Note, as an alternative syntax to skip (comment out)

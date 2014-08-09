@@ -266,7 +266,7 @@ only support inline code (if you want to include code use a nested include e.g.:
 ~~~
 
 For more options or on how to write your own syntax highlighting 
-helpers check the [source of the syntax higlighting helpers](http://github.com/geraldb/slideshow/tree/master/lib/slideshow/helpers/syntax).
+helpers check the [source of the syntax higlighting helpers](http://github.com/slideshow-s9/slideshow/tree/master/lib/slideshow/helpers/syntax).
 
 
 {% include questions.md %}
