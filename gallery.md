@@ -32,7 +32,7 @@ Contents:
 
 Sample template package using the S6 blank package.
 
-[Sample](tutorial.html)  &middot; [Sample PDF](tutorial.pdf.html)  &middot;
+[Sample](demos/tutorial.html)  &middot; [Sample PDF](demos/tutorial.pdf.html)  &middot;
 [More »](https://github.com/slideshow-s9/slideshow-s6-blank)
 
 
@@ -74,7 +74,7 @@ Sample template package using the deck.js package by Caleb Troughton (aka imakew
 
 Sample template package using Google's `html5-slides` code.
 
-[Sample](g5/tutorial1.html5.html)  &middot;
+[Sample](demos/g5/tutorial1.html5.html)  &middot;
 [More »](https://github.com/slideshow-s9/slideshow-google-html5-slides)
 
 
@@ -90,7 +90,7 @@ Sample template package using the impress.js package by Bartek Szopka (aka barta
 
 Sample template package using the S5.11 blank package.
 
-[Sample](s5/tutorial1.html)  &middot;
+[Sample](demos/s5/tutorial1.html)  &middot;
 [More »](https://github.com/slideshow-s9/slideshow-s5-blank)
 
 
@@ -116,7 +116,7 @@ Sample template package using the Shower package by Vadim Makeev.
 
 Sample template package using the Slidy2 machinery
 
-[Sample](slidy/tutorial1.w3c.html)  &middot;
+[Sample](demos/slidy/tutorial1.w3c.html)  &middot;
 [More »](https://github.com/slideshow-s9/slideshow-slidy)
 
 
