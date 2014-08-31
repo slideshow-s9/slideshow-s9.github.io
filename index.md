@@ -157,8 +157,7 @@ that lets you author web pages in plain text. More:
 
 ## What's S5? What's S6?   {#s6}
 
-Simple Standards-based Slide Show System (S5) is
-Eric Meyer's (of CSS fame) public domain (free, open source)
+Simple Standards-based Slide Show System (S5) is a classic public domain (free, open source)
 slide show package inspired by Opera Show and others that works in all modern browsers
 without any plugin required because it includes its own slide show machinery in JavaScript.
 (Use the [`s5blank`](https://github.com/slideshow-s9/slideshow-s5-blank)
@@ -171,7 +170,7 @@ S6 is the rewrite of S5 using
 the jQuery JavaScript library - offering easier to understand and easier
 to extend code. Add plugins, effects and more. Contributions welcome!
 
-* [S6 Project Site](https://github.com/geraldb/s6)
+* [S6 Project Site](https://github.com/slidekit/s6)
 
 Keyboard controls:
 
