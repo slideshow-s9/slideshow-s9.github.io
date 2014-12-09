@@ -130,6 +130,23 @@ pre,
    font-size: 80%;
 }
 
+
+.banner {
+  color: white;
+  background-color: #333333;
+  font-size: 12px;
+  padding: 6px 6px 4px 8px;
+  margin: 0 0 8px 0; }
+
+  .banner a,
+  .banner a:visited {
+    text-decoration: none;
+    color: white;
+    background-color: #333333; }
+    .banner a:hover {
+      text-decoration: underline; }
+
+
 /* styles for ultraviolet code syntax highlighting theme 'eiffel' */
 
 /* use our own background
