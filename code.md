@@ -19,7 +19,7 @@ Contents:
 Slide Show (S9) lets you include and syntax highlight code
 with the `code` helper. Example:
 
-~~~
+```
 <% code do %>
 # The Greeter class
 class Greeter
@@ -38,7 +38,7 @@ g = Greeter.new("world")
 # Output "Hello World!"
 g.salute
 <% end %>
-~~~
+```
 
 becomes
 
@@ -94,9 +94,9 @@ syntax highlighting for more than fifty languages in twenty themes:
 
 To use Ultraviolet for syntax highlighting install the Ruby gem e.g.
 
-~~~
+```
 $ gem install ultraviolet
-~~~
+```
 
 and switch the `code-engine` setting to `uv` or `ultraviolet`.
 
@@ -109,9 +109,9 @@ in Ruby:
 
 To use CodeRay for syntax highlighting install the Ruby gem e.g.
 
-~~~
+```
 $ gem install coderay
-~~~
+```
 
 and switch the `code-engine` setting to `coderay`.
 
@@ -125,23 +125,23 @@ The `code` helper lets you include and syntax highlight code inline e.g.
   <td markdown="1" width="50%" style="vertical-align: top;">
 Classic-style:
 
-~~~
+```
 <% code do %> 
   puts 'Hello World!   
 <% end %> 
-~~~
+```
 
 </td>
 <td markdown="1" style="vertical-align: top;">
 Django-Style:
 
-~~~
+```
 {% raw %}
 {% code %} 
   puts 'Hello World!   
 {% end %}
 {% endraw %}
-~~~
+```
 </td></tr></table>
 
 or include code from a file - lets say `hello.rb`:
@@ -149,16 +149,16 @@ or include code from a file - lets say `hello.rb`:
 <table width="100%">
 <tr>
   <td markdown="1" width="50%" style="vertical-align: top;">
-~~~
+```
 <%= code 'hello.rb' %> 
-~~~
+```
 </td>
 <td markdown="1" style="vertical-align: top;">
-~~~
+```
 {% raw %}
 {{ code hello.rb }} 
 {% endraw %}
-~~~
+```
 </td></tr></table>
 
 To select the language (default is `ruby`) use the `:lang` option e.g.
@@ -166,16 +166,16 @@ To select the language (default is `ruby`) use the `:lang` option e.g.
 <table width="100%">
 <tr>
   <td markdown="1" width="50%" style="vertical-align: top;">
-~~~
+```
 <%= code 'effects.css', lang: => 'css' %> 
-~~~
+```
 </td>
 <td markdown="1" style="vertical-align: top;">
-~~~
+```
 {% raw %}
 {{ code effects.css lang=css }} 
 {% endraw %}
-~~~
+```
 </td></tr></table>
 
 Note, you can also include parts of files
@@ -184,25 +184,25 @@ in your source (e.g. `#START:your_marker_here` and
 `#END:your_marker_here`) and you can also pass along an extra CSS class 
 (`large`, `small`, `tiny`, etc.) e.g. this directive in Codex
 
-~~~
+```
 :code code/meta/my_ostruct.rb[impl class=code-small] 
-~~~
+```
 
 becomes in S9: 
 
 <table width="100%">
 <tr>
   <td markdown="1" width="50%" style="vertical-align: top;">
-~~~
+```
 <%= code 'code/meta/my_ostruct.rb#impl', class:=>'small' %> 
-~~~
+```
 </td>
 <td markdown="1" style="vertical-align: top;">
-~~~
+```
 {% raw %}
 {{ code code/meta/my_ostruct.rb#impl class=small }}
 {% endraw %}
-~~~
+```
 </td></tr></table>
 
 
@@ -211,59 +211,59 @@ To select the underlying engine for syntax highlighting use the `:engine` option
 <table width="100%">
 <tr>
   <td markdown="1" width="50%" style="vertical-align: top;">
-~~~
+```
 <%= code 'highlight.rb', :engine => 'sh' %> 
-~~~
+```
 </td>
 <td markdown="1" style="vertical-align: top;">
-~~~
+```
 {% raw %}
 {{ code highlight.rb  engine=sh }}
 {% endraw %}
-~~~
+```
 </td></tr></table>
 
 or use a header to set it once e.g:
 
-~~~
+```
 code-engine: sh   # or use your very own code engine here 
-~~~
+```
 
 You can also use the built-in code highlighting engines 
 "stand-alone" without the code "wrapper" helper. 
 
 To use SyntaxHighlighter use:
 
-~~~
+```
 <% sh do %>
   puts 'Hello World!
 <% end %>
-~~~
+```
 
 To use Ultraviolet use: 
 
-~~~
+```
 <% uv do %>
   puts '¡Hola Mundo!
 <% end %>
-~~~
+```
 
 To use CodeRay use:
 
-~~~
+```
 <% coderay do %>
   puts 'Hallo Welt!
 <% end %>
-~~~
+```
 
 Note, that the `sh`, `uv` and `coderay` helpers
 only support inline code (if you want to include code use a nested include e.g.: 
 
-~~~
+```
 <% sh :lang => 'css', :line_numbers => 'off' do %>
   <%= include 'gradients.css' %> 
 <% end %> 
-~~~
+```
 
 For more options or on how to write your own syntax highlighting 
 helpers check the [source of the syntax higlighting helpers](http://github.com/slideshow-s9/slideshow/tree/master/lib/slideshow/helpers/syntax).

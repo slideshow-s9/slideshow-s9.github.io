@@ -24,7 +24,7 @@ Contents:
 You can use the `!SLIDE` directive to create slides without headings.
 Example:
 
-~~~
+```
 !SLIDE
 
 A slide with no title
@@ -44,22 +44,22 @@ And another
 !SLIDE image 
 
 !i/friendsbadge.png!
-~~~
+```
 
 Note, you can pass along CSS style classes to your generated `div`
 or `section` that wraps your slide. Example:
 
-~~~
+```
 !SLIDE smaller commandline
-~~~
+```
 
 Will become:
 
-~~~
+```
 <div class='slide smaller commandline'>
   ...
 </div>
-~~~
+```
 
 
 ## How To Use Gradient Themes for the Built-In S6 Template Pack?   {#themes}
@@ -72,19 +72,19 @@ using a simple CSS-style name value pair. [More »](themes.html#use)
 
 Using the `install` command lets you fetch (install) new templates. Example:
 
-~~~
+```
 $ slideshow install s5blank
-~~~
+```
 
 or
 
-~~~
+```
 $ slideshow install https://raw.github.com/slideshow-s9/slideshow-s5-blank/master/s5blank.txt
-~~~
+```
 
 Resulting in:
 
-~~~
+```
 Fetching template package 's5blank' 
   : from 'https://raw.github.com/slideshow-s9/slideshow-s5-blank/master
   : saving to '~/.slideshow/templates/s5blank'
@@ -93,7 +93,7 @@ Fetching template package 's5blank'
   ... 
   Downloading template 'ui/default/slides.js'... 
 Done. 
-~~~
+```
 
 Note, if you want to store the template pack somewhere else
 use the `-c/--config` option (defaults to `~/.slideshow`).
@@ -106,15 +106,15 @@ To find more templates browse the [Template Gallery](gallery.html).
 Trouble downloading? Do you have a direct internet connection?
 If not, configure your proxy using the HTTP_PROXY environment variable. Sample:
 
-~~~
+```
 HTTP_PROXY=http://234.445.454:4341
-~~~
+```
 
 Or with user credentials (that is, login and password):
 
-~~~
+```
 HTTP_PROXY=http://gerald:topsecret@234.445.454:4341
-~~~
+```
 
 If all fails, you can always download the template pack on your own
 (using lets say `git` itself) and than move the souces into your
@@ -129,17 +129,17 @@ Step 1: Change to your templates folder
 
 Issue the command:
 
-~~~
+```
 cd ~/.slideshow/templates
-~~~
+```
 
 Step 2: Clone (Fetch) the template pack using `git`
 
 Let's clone the `slideshow-google-html5-slides` template pack. Issue the command:
 
-~~~
+```
 git clone http://github.com/slideshow-s9/slideshow-google-html5-slides.git
-~~~
+```
 
 That's it. Use the `list` command to list all installed template packs.
 
@@ -147,23 +147,23 @@ That's it. Use the `list` command to list all installed template packs.
 
 Using the `list` command lets you list all installed templates. Example:
 
-~~~
+```
 $ slideshow list
-~~~
+```
 
 or
 
-~~~
+```
 $ slideshow ls
-~~~
+```
 
 Resulting in:
 
-~~~
+```
 Installed templates include: 
   s5blank.txt       (~/.slideshow/templates/s5blank/s5blank.txt)
   s6.txt            (/usr/lib/ruby/gems/1.8/gems/slideshow-0.8/templates/s6.txt)
-~~~
+```
 
 
 ## How To Use Your Own Slide Show Template Packages?   {#templates}
@@ -175,13 +175,13 @@ See the [Template Gallery](gallery.html) for more info and samples to get starte
 To use your own template pack use the `-t/--template MANIFEST` option 
 passing along the manifest. Example:
 
-~~~
-$ slideshow build microformats -t s6
-$ slideshow build microformats -t s5blank
-~~~
+```
+$ slideshow build microformats.text -t s6
+$ slideshow build microformats.text -t s5blank
+```
 
 Got templates? Send a link and announcement to the
-[Forum/Mailing List](http://groups.google.com/group/webslideshow)
+[wwwmake forum/mailing List](http://groups.google.com/group/wwwmake)
 and get your link added to the [Template Gallery](gallery.html).
 
 
@@ -194,11 +194,11 @@ using lets say the free, open source [`wkhtmltopdf`](http://code.google.com/p/wk
 
 Example:
 
-~~~
-$ slideshow build tutorial
+```
+$ slideshow build tutorial.text
 
 $ wkhtmltopdf --outline --orientation Landscape tutorial.pdf.html tutorial.pdf 
-~~~
+```
 
 
 ## How To Comment Out Content?   {#comments}
@@ -206,7 +206,7 @@ $ wkhtmltopdf --outline --orientation Landscape tutorial.pdf.html tutorial.pdf
 Use `%` for comments anywhere (including headers) and `%begin`/`%end`
 for multi-line comments and `%end` to skip everything until the end.
 
-~~~
+```
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %  Start off with some headers
 
@@ -219,7 +219,7 @@ author: Jim Weirich
 # 10 Things Every Java Programmer Should Know About Ruby
 
 Jim Weirich
-~~~
+```
 
 See [10 Things Every Java Programmer Should Know About Ruby](http://raw.github.com/slideshow-s9/samples/master/10things.text)
 sample.
@@ -227,11 +227,11 @@ sample.
 Note, as an alternative syntax to skip (comment out)
 content in your source enclose it with  `__SKIP__`/`__END__`. Example:
 
-~~~
+```
 __SKIP__ 
   not yet ready or private notes/comments 
 __END__ 
-~~~
+```
 
 As a shortcut if you just use `__END__` (without `__SKIP__`) (Ruby-like)
 it will skip everything from `__END__` until the end of the file.

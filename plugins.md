@@ -21,11 +21,11 @@ Contents:
 Slide Show (S9) includes support for plugins and helpers
 and lets you use Embedded Ruby (ERB) in your slide source. Example:
 
-~~~
-h1. Today's Date
+```
+## Today's Date
 
 <%= Date.today %> 
-~~~
+```
 
 If you want to use your own helpers put your code in the `./lib`
 folder (or any subfolders) and your code gets loaded on startup.
@@ -33,13 +33,13 @@ folder (or any subfolders) and your code gets loaded on startup.
 Note, as an alternative syntax for Embedded Ruby (ERB) helpers you can also
 use a Django-style syntax using `{% raw %}{{ }}{% endraw %}`. Example:
 
-~~~
+```
 {% raw %}
-h1. Today's Date
+## Today's Date
 
 {{ Date.today }}
 {% endraw %}
-~~~
+```
 
 ## Built-In Helpers   {#builtin}
 
@@ -50,18 +50,18 @@ h1. Today's Date
   <td markdown="1" width="50%" style="vertical-align: top;">
 Django-style helper syntax:
 
-~~~
+```
 {% raw %}
 {{ include help.txt }}
 {% endraw %}
-~~~
+```
 </td>
 <td markdown="1" style="vertical-align: top;">
 Classic helper syntax:
 
-~~~
+```
 <%= include 'help.txt' %>
-~~~
+```
 </td></tr></table>
 
 
@@ -72,18 +72,18 @@ Classic helper syntax:
   <td markdown="1" width="50%" style="vertical-align: top;">
 Django-style:
 
-~~~
+```
 {% raw %}
 {{ google_analytics code=UA-YOUR-CODE-HERE }}
 {% endraw %}
-~~~
+```
 </td>
 <td markdown="1" style="vertical-align: top;">
 Classic:
 
-~~~
+```
 <%= google_analytics :code => 'UA-YOUR-CODE-HERE' %>
-~~~
+```
 </td></tr></table>
 
 
@@ -94,18 +94,18 @@ Classic:
   <td markdown="1" width="50%" style="vertical-align: top;">
 Django-style:
 
-~~~
+```
 {% raw %}
 {{ help }}
 {% endraw %}
-~~~
+```
 </td>
 <td markdown="1" style="vertical-align: top;">
 Classic:
 
-~~~
+```
 <%= help %>
-~~~
+```
 </td></tr></table>
 
 * `left`/`right` - Lets you use two-column layouts in your slides. Example:
@@ -115,7 +115,7 @@ Classic:
   <td markdown="1" width="50%" style="vertical-align: top;">
 Django-style:
 
-~~~
+```
 {% raw %}
 {% left %}
 
@@ -139,12 +139,12 @@ typed.
 typed.
 {% end %}
 {% endraw %}
-~~~
+```
 </td>
 <td markdown="1" style="vertical-align: top;">
 Classic:
 
-~~~
+```
 <% left do %>
 
 ### Java is
@@ -166,7 +166,7 @@ typed.
 
 typed.
 <% end %>
-~~~
+```
 </td></tr></table>
 
 * `step`  - Lets you wrap a block into a div for incremental display using steps. Example:
@@ -176,7 +176,7 @@ typed.
   <td markdown="1" width="50%" style="vertical-align: top;">
 Django-style:
 
-~~~
+```
 {% raw %}
 {% step %}
 * Catching all inappropriate operations on a type, either at
@@ -184,18 +184,18 @@ Django-style:
   * run time
 {% end %}
 {% endraw %}
-~~~
+```
 </td>
 <td markdown="1" style="vertical-align: top;">
 Classic:
 
-~~~
+```
 <% step do %>
 * Catching all inappropriate operations on a type, either at
   * compile time, or
   * run time
 <% end %>
-~~~
+```
 </td></tr></table>
 
 
@@ -203,17 +203,17 @@ Classic:
 
 In your slide source use: 
   
-~~~
+```
 <% content_for :head do %> 
   your content here e.g. more meta tags; javascript includes etc. 
 <% end %> 
-~~~
+```
 
 In your template use: 
 
-~~~
+```
 <%= content_for :head %>
-~~~
+```
 
 and it will include the marked content from your source.
 Note, you can use `:foo`, `:bar` or whatever key you 
@@ -234,7 +234,7 @@ Let's create a new Ruby script (file) e.g. `markdown_helper.rb`
 and let's pack our new helper into a module named `MarkdownHelper`
 Example:
 
-~~~
+```
 module MarkdownHelper
   
   # helper/shortcut for adding embedded image to slide in markdown syntax:
@@ -250,17 +250,17 @@ module MarkdownHelper
   end
   
 end
-~~~
+```
 
 Almost done. Two more steps. Include your code into
 the class `Slideshow::Gen`. Add this snippet to the end of your
 Ruby script:
 
-~~~
+```
 class Slideshow::Gen
   include MarkdownHelper
 end
-~~~
+```
 
 Lastly, make sure your Ruby script (that is, `markdown_helper.rb`)
 resides in the `./lib`
@@ -268,20 +268,20 @@ folder (or any subfolders) of your working folder
 and your code will get loaded on startup and is ready for use in your
 slides. Example:
  
-~~~
+```
 <%= image 'friendsbadge.png' %>
-~~~
+```
 
 Or Django-style:
 
-~~~
+```
 {% raw %}
 {{ image friendsbadge.png }}
 {% endraw %}
-~~~
+```
 
 That's it. For more samples, check the
-[source of the built-in helpers](http://github.com/geraldb/slideshow/tree/master/lib/slideshow/helpers).
+[source of the plugin helpers](http://github.com/slideshow-s9/slideshow-plugins).
 
 
 {% include questions.md %}

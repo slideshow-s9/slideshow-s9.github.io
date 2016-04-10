@@ -16,12 +16,12 @@ Contents:
 </div>
 
 
-~~~
+```
 SYNOPSIS
     slideshow [global options] command [command options] [arguments...]
 
 VERSION
-    2.0.0
+    3.0.0
 
 GLOBAL OPTIONS
     -c, --config=PATH - Configuration Path (default: ~/.slideshow)
@@ -35,12 +35,12 @@ COMMANDS
     new, n             - Generate quick starter sample
     about, a           - (Debug) Show more version info
     help               - Shows a list of commands or help for one command
-~~~
+```
 
 
 ### `build` Command  {#build}
 
-~~~
+```
 NAME
     build - Build slideshow
 
@@ -56,18 +56,15 @@ COMMAND OPTIONS
     -t, --template=MANIFEST - Template Manifest (default: s6)
 
 EXAMPLES
-    slideshow build microformats
-    slideshow build microformats.text            # Process slides using Markdown
-    slideshow build microformats.textile         # Process slides using Textile
-    slideshow build microformats.rst             # Process slides using reStructuredText
-    slideshow build microformats -o slides       # Output slideshow to slides folder
-    slideshow build microformats -t s5blank      # Use your own slide show templates (e.g. s5blank)
-~~~
+    slideshow build microformats.text
+    slideshow build microformats.text -o slides     # Output slideshow to slides folder
+    slideshow build microformats.text -t s5blank    # Use your own slide show templates (e.g. s5blank)
+```
 
 
 ### `list` Command  {#list}
 
-~~~
+```
 NAME
     list - List installed template packs
 
@@ -77,12 +74,12 @@ SYNOPSIS
 EXAMPLES
     slideshow list
     slideshow ls
-~~~
+```
 
 
 ### `install` Command   {#install}
 
-~~~
+```
 NAME
     install - Install template pack
 
@@ -95,12 +92,12 @@ COMMAND OPTIONS
 EXAMPLES
     slideshow install impress.js
     slideshow install https://raw.github.com/slideshow-s9/slideshow-impress.js/master/impress.js.txt
-~~~
+```
 
 
 ### `new` Command   {#new}
 
-~~~
+```
 NAME
     new - Generate quick starter sample
 
@@ -114,7 +111,8 @@ COMMAND OPTIONS
 EXAMPLES
     slideshow new
     slideshow new -t impress.js
-~~~
+```
 
 
 {% include questions.md %}
+

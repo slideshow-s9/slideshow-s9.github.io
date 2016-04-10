@@ -41,9 +41,9 @@ a simple CSS-style name value pair (if you use the built-in S6 templates).
 
 Example 1: Use `top-bottom` gradient theme with the colors red and black
 
-~~~
+```
 gradient: top-bottom red black
-~~~
+```
 
 *Themes*. The built-in predefined gradient themes include: `diagonal`,
 `top-bottom`, 
@@ -59,27 +59,27 @@ gradient: top-bottom red black
 
 Example 2: Use pre-defined CSS colors (with default `diagonal` gradient theme)
 
-~~~
+```
 gradient-colors: green lime
-~~~
+```
 
 Example 3: Use self-defined colors (with default `diagonal` gradient theme)
 
-~~~
+```
 gradient-colors: #0e1f5b #3b5998
-~~~
+```
 
 Example 4: Use `radial` gradient theme and facebook colors
 
-~~~
+```
 gradient: radial #0e1f5b #3b5998
-~~~
+```
 
 Example 5: Just change gradient theme and use default colors, that is, `red` and `orange`
 
-~~~
+```
 gradient-theme: repeat
-~~~
+```
 
 That's it.
 

@@ -9,6 +9,7 @@ kramdown:
 exclude:
   - attic
   - README.md
+  - TODOS.md
 
 
 safe: true
