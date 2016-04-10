@@ -31,23 +31,11 @@ Contents:
 
 ## S6 Series
 
+
 ### What's S6?
 
-S6 is the rewrite of the classic S5 () using the jquery JavaScript library - offering easier to understand and easier
-to extend code. Add plugins, effects and more. Contributions welcome!
-
-* [S6 Project Site](https://github.com/slidekit/s6)
-
-Keyboard controls:
-
-Action               | Key
--------------------- | ---
-Go to next slide     | Space Bar, Right Arrow Down Arrow, Page Down
-Go to previous slide | Left Arrow, Up Arrow, Page Up
-Go to first slide    | Home
-Go to last slide     | End
-Toggle between slideshow and outline view (`Ø`) | T
-Show/hide slide controls (`Ø` `«` `»`)  | C, Move mouse to bottom right corner
+S6 is a modern slide show template using HTML5, CSS3 and JavaScript (w/ jQuery).
+See the [S6 Project Site](https://github.com/slidekit/s6) for more.
 
 
 ### S6 Blank  {#s6blank}
@@ -66,6 +54,18 @@ Includes SyntaxHighlighter - a free, open source syntax highlighter in JavaScrip
 [More »](https://github.com/slideshow-s9/slideshow-s6-syntax-highlighter)
 
 
+Keyboard controls:
+
+Action               | Key
+-------------------- | ---
+Go to next slide     | Space Bar, Right Arrow Down Arrow, Page Down
+Go to previous slide | Left Arrow, Up Arrow, Page Up
+Go to first slide    | Home
+Go to last slide     | End
+Toggle between slideshow and outline view (`Ø`) | T
+Show/hide slide controls (`Ø` `«` `»`)  | C, Move mouse to bottom right corner
+
+
 
 ## CSSS   {#csss}
 
@@ -74,18 +74,21 @@ Sample template package using the CSSS package by Lea Verou.
 [More »](https://github.com/slideshow-s9/slideshow-csss)
 
 
-## deck.js.sh by Ralph Möritz   {#deckjs}
+
+## deck.js
+
+### deck.js.sh by Ralph Möritz   {#deckjs}
 
 Template pack using deck.js with SyntaxHighlighter (sh).
 
-~~~
+```
 $ slideshow install https://raw.github.com/ralph-moeritz/slideshow-deck.js.sh/master/deck.js.sh.txt
-~~~
+```
 
 [More »](https://github.com/ralph-moeritz/slideshow-deck.js.sh)
 
 
-## deck.js   
+### deck.js   
 
 Sample template package using the deck.js package by Caleb Troughton (aka imakewebthings).
 
@@ -117,8 +120,7 @@ Sample template package using the impress.js package by Bartek Szopka (aka barta
 Simple Standards-based Slide Show System (S5) is a classic public domain (free, open source)
 slide show package inspired by Opera Show and others that works in all modern browsers
 without any plugin required because it includes its own slide show machinery in JavaScript.
-
-* [S5 Project Site](http://meyerweb.com/eric/tools/s5)
+See the [S5 Project Site](http://meyerweb.com/eric/tools/s5) for more.
 
 ### S5 Blank   {#s5blank}
 
@@ -159,15 +161,14 @@ Sample template package using the Slidy2 machinery
 
 Template pack using reveal.js.
 
-~~~
+```
 $ slideshow install https://raw.github.com/avillafiorita/slideshow-reveal.js/master/reveal.txt
-~~~
-
+```
 or
 
-~~~
+```
 $ slideshow install reveal
-~~~
+```
 
 [Docu](https://github.com/avillafiorita/slideshow-reveal.js/blob/master/doc/s9-reveal.textile) &middot; 
 [More »](https://github.com/avillafiorita/slideshow-reveal.js)
@@ -177,9 +178,9 @@ $ slideshow install reveal
 
 Template pack using Shower.
 
-~~~
+```
 $ slideshow install https://raw.github.com/avillafiorita/slideshow-shower/master/shower.txt
-~~~
+```
 
 [Docu](https://github.com/avillafiorita/slideshow-shower/blob/master/doc/tutorial.textile)  &middot; 
 [More »](https://github.com/avillafiorita/slideshow-shower)
@@ -190,9 +191,9 @@ $ slideshow install https://raw.github.com/avillafiorita/slideshow-shower/master
 
 Template pack using Upstage - a simple slideshow system built with YUI 3 by Reid Burke. 
 
-~~~
+```
 $ slideshow install https://raw.github.com/reid/upstage/master/upstage.txt
-~~~
+```
 
 [More »](https://github.com/reid/upstage)
 -->
