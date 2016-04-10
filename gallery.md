@@ -28,7 +28,29 @@ Contents:
 </div>
 
 
-## S6 Blank  {#s6blank}
+
+## S6 Series
+
+### What's S6?
+
+S6 is the rewrite of the classic S5 () using the jquery JavaScript library - offering easier to understand and easier
+to extend code. Add plugins, effects and more. Contributions welcome!
+
+* [S6 Project Site](https://github.com/slidekit/s6)
+
+Keyboard controls:
+
+Action               | Key
+-------------------- | ---
+Go to next slide     | Space Bar, Right Arrow Down Arrow, Page Down
+Go to previous slide | Left Arrow, Up Arrow, Page Up
+Go to first slide    | Home
+Go to last slide     | End
+Toggle between slideshow and outline view (`Ø`) | T
+Show/hide slide controls (`Ø` `«` `»`)  | C, Move mouse to bottom right corner
+
+
+### S6 Blank  {#s6blank}
 
 Sample template package using the S6 blank package.
 
@@ -36,12 +58,13 @@ Sample template package using the S6 blank package.
 [More »](https://github.com/slideshow-s9/slideshow-s6-blank)
 
 
-## S6 Blank w/ Syntax Highlighter  {#s6syntax}
+### S6 Blank w/ Syntax Highlighter  {#s6syntax}
 
 Sample template package using the S6 blank package. 
 Includes SyntaxHighlighter - a free, open source syntax highlighter in JavaScript.
 
 [More »](https://github.com/slideshow-s9/slideshow-s6-syntax-highlighter)
+
 
 
 ## CSSS   {#csss}
@@ -86,7 +109,18 @@ Sample template package using the impress.js package by Bartek Szopka (aka barta
 
 
 
-## S5 Blank   {#s5blank}
+
+## S5 Series
+
+### What's S5?
+
+Simple Standards-based Slide Show System (S5) is a classic public domain (free, open source)
+slide show package inspired by Opera Show and others that works in all modern browsers
+without any plugin required because it includes its own slide show machinery in JavaScript.
+
+* [S5 Project Site](http://meyerweb.com/eric/tools/s5)
+
+### S5 Blank   {#s5blank}
 
 Sample template package using the S5.11 blank package.
 
@@ -94,12 +128,13 @@ Sample template package using the S5.11 blank package.
 [More »](https://github.com/slideshow-s9/slideshow-s5-blank)
 
 
-## S5 Themes (Blue, I18N and Pixel)   {#s5themes}
+### S5 Themes (Blue, I18N and Pixel)   {#s5themes}
 
 Sample template package using the S5.11 package including three themes, that is, Blue, I18N
 and Pixel.
 
 [More »](https://github.com/slideshow-s9/slideshow-s5-themes)
+
 
 
 <!--
@@ -172,5 +207,6 @@ Using the `install` command lets you fetch (install) new templates.
 ## Got Templates?   {#add}
 
 Share your templates. Send a link and announcement to the
-[Free Web Slide Show Alternatives (S5, S6, S9, Slidy And Friends) Forum/Mailing List](http://groups.google.com/group/webslideshow)
+[wwwmake forum/mailing List](http://groups.google.com/group/wwwmake)
 and get your link added here. Thanks!
+
