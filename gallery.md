@@ -29,13 +29,21 @@ Contents:
 
 
 
-## S6 Series
-
-
-### What's S6?
+## S6 Series   {#s6}
 
 S6 is a modern slide show template using HTML5, CSS3 and JavaScript (w/ jQuery).
 See the [S6 Project Site](https://github.com/slidekit/s6) for more.
+
+Keyboard controls:
+
+Action               | Key
+-------------------- | ---
+Go to next slide     | Space Bar, Right Arrow Down Arrow, Page Down
+Go to previous slide | Left Arrow, Up Arrow, Page Up
+Go to first slide    | Home
+Go to last slide     | End
+Toggle between slideshow and outline view (`Ø`) | T
+Show/hide slide controls (`Ø` `«` `»`)  | C, Move mouse to bottom right corner
 
 
 ### S6 Blank  {#s6blank}
@@ -54,32 +62,28 @@ Includes SyntaxHighlighter - a free, open source syntax highlighter in JavaScrip
 [More »](https://github.com/slideshow-s9/slideshow-s6-syntax-highlighter)
 
 
-Keyboard controls:
 
-Action               | Key
--------------------- | ---
-Go to next slide     | Space Bar, Right Arrow Down Arrow, Page Down
-Go to previous slide | Left Arrow, Up Arrow, Page Up
-Go to first slide    | Home
-Go to last slide     | End
-Toggle between slideshow and outline view (`Ø`) | T
-Show/hide slide controls (`Ø` `«` `»`)  | C, Move mouse to bottom right corner
+## CSSS  {#csss}
+
+CSSS is a slide show template by Lea Verou.
 
 
+### CSSS Sample
 
-## CSSS   {#csss}
-
-Sample template package using the CSSS package by Lea Verou.
+Sample template package using the CSSS template.
 
 [More »](https://github.com/slideshow-s9/slideshow-csss)
 
 
 
-## deck.js
+## deck.js {#deckjs}
 
-### deck.js.sh by Ralph Möritz   {#deckjs}
+deck.js is a slide show template by Caleb Troughton (aka imakewebthings).
 
-Template pack using deck.js with SyntaxHighlighter (sh).
+
+### deck.js.sh
+
+Template pack using deck.js with SyntaxHighlighter (sh) by Ralph Möritz.
 
 ```
 $ slideshow install https://raw.github.com/ralph-moeritz/slideshow-deck.js.sh/master/deck.js.sh.txt
@@ -88,9 +92,9 @@ $ slideshow install https://raw.github.com/ralph-moeritz/slideshow-deck.js.sh/ma
 [More »](https://github.com/ralph-moeritz/slideshow-deck.js.sh)
 
 
-### deck.js   
+### deck.js Sample  
 
-Sample template package using the deck.js package by Caleb Troughton (aka imakewebthings).
+Sample template package using the deck.js package.
 
 [More »](https://github.com/slideshow-s9/slideshow-deck.js)
 
@@ -98,15 +102,27 @@ Sample template package using the deck.js package by Caleb Troughton (aka imakew
 
 ## Google HTML5 Rocks   {#g5}
 
+`html5-slides` is a slide show template
+by Google used for the Google I/O conference in 2011
+
+
+### Google HTML5 Rocks Sample
+
 Sample template package using Google's `html5-slides` code.
 
 [Sample](demos/packs/g5/tutorial1.html5.html)  &middot;
 [More »](https://github.com/slideshow-s9/slideshow-google-html5-slides)
 
 
+
+
 ## impress.js   {#impressjs}
 
-Sample template package using the impress.js package by Bartek Szopka (aka bartaz).
+impress.js is a slide show template by Bartek Szopka (aka bartaz).
+
+### impress.js Sample
+
+Sample template package using the impress.js package.
 
 [More »](https://github.com/slideshow-s9/slideshow-impress.js)
 
@@ -114,8 +130,6 @@ Sample template package using the impress.js package by Bartek Szopka (aka barta
 
 
 ## S5 Series
-
-### What's S5?
 
 Simple Standards-based Slide Show System (S5) is a classic public domain (free, open source)
 slide show package inspired by Opera Show and others that works in all modern browsers
@@ -139,17 +153,13 @@ and Pixel.
 
 
 
-<!--
-## Shower (Ribbon Theme)   {#shower}
 
-Sample template package using the Shower package by Vadim Makeev.
+## Slidy {#slidy}
 
-[More »](https://github.com/slideshow-s9/slideshow-shower)
--->
+Slidy is slide show template by Dave Raggett
 
 
-
-## Slidy (W3C Blue)   {#slidy}
+### Slidy Sample (W3C Blue)   
 
 Sample template package using the Slidy2 machinery
 
@@ -157,9 +167,15 @@ Sample template package using the Slidy2 machinery
 [More »](https://github.com/slideshow-s9/slideshow-slidy)
 
 
-## reveal.js by Adolfo Villafiorita   {#revealjs}
 
-Template pack using reveal.js.
+## reveal.js   {#revealjs}
+
+reveal.js is a slide show template by Hakim El Hattab.
+
+
+### reveal
+
+Template pack using reveal.js by Adolfo Villafiorita.
 
 ```
 $ slideshow install https://raw.github.com/avillafiorita/slideshow-reveal.js/master/reveal.txt
@@ -174,9 +190,15 @@ $ slideshow install reveal
 [More »](https://github.com/avillafiorita/slideshow-reveal.js)
 
 
-## Shower by Adolfo Villafiorita   {#shower}
 
-Template pack using Shower.
+## Shower  {#shower}
+
+Shower is a slide show template by Vadim Makeev.
+
+
+### Shower   
+
+Template pack using Shower by Adolfo Villafiorita.
 
 ```
 $ slideshow install https://raw.github.com/avillafiorita/slideshow-shower/master/shower.txt
@@ -184,6 +206,17 @@ $ slideshow install https://raw.github.com/avillafiorita/slideshow-shower/master
 
 [Docu](https://github.com/avillafiorita/slideshow-shower/blob/master/doc/tutorial.textile)  &middot; 
 [More »](https://github.com/avillafiorita/slideshow-shower)
+
+
+### Shower Sample (Ribbon Theme)
+
+Sample template package using the Shower package.
+
+[More »](https://github.com/slideshow-s9/slideshow-shower)
+
+
+
+
 
 
 <!--
