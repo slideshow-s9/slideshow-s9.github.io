@@ -1,0 +1,110 @@
+%%%%%%%%%%%%%%%%%%
+%% Some Headers
+
+Title: Slide Show (S9) 10-Minute Tutorial
+
+%%%%%%
+%% NB: same as tutorial.textile
+%%  - no agenda slide (w/ help) included
+%%  - no gradient bonus slide
+%%  - wiki style sample only in markdown
+
+%%%%%%%%%%%%%%
+%% Let's go.
+
+
+h1. What's Slide Show (S9)?
+
+h3. What? 
+
+A Free Web Alternative to PowerPoint and Keynote in Ruby
+
+
+h3. Getting Started in 1-2-3 Easy Steps
+
+*(step) Step 1: Write your slides in plain text using a wiki-style markup language
+*(step) Step 2: Build your slide show using the @slideshow@ gem
+*(step) Step 3: Open up your slide show in your browser and hit the space bar to flip through your slides
+*(step) That's it. Showtime!
+
+
+h1. Wiki-Style Markup Language
+
+Lets you create slide shows and author slides in plain text using a wiki-style markup language
+that's easy-to-write and easy-to-read. Sample:
+
+{{{
+# What's Slide Show (S9)?
+
+### What? 
+
+A Free Web Alternative to PowerPoint and Keynote in Ruby
+
+### Getting Started in 1-2-3 Easy Steps
+
+- Step 1: Write your slides in plain text using a wiki-style markup language
+- Step 2: Build your slide show using the `slideshow` gem
+- Step 3: Open up your slide show in your browser 
+- That's it. Showtime!
+}}}
+
+
+
+h1. How it works - Just press F11!  
+
+The Slide Show (S9) Ruby gem turns your slides in plain text into a web page 
+that's an all-in-one-page handout and a live slide show all at once.
+
+{{{
+$ slideshow build tutorial
+
+=> Preparing slideshow 'tutorial.html'...
+=> Done.
+}}}
+
+
+Turn your web page into a slide show and your browser into full screen projection
+with a single push button (F11).  Hit the space bar or the right arrow, down arrow
+or page down key to flip through your slides.
+ 
+That's all. It's that simple.
+
+
+h1. Slide Show (S9) Template Pack Options
+
+{% left %}
+
+h3. What's S5?
+
+Simple Standards-based Slide Show System (S5) is a classic public domain (free, open source)
+slide show package inspired by Opera Show and others
+that works in all modern browsers (without any plugin required
+because it includes its own slide show machinery in JavaScript).
+
+(Use the @s5blank@ or @s5themes@ template pack to create S5 slide shows.)
+
+{% end %}
+
+{% right %}
+
+h3. What's S6?
+
+S6 started as a rewrite of S5 using the jQuery JavaScript library -- offering easier to understand and easier to extend code. Add plugins, effects and more. Contributions welcome!
+
+(Use the @s6blank@ or @s6syntax@ template pack to create S6 slide shows.)
+
+{% end %}
+
+h3. What's Slidy? What's Google HTML5 Slides? 
+
+Check the "Slide Show (S9) Template Gallery":http://slideshow-s9.github.io/gallery.html
+for more template packs and samples.
+
+
+
+h1. Thank You - Questions? Comments?
+
+Gerald Bauer designed and developed the Slide Show (S9) Ruby gem. 
+Find out more @ "slideshow-s9.github.io":http://slideshow-s9.github.io 
+
+Questions? Comments? Send them along to the "Free Web Slide Show Alternatives - S5, S6, S9 And Friends - Forum/Mailing List":http://groups.google.com/group/webslideshow. Thanks!
