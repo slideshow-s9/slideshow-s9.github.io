@@ -69,11 +69,11 @@ open standards** - no need to reinvent the wheel and sign-up for single-vendor o
 
 ### Broad Definition
 
-- Best Practices for Designing Web Services for a Unified Human and Programable Web
+Best Practices for Designing Web Services for a Unified Human and Programable Web
 
 ### Narrow Definition
 
-- Alternative to BigCo Web Services (SOAP, WS-\*) and RPC-Style Web Services (XML-RPC)
+Alternative to BigCo Web Services (SOAP, WS-\*) and RPC-Style Web Services (XML-RPC)
 ```
 
 Use headings `#` to start a new slide. That's it.
