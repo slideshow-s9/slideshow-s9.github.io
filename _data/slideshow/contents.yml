@@ -1,32 +1,46 @@
 ######################
 #  Table of Contents
 
-- title: What's Slide Show (S9)?
+- title: 1. What's Slide Show (S9)?
   path:  index.md
+  sections:
+  - title: What's Slide Show (S9)?
+  - title: Getting Started in 1-2-3 Easy Steps
+  - title: What's Markdown?
 
-- title: Settings, Tips, Tricks and More
+
+- title: 2. Settings, Tips, Tricks and More
   path:  more.md
+  sections:
+  - title: How To Create Slides Without Titles?
+  - title: How To Use Gradient Themes?
+  - title: How To Fetch New Template Packages?
+  - title: How To Fetch New Template Packs Using git?
+  - title: How To List All Installed Template Packages?
+  - title: How To Use Your Own Slide Show Template Packages?
+  - title: How To Generate PDF Documents from Your Slide Shows?
+  - title: How To Comment Out Content?
 
-- title: Plugins, Helpers and Extensions
+
+- title: 3. Plugins, Helpers and Extensions
   path:  plugins.md
 
-- title: Code/Syntax Highlighting Helpers
+- title: 4. Code/Syntax Highlighting Helpers
   path:  code.md
 
-- title: Template Gallery
+- title: 5. Template Gallery
   path:  gallery.md
 
-- title: Gradient Themes
+- title: 6. Gradient Themes
   path:  themes.md
 
-- title: Commands, Commands, Commands
+- title: 7. Commands, Commands, Commands
   path:  commands.md
 
-- title: Settings Reference
+- title: 8. Settings Reference
   path:  settings.md
 
-
-- title: About
+- title: 9. About
   path:  about.md
   sections:
   - title: License
