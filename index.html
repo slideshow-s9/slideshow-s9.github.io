@@ -1,0 +1,99 @@
+---
+## layout: book
+
+layout: none
+---
+
+
+{% assign book           = site.data.slideshow.book %}
+<!-- todo: check - can we use book.contents - why? why not? -->
+{% assign book_contents  = site.data.slideshow.contents %}
+
+
+
+<p>
+  <a href="https://github.com/slideshow-s9">Slide Show (S9) @ GitHub</a>
+</p>
+
+<!-- cover -->
+
+
+<h1>{{ book.title }}</h1>
+<!-- todo: move subtitle to book.yml -->
+<h2>Free Web Alternative to PowerPoint and Keynote in Ruby - Write Your Slides in Plain Text w/ Formatting Conventions</h2>
+<h3>by {{ book.author.name }}</h3>
+
+
+<!-- table of contents -->
+
+<div class='toc'>
+
+Contents
+
+<ul>
+{% for chapter in book_contents %}
+  <li>{{ chapter.title }}
+   <ul>
+     {% for sec in chapter.sections %}
+     <li>{{ sec.title }}
+       {% if sec.sections %}
+       <ul>
+         {% for subsec in sec.sections %}
+         <li>{{ subsec.title }}</li>
+         {% endfor %}
+       </ul>
+       {% endif %}
+     </li>
+     {% endfor %}
+   </ul>
+  </li>
+{% endfor %}
+</ul>
+</div>
+
+
+<!-- chapters -->
+
+{% for chapter in book_contents %}
+<div class="chapter">
+  <h1>{{ chapter.title }}</h1>
+
+  <!-- add mini table of contents for chapter if available -->
+  {% if chapter.sections %}
+  Contents
+  <ul>
+    {% for sec in chapter.sections %}
+    <li>{{ sec.title }}
+      {% if sec.sections %}
+      <ul>
+        {% for subsec in sec.sections %}
+        <li>{{ subsec.title }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+
+  <!-- try adding content using include_relative -->
+  {% capture txt %}{% include_relative _slideshow/{{chapter.path}} %}{% endcapture %}
+
+  <!-- hack: cut off yaml front matter header
+     possible alternative??:
+       try to use collection and use a content lookup with title or path - why? whynot??
+    -->
+  {% assign txt2 = txt | replace_first: '---', '' | replace_first: '---', '@@END@@' | split: '@@END@@' %}
+  {{ txt2[1] | markdownify }}
+</div>
+{% endfor %}
+
+
+<!-- github ribbon
+     see https://github.com/blog/273-github-ribbons
+  -->
+
+<a href="https://github.com/slideshow-s9/docs">
+  <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
+</a>
