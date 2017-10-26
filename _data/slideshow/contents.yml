@@ -24,21 +24,57 @@
 
 - title: 3. Plugins, Helpers and Extensions
   path:  plugins.md
+  sections:
+  - title: Using Embedded Ruby (ERB) Helpers in Your Slides
+  - title: Built-In Helpers
+  - title: Code/Syntax Highlighting Helpers
+  - title: How to Create Your Own Helpers
+
 
 - title: 4. Code/Syntax Highlighting Helpers
   path:  code.md
+  sections:
+  - title: Hello, Syntax Highlighting Helper!
+  - title: Client-Side vs. Server-Side Syntax Highlighting
+  - title: Using the `code` Helpers for Syntax Highlighting
+
 
 - title: 5. Template Gallery
   path:  gallery.md
+  sections:
+  - title: S6 Blank
+  - title: S6 Blank w/ Syntax Highlighter
+  - title: CSSS
+  - title: deck.js
+  - title: Google HTML5 Rocks
+  - title: impress.js
+  - title: S5 Blank
+  - title: S5 Themes
+  - title: Shower
+  - title: Slidy
+  - title: reveal.js
+
 
 - title: 6. Gradient Themes
   path:  themes.md
+  sections:
+  - title: Browse by Color
+  - title: Browse by Style
+  - title: How To Use Gradient Themes for the Built-In S6 Template Pack?
+
 
 - title: 7. Commands, Commands, Commands
   path:  commands.md
+  sections:
+  - title: build Command
+  - title: list Command
+  - title: install Command
+  - title: new Command
+
 
 - title: 8. Settings Reference
   path:  settings.md
+
 
 - title: 9. About
   path:  about.md
