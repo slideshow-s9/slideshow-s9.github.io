@@ -1,7 +1,32 @@
 ######################
 #  Table of Contents
 
-- title: 5. About
+- title: What's Slide Show (S9)?
+  path:  index.md
+
+- title: Settings, Tips, Tricks and More
+  path:  more.md
+
+- title: Plugins, Helpers and Extensions
+  path:  plugins.md
+
+- title: Code/Syntax Highlighting Helpers
+  path:  code.md
+
+- title: Template Gallery
+  path:  gallery.md
+
+- title: Gradient Themes
+  path:  themes.md
+
+- title: Commands, Commands, Commands
+  path:  commands.md
+
+- title: Settings Reference
+  path:  settings.md
+
+
+- title: About
   path:  about.md
   sections:
   - title: License
