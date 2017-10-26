@@ -1,0 +1,263 @@
+---
+### note: will result in an all-in-one-file stylesheet e.g. style.css
+---
+
+
+@import 'settings';
+
+
+html {
+  font-family: $font-family;
+  font-size:   20px;
+  line-height: 1.5;
+}
+
+
+//////////////
+// Links
+
+a {
+  color:           $link-color;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+
+////////////////////////////
+// Headings
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom:  .5rem;
+  font-weight:    bold;
+  line-height:    1.25;
+}
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+h3 {
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+}
+h4, h5, h6 {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+
+///////////////////
+// Code
+
+code {
+  padding: .15em .3em;
+  border: 1px solid #E5E5E5;
+  background-color: #f7f7f7;
+}
+
+pre {
+  border: 1px solid #E5E5E5;
+  background-color: #f7f7f7;
+  padding: 1em;
+
+  code {
+    padding: 0;
+    border: none;
+  }
+}
+
+/////////////
+// Body text
+
+// p {
+//  margin-top: 0;
+//  margin-bottom: 1rem;
+// }
+
+
+/////////////
+// Lists
+
+// ul, ol, dl {
+//  margin-top: 0;
+//  margin-bottom: 1rem;
+// }
+
+
+
+///////////////////////
+// Note types
+
+.note {
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    border: 1px solid transparent;
+    border-radius: 4px;
+
+    &.info {
+     background-color: #d9edf7;
+     border-color: #bce8f1;
+   }
+
+    &.warning {
+      background-color: #fcf8e3;
+      border-color: #faebcc;
+    }
+
+    &.unreleased {
+      background-color: #f2dede;
+      border-color: #ebccd1;
+   }
+}
+
+
+
+////////////////////////////////
+//  Container
+//   -- centers page content
+
+.container {
+  max-width: 38rem;
+  padding-left:  1rem;
+  padding-right: 1rem;
+  margin-left:  auto;
+  margin-right: auto;
+}
+
+
+
+
+/* styles for ultraviolet code syntax highlighting theme 'eiffel' */
+
+/* use our own background
+pre.eiffel .EmbeddedSource {
+   background-color: #6597F6;
+}
+pre.eiffel {
+   background-color: #FFFFFF;
+   color: #000000;
+}
+*/
+
+pre.eiffel .LibraryObject {
+   font-weight: bold;
+   color: #6D79DE;
+}
+pre.eiffel .Section {
+   font-style: italic;
+}
+pre.eiffel .FunctionArgumentAndResultTypes {
+   color: #70727E;
+}
+pre.eiffel .TypeName {
+   font-style: italic;
+}
+pre.eiffel .Number {
+   color: #CD0000;
+   font-style: italic;
+}
+pre.eiffel .MarkupList {
+   color: #B90690;
+}
+pre.eiffel .MarkupTagAttribute {
+   font-style: italic;
+}
+pre.eiffel .LibraryVariable {
+   font-weight: bold;
+   color: #21439C;
+}
+pre.eiffel .line-numbers {
+   background-color: #C3DCFF;
+   color: #000000;
+}
+pre.eiffel .FunctionParameter {
+   font-style: italic;
+}
+pre.eiffel .MarkupTag {
+   color: #1C02FF;
+}
+pre.eiffel .MarkupHeading {
+   font-weight: bold;
+   color: #0C07FF;
+}
+pre.eiffel .JsOperator {
+   color: #687687;
+}
+pre.eiffel .InheritedClassName {
+   font-style: italic;
+}
+pre.eiffel .StringInterpolation {
+   color: #26B31A;
+}
+pre.eiffel .MarkupQuote {
+   color: #000000;
+   font-style: italic;
+}
+pre.eiffel .MarkupNameOfTag {
+   font-weight: bold;
+}
+pre.eiffel .InvalidTrailingWhitespace {
+   background-color: #FFD0D0;
+}
+pre.eiffel .LibraryConstant {
+   font-weight: bold;
+   color: #06960E;
+}
+pre.eiffel .MarkupXmlDeclaration {
+   color: #68685B;
+}
+pre.eiffel .PreprocessorDirective {
+   font-weight: bold;
+   color: #0C450D;
+}
+pre.eiffel .BuiltInConstant {
+   color: #585CF6;
+   font-style: italic;
+}
+pre.eiffel .MarkupDtd {
+   font-style: italic;
+}
+pre.eiffel .Invalid {
+   background-color: #990000;
+   color: #FFFFFF;
+}
+pre.eiffel .LibraryFunction {
+   font-weight: bold;
+   color: #3C4C72;
+}
+pre.eiffel .String {
+   color: #D80800;
+}
+pre.eiffel .UserDefinedConstant {
+   color: #C5060B;
+   font-style: italic;
+}
+pre.eiffel .Keyword {
+   font-weight: bold;
+   color: #0100B6;
+}
+pre.eiffel .MarkupDoctype {
+   color: #888888;
+}
+pre.eiffel .FunctionName {
+   font-weight: bold;
+   color: #0000A2;
+}
+pre.eiffel .PreprocessorLine {
+   color: #1A921C;
+}
+pre.eiffel .Variable {
+   color: #0206FF;
+   font-style: italic;
+}
+pre.eiffel .Comment {
+   color: #00B418;
+}
