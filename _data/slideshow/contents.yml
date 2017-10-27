@@ -6,18 +6,17 @@
   sections:
   - title: What's Slide Show (S9)?
   - title: Getting Started in 1-2-3 Easy Steps
-  - title: What's Markdown?
 
 
 - title: 2. Settings, Tips, Tricks and More
   path:  more.md
   sections:
-  - title: How To Create Slides Without Titles?
-  - title: How To Use Gradient Themes?
   - title: How To Fetch New Template Packages?
   - title: How To Fetch New Template Packs Using git?
   - title: How To List All Installed Template Packages?
   - title: How To Use Your Own Slide Show Template Packages?
+  - title: How To Create Slides Without Titles?
+  - title: How To Use Gradient Themes?
   - title: How To Generate PDF Documents from Your Slide Shows?
   - title: How To Comment Out Content?
 
@@ -62,8 +61,14 @@
   - title: Browse by Style
   - title: How To Use Gradient Themes for the Built-In S6 Template Pack?
 
+- title: 7. Create Your Own Templates
+  path:  templates.md
+  sections:
+  - title: Headers
+  - title: Slides
+  - title: Filename
 
-- title: 7. Commands, Commands, Commands
+- title: 8. Commands, Commands, Commands
   path:  commands.md
   sections:
   - title: build Command
@@ -72,11 +77,15 @@
   - title: new Command
 
 
-- title: 8. Settings Reference
+- title: 9. Settings Reference
   path:  settings.md
 
 
-- title: 9. About
+- title: 10. What's Markdown?
+  path:  markdown.md
+
+
+- title: 11. About
   path:  about.md
   sections:
   - title: License
