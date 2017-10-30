@@ -16,7 +16,7 @@
   - title: How To List All Installed Template Packages?
   - title: How To Use Your Own Slide Show Template Packages?
   - title: How To Create Slides Without Titles?
-  - title: How To Use Gradient Themes?
+  - title: How To Use Gradient Background Themes?
   - title: How To Generate PDF Documents from Your Slide Shows?
   - title: How To Comment Out Content?
 
@@ -35,7 +35,7 @@
   sections:
   - title: Hello, Syntax Highlighting Helper!
   - title: Client-Side vs. Server-Side Syntax Highlighting
-  - title: Using the `code` Helpers for Syntax Highlighting
+  - title: Using the code Helpers for Syntax Highlighting
 
 
 - title: 5. Template Gallery
@@ -43,23 +43,23 @@
   sections:
   - title: S6 Blank
   - title: S6 Blank w/ Syntax Highlighter
+  - title: reveal.js
+  - title: Shower
   - title: CSSS
   - title: deck.js
-  - title: Google HTML5 Rocks
   - title: impress.js
+  - title: bespoke.js
+  - title: Google HTML5 Rocks
   - title: S5 Blank
-  - title: S5 Themes
-  - title: Shower
   - title: Slidy
-  - title: reveal.js
 
 
-- title: 6. Gradient Themes
+- title: 6. Gradient Background Themes
   path:  themes.md
   sections:
   - title: Browse by Color
   - title: Browse by Style
-  - title: How To Use Gradient Themes for the Built-In S6 Template Pack?
+  - title: How To Use Gradient Background Themes for the Built-In S6 Template Pack?
 
 - title: 7. Create Your Own Templates
   path:  templates.md
