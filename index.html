@@ -1,12 +1,17 @@
 ---
 layout: book
+book:   slideshow      ## book id used for site.data[ page.book ] lookups
 ---
 
 
-{% assign book           = site.data.slideshow.book %}
+{% assign book              = site.data[ page.book ].book %}
 <!-- todo: check - can we use book.contents - why? why not? -->
-{% assign book_contents  = site.data.slideshow.contents %}
+{% assign book_contents     = site.data[ page.book ].contents %}
+{% assign book['contents']  = site.data[ page.book ].contents %}
 
+<pre>
+  {{ book.contents | inspect }}
+</pre>
 
 
 <p>
