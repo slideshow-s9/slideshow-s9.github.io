@@ -1,23 +1,29 @@
 ---
 layout: book
-book:   slideshow      ## book id used for site.data[ page.book ] lookups
+
+book:       slideshow      ## book id used for site.data[ page.book ] lookups
 ---
+
+
+{% if site.home %}
+<p>
+  <a href="{{ site.home.url }}">{{ site.home.title }}</a>
+</p>
+{% endif %}
 
 
 {% assign book = site.data[ page.book ].book %}
 
+<!-- used for (root path) to (relative) include  content pages
+       e.g. turn slideshow into _slideshow  (e.g. convention use folder with underscore for now)
+  -->
+{% capture book_path %}_{{ page.book }}{% endcapture %}
 
-
-<p>
-  <a href="https://github.com/slideshow-s9">Slide Show (S9) @ GitHub</a>
-</p>
 
 <!-- cover -->
 
-
 <h1>{{ book.title }}</h1>
-<!-- todo: move subtitle to book.yml -->
-<h2>Write Your Slides in Plain Text w/ Markdown Formatting Conventions - Free Web Alternative to PowerPoint and Keynote</h2>
+<h2>{{ book.subtitle }}</h2>
 <h3>by {{ book.author.name }}</h3>
 
 
@@ -75,7 +81,7 @@ Contents
 
 
   <!-- try adding content using include_relative -->
-  {% capture txt %}{% include_relative _slideshow/{{chapter.path}} %}{% endcapture %}
+  {% capture txt %}{% include_relative {{ book_path }}/{{chapter.path}} %}{% endcapture %}
 
   <!-- hack: cut off yaml front matter header
      possible alternative??:
@@ -87,10 +93,12 @@ Contents
 {% endfor %}
 
 
+
+{% if book.github %}
 <!-- github ribbon
      see https://github.com/blog/273-github-ribbons
   -->
-
-<a href="https://github.com/slideshow-s9/docs">
+<a href="{{ book.github.url }}">
   <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
 </a>
+{% endif %}

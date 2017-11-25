@@ -1,4 +1,14 @@
+##################
+# site settings
 
+home:
+  url:   https://github.com/slideshow-s9
+  title: Slide Show (S9) @ GitHub
+
+
+
+######################
+# build settings
 
 markdown: kramdown
 
