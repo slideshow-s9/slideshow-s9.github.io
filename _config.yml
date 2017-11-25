@@ -20,3 +20,9 @@ exclude:
 
 safe: true
 lsi: false
+
+
+plugins:
+- jekyll-remote-theme
+
+remote_theme: slideshow-s9/jekyll-books-theme
