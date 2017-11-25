@@ -4,14 +4,8 @@ book:   slideshow      ## book id used for site.data[ page.book ] lookups
 ---
 
 
-{% assign book              = site.data[ page.book ].book %}
-<!-- todo: check - can we use book.contents - why? why not? -->
-{% assign book_contents     = site.data[ page.book ].contents %}
-{% assign book['contents']  = site.data[ page.book ].contents %}
+{% assign book = site.data[ page.book ].book %}
 
-<pre>
-  {{ book.contents | inspect }}
-</pre>
 
 
 <p>
@@ -34,7 +28,7 @@ book:   slideshow      ## book id used for site.data[ page.book ] lookups
 Contents
 
 <ul>
-{% for chapter in book_contents %}
+{% for chapter in book.contents %}
   <li>{{ chapter.title }}
    <ul>
      {% for sec in chapter.sections %}
@@ -57,7 +51,7 @@ Contents
 
 <!-- chapters -->
 
-{% for chapter in book_contents %}
+{% for chapter in book.contents %}
 <div class="chapter">
   <h1>{{ chapter.title }}</h1>
 

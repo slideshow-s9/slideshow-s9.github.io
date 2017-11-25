@@ -1,3 +1,101 @@
+######################################
+#   Meta Book Info / Front Matter
+
 title:   "Slide Show (S9) Guide (Book Edition)"
 author:
   name:  "Gerald Bauer, et al"
+
+
+######################
+#  Table of Contents
+
+contents:
+- title: 1. What's Slide Show (S9)?
+  path:  index.md
+  sections:
+  - title: What's Slide Show (S9)?
+  - title: Getting Started in 1-2-3 Easy Steps
+
+
+- title: 2. Settings, Tips, Tricks and More
+  path:  more.md
+  sections:
+  - title: How To Fetch New Template Packages?
+  - title: How To Fetch New Template Packs Using git?
+  - title: How To List All Installed Template Packages?
+  - title: How To Use Your Own Slide Show Template Packages?
+  - title: How To Create Slides Without Titles?
+  - title: How To Use Gradient Background Themes?
+  - title: How To Generate PDF Documents from Your Slide Shows?
+  - title: How To Comment Out Content?
+
+
+- title: 3. Plugins, Helpers and Extensions
+  path:  plugins.md
+  sections:
+  - title: Using Embedded Ruby (ERB) Helpers in Your Slides
+  - title: Built-In Helpers
+  - title: Code/Syntax Highlighting Helpers
+  - title: How to Create Your Own Helpers
+
+
+- title: 4. Code/Syntax Highlighting Helpers
+  path:  code.md
+  sections:
+  - title: Hello, Syntax Highlighting Helper!
+  - title: Client-Side vs. Server-Side Syntax Highlighting
+  - title: Using the code Helpers for Syntax Highlighting
+
+
+- title: 5. Template Gallery
+  path:  gallery.md
+  sections:
+  - title: S6 Blank
+  - title: S6 Blank w/ Syntax Highlighter
+  - title: reveal.js
+  - title: Shower
+  - title: CSSS
+  - title: deck.js
+  - title: impress.js
+  - title: bespoke.js
+  - title: Google HTML5 Rocks
+  - title: S5 Blank
+  - title: Slidy
+
+
+- title: 6. Gradient Background Themes
+  path:  themes.md
+  sections:
+  - title: Browse by Color
+  - title: Browse by Style
+  - title: How To Use Gradient Background Themes for the Built-In S6 Template Pack?
+
+- title: 7. Create Your Own Templates
+  path:  templates.md
+  sections:
+  - title: Headers
+  - title: Slides
+  - title: Filename
+
+- title: 8. Commands, Commands, Commands
+  path:  commands.md
+  sections:
+  - title: build Command
+  - title: list Command
+  - title: install Command
+  - title: new Command
+
+
+- title: 9. Settings Reference
+  path:  settings.md
+
+
+- title: 10. What's Markdown?
+  path:  markdown.md
+
+
+- title: 11. About
+  path:  about.md
+  sections:
+  - title: License
+  - title: Questions? Comments?
