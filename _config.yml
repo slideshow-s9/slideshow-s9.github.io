@@ -5,6 +5,9 @@ home:
   url:   https://github.com/slideshow-s9
   title: Slide Show (S9) @ GitHub
 
+style:
+  link_color:   '#8b0000'    # use ruby-ish red
+
 
 
 ######################
@@ -26,11 +29,7 @@ exclude:
   - TODOS.md
 
 
-safe: true
-lsi: false
-
-
 plugins:
 - jekyll-remote-theme
 
-remote_theme: slideshow-s9/jekyll-books-theme
+remote_theme: octobook/books-twentyeighteen-theme
